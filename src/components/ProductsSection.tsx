@@ -37,12 +37,12 @@ const products = [
 
 const ProductsSection = () => {
   return (
-    <section id="products" className="py-16 bg-gray-50">
+    <section id="products" className="py-16 bg-black">
       <div className="container mx-auto px-4">
-        <h2 className="section-title text-center mx-auto mb-12">
+        <h2 className="section-title text-center mx-auto mb-12 text-white">
           Our Products
         </h2>
-        <p className="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-12">
+        <p className="text-center text-lg text-gray-400 max-w-3xl mx-auto mb-12">
           Browse our premium range of hosiery products. We offer substantial discounts for bulk orders - contact us for pricing details.
         </p>
         

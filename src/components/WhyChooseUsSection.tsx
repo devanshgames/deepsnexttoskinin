@@ -44,26 +44,26 @@ const reasons = [
 
 const WhyChooseUsSection = () => {
   return (
-    <section id="why-us" className="py-16 bg-white">
+    <section id="why-us" className="py-16 bg-black">
       <div className="container mx-auto px-4">
-        <h2 className="section-title text-center mx-auto mb-4 text-black">
+        <h2 className="section-title text-center mx-auto mb-4 text-white">
           Why Choose DEEPA HOSIERY
         </h2>
-        <p className="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-12">
+        <p className="text-center text-lg text-gray-400 max-w-3xl mx-auto mb-12">
           When you partner with us, you're choosing experience, quality, and reliability for your business.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {reasons.map((reason) => (
-            <Card key={reason.id} className="hover:shadow-lg transition-shadow border-l-4 border-l-deepa-teal">
+            <Card key={reason.id} className="hover:shadow-lg transition-shadow border-l-4 border-l-deepa-teal bg-[#111]">
               <CardContent className="p-6">
                 <div className="flex items-start">
                   <div className="mr-4 mt-1 text-deepa-teal">
                     <reason.icon size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-xl mb-2">{reason.title}</h3>
-                    <p className="text-gray-600">{reason.description}</p>
+                    <h3 className="font-semibold text-xl mb-2 text-white">{reason.title}</h3>
+                    <p className="text-gray-400">{reason.description}</p>
                   </div>
                 </div>
               </CardContent>
@@ -72,7 +72,7 @@ const WhyChooseUsSection = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <h3 className="text-2xl font-display font-semibold text-deepa-teal mb-4">
+          <h3 className="text-2xl font-display font-semibold text-white mb-4">
             Ready to experience the DEEPA HOSIERY difference?
           </h3>
           <a 
