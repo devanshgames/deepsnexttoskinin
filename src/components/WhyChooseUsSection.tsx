@@ -55,10 +55,10 @@ const WhyChooseUsSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {reasons.map((reason) => (
-            <Card key={reason.id} className="hover:shadow-lg transition-shadow border-l-4 border-l-deepa-purple">
+            <Card key={reason.id} className="hover:shadow-lg transition-shadow border-l-4 border-l-deepa-teal">
               <CardContent className="p-6">
                 <div className="flex items-start">
-                  <div className="mr-4 mt-1 text-deepa-purple">
+                  <div className="mr-4 mt-1 text-deepa-teal">
                     <reason.icon size={24} />
                   </div>
                   <div>
@@ -72,12 +72,12 @@ const WhyChooseUsSection = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <h3 className="text-2xl font-display font-semibold text-deepa-dark-purple mb-4">
+          <h3 className="text-2xl font-display font-semibold text-deepa-teal mb-4">
             Ready to experience the DEEPA HOSIERY difference?
           </h3>
           <a 
             href="#contact" 
-            className="inline-block bg-deepa-purple hover:bg-deepa-dark-purple text-white px-8 py-3 rounded-md transition-colors"
+            className="inline-block bg-deepa-teal hover:bg-deepa-dark-teal text-black px-8 py-3 rounded-md transition-colors"
           >
             Contact Us Today
           </a>

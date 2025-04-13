@@ -29,19 +29,19 @@ const AboutSection = () => {
             </p>
             <div className="grid grid-cols-2 gap-6 mt-8">
               <div className="text-center p-4 bg-gray-50 rounded-lg">
-                <span className="text-4xl font-bold text-deepa-purple block mb-2">30+</span>
+                <span className="text-4xl font-bold text-deepa-teal block mb-2">30+</span>
                 <span className="text-gray-600">Years Experience</span>
               </div>
               <div className="text-center p-4 bg-gray-50 rounded-lg">
-                <span className="text-4xl font-bold text-deepa-purple block mb-2">1000+</span>
+                <span className="text-4xl font-bold text-deepa-teal block mb-2">1000+</span>
                 <span className="text-gray-600">Business Clients</span>
               </div>
               <div className="text-center p-4 bg-gray-50 rounded-lg">
-                <span className="text-4xl font-bold text-deepa-purple block mb-2">50+</span>
+                <span className="text-4xl font-bold text-deepa-teal block mb-2">50+</span>
                 <span className="text-gray-600">Product Varieties</span>
               </div>
               <div className="text-center p-4 bg-gray-50 rounded-lg">
-                <span className="text-4xl font-bold text-deepa-purple block mb-2">12</span>
+                <span className="text-4xl font-bold text-deepa-teal block mb-2">12</span>
                 <span className="text-gray-600">States Covered</span>
               </div>
             </div>

@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -35,6 +36,10 @@ export default {
         deepa: {
           black: "#000000",
           teal: "#90E4C1",
+          "dark-teal": "#65B095", // Adding a darker shade of teal
+          purple: "#7E69AB", // Keeping the old color reference to fix errors
+          "dark-purple": "#504178", // Keeping the old color reference to fix errors
+          "light-purple": "#9B87F5" // Keeping the old color reference to fix errors
         }
       },
       borderRadius: {

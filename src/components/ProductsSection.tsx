@@ -56,7 +56,7 @@ const ProductsSection = () => {
                   className="w-full h-64 object-cover"
                 />
                 {product.isSpecialOffer && (
-                  <Badge className="absolute top-3 right-3 bg-deepa-purple">Special Offer</Badge>
+                  <Badge className="absolute top-3 right-3 bg-deepa-teal">Special Offer</Badge>
                 )}
               </div>
               <CardContent className="pt-4">
@@ -65,7 +65,7 @@ const ProductsSection = () => {
               </CardContent>
               <CardFooter className="border-t pt-4 flex justify-between">
                 {product.isSpecialOffer ? (
-                  <span className="text-deepa-purple font-semibold">Bulk Discount Available</span>
+                  <span className="text-deepa-teal font-semibold">Bulk Discount Available</span>
                 ) : (
                   <span className="text-gray-600">Wholesale Only</span>
                 )}
@@ -74,27 +74,27 @@ const ProductsSection = () => {
           ))}
         </div>
         
-        <div className="mt-16 bg-deepa-purple/10 p-8 rounded-lg">
-          <h3 className="text-2xl font-display font-semibold text-deepa-dark-purple mb-4">Bulk Order Benefits</h3>
+        <div className="mt-16 bg-deepa-teal/10 p-8 rounded-lg">
+          <h3 className="text-2xl font-display font-semibold text-deepa-dark-teal mb-4">Bulk Order Benefits</h3>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <li className="flex items-start">
-              <span className="bg-deepa-purple text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
+              <span className="bg-deepa-teal text-black rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
               <p>Volume discounts for larger orders</p>
             </li>
             <li className="flex items-start">
-              <span className="bg-deepa-purple text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
+              <span className="bg-deepa-teal text-black rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
               <p>Customized packaging available</p>
             </li>
             <li className="flex items-start">
-              <span className="bg-deepa-purple text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
+              <span className="bg-deepa-teal text-black rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
               <p>Flexible payment options</p>
             </li>
             <li className="flex items-start">
-              <span className="bg-deepa-purple text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
+              <span className="bg-deepa-teal text-black rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
               <p>Priority delivery scheduling</p>
             </li>
           </ul>
-          <p className="mt-6 text-deepa-dark-purple font-semibold">Contact us for special bulk pricing and offers!</p>
+          <p className="mt-6 text-deepa-dark-teal font-semibold">Contact us for special bulk pricing and offers!</p>
         </div>
       </div>
     </section>

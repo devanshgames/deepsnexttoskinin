@@ -40,9 +40,9 @@ const TestimonialsSection = () => {
             <Card key={testimonial.id} className="bg-white shadow-md hover:shadow-lg transition-shadow">
               <CardContent className="pt-6">
                 <div className="flex flex-col items-center mb-6">
-                  <Avatar className="w-20 h-20 mb-4 border-2 border-deepa-purple">
+                  <Avatar className="w-20 h-20 mb-4 border-2 border-deepa-teal">
                     <AvatarImage src={testimonial.image} alt={testimonial.name} />
-                    <AvatarFallback className="bg-deepa-purple text-white">
+                    <AvatarFallback className="bg-deepa-teal text-black">
                       {testimonial.name.split(' ').map(n => n[0]).join('')}
                     </AvatarFallback>
                   </Avatar>
@@ -53,7 +53,7 @@ const TestimonialsSection = () => {
                 </div>
                 
                 <div className="relative">
-                  <svg className="absolute top-0 left-0 w-8 h-8 text-deepa-purple/20 -translate-x-4 -translate-y-4" 
+                  <svg className="absolute top-0 left-0 w-8 h-8 text-deepa-teal/20 -translate-x-4 -translate-y-4" 
                       fill="currentColor" viewBox="0 0 32 32" aria-hidden="true">
                     <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z" />
                   </svg>

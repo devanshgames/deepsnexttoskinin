@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="md:col-span-2">
             <h2 className="text-2xl font-display font-bold mb-4">
-              DEEPA <span className="text-deepa-light-purple">HOSIERY</span>
+              DEEPA <span className="text-deepa-teal">HOSIERY</span>
             </h2>
             <p className="text-gray-300 mb-6 max-w-md">
               Your trusted wholesale partner for premium hosiery products. With over 30 years of experience, 

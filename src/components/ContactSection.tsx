@@ -62,7 +62,7 @@ const ContactSection = () => {
             
             <div className="space-y-6">
               <div className="flex items-start">
-                <div className="mr-4 mt-1 bg-deepa-purple/10 p-3 rounded-full text-deepa-purple">
+                <div className="mr-4 mt-1 bg-deepa-teal/10 p-3 rounded-full text-deepa-teal">
                   <Phone size={20} />
                 </div>
                 <div>
@@ -72,7 +72,7 @@ const ContactSection = () => {
               </div>
               
               <div className="flex items-start">
-                <div className="mr-4 mt-1 bg-deepa-purple/10 p-3 rounded-full text-deepa-purple">
+                <div className="mr-4 mt-1 bg-deepa-teal/10 p-3 rounded-full text-deepa-teal">
                   <Mail size={20} />
                 </div>
                 <div>
@@ -82,7 +82,7 @@ const ContactSection = () => {
               </div>
               
               <div className="flex items-start">
-                <div className="mr-4 mt-1 bg-deepa-purple/10 p-3 rounded-full text-deepa-purple">
+                <div className="mr-4 mt-1 bg-deepa-teal/10 p-3 rounded-full text-deepa-teal">
                   <MapPin size={20} />
                 </div>
                 <div>
@@ -199,7 +199,7 @@ const ContactSection = () => {
                   
                   <Button 
                     type="submit" 
-                    className="w-full bg-deepa-purple hover:bg-deepa-dark-purple text-white py-3"
+                    className="w-full bg-deepa-teal hover:bg-deepa-dark-teal text-black py-3"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? "Sending..." : "Send Message"}
