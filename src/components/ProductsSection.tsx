@@ -1,0 +1,104 @@
+
+import React from 'react';
+import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+
+// Sample product data
+const products = [
+  {
+    id: 1,
+    name: "Premium Cotton Undergarments",
+    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
+    category: "Undergarments",
+    isSpecialOffer: true,
+  },
+  {
+    id: 2,
+    name: "Ladies Lingerie Collection",
+    image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
+    category: "Lingerie",
+    isSpecialOffer: false,
+  },
+  {
+    id: 3,
+    name: "Men's Premium Innerwear",
+    image: "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
+    category: "Innerwear",
+    isSpecialOffer: true,
+  },
+  {
+    id: 4,
+    name: "Children's Hosiery Collection",
+    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
+    category: "Children",
+    isSpecialOffer: false,
+  },
+];
+
+const ProductsSection = () => {
+  return (
+    <section id="products" className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <h2 className="section-title text-center mx-auto mb-12">
+          Our Products
+        </h2>
+        <p className="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-12">
+          Browse our premium range of hosiery products. We offer substantial discounts for bulk orders - contact us for pricing details.
+        </p>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {products.map((product) => (
+            <Card key={product.id} className="product-card">
+              <div className="relative">
+                <img 
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-64 object-cover"
+                />
+                {product.isSpecialOffer && (
+                  <Badge className="absolute top-3 right-3 bg-deepa-purple">Special Offer</Badge>
+                )}
+              </div>
+              <CardContent className="pt-4">
+                <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
+                <p className="text-sm text-gray-500">{product.category}</p>
+              </CardContent>
+              <CardFooter className="border-t pt-4 flex justify-between">
+                {product.isSpecialOffer ? (
+                  <span className="text-deepa-purple font-semibold">Bulk Discount Available</span>
+                ) : (
+                  <span className="text-gray-600">Wholesale Only</span>
+                )}
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
+        
+        <div className="mt-16 bg-deepa-purple/10 p-8 rounded-lg">
+          <h3 className="text-2xl font-display font-semibold text-deepa-dark-purple mb-4">Bulk Order Benefits</h3>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <li className="flex items-start">
+              <span className="bg-deepa-purple text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
+              <p>Volume discounts for larger orders</p>
+            </li>
+            <li className="flex items-start">
+              <span className="bg-deepa-purple text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
+              <p>Customized packaging available</p>
+            </li>
+            <li className="flex items-start">
+              <span className="bg-deepa-purple text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
+              <p>Flexible payment options</p>
+            </li>
+            <li className="flex items-start">
+              <span className="bg-deepa-purple text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">✓</span>
+              <p>Priority delivery scheduling</p>
+            </li>
+          </ul>
+          <p className="mt-6 text-deepa-dark-purple font-semibold">Contact us for special bulk pricing and offers!</p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProductsSection;
