@@ -44,9 +44,9 @@ const reasons = [
 
 const WhyChooseUsSection = () => {
   return (
-    <section id="why-us" className="py-16">
+    <section id="why-us" className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="section-title text-center mx-auto mb-4">
+        <h2 className="section-title text-center mx-auto mb-4 text-black">
           Why Choose DEEPA HOSIERY
         </h2>
         <p className="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-12">

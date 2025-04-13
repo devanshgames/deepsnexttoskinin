@@ -8,6 +8,9 @@ const NavBar = () => {
     <header className="bg-black shadow-sm py-4 sticky top-0 z-50">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
+          <div className="mr-3 bg-deepa-teal rounded-full w-10 h-10 flex items-center justify-center">
+            <span className="text-black font-bold text-xl">D</span>
+          </div>
           <h1 className="text-2xl font-display font-bold text-deepa-teal">
             DEEPA <span className="text-white">HOSIERY</span>
           </h1>

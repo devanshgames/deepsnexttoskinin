@@ -31,7 +31,7 @@ const TestimonialsSection = () => {
   return (
     <section id="testimonials" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="section-title text-center mx-auto mb-12">
+        <h2 className="section-title text-center mx-auto mb-12 text-black">
           What Our Clients Say
         </h2>
         
@@ -47,7 +47,7 @@ const TestimonialsSection = () => {
                     </AvatarFallback>
                   </Avatar>
                   <div className="text-center">
-                    <h3 className="font-semibold text-lg">{testimonial.name}</h3>
+                    <h3 className="font-semibold text-lg text-black">{testimonial.name}</h3>
                     <p className="text-gray-500 text-sm">{testimonial.company}</p>
                   </div>
                 </div>

@@ -47,16 +47,16 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-16 bg-gray-50">
+    <section id="contact" className="py-16 bg-black">
       <div className="container mx-auto px-4">
-        <h2 className="section-title text-center mx-auto mb-12">
+        <h2 className="section-title text-center mx-auto mb-12 text-deepa-teal">
           Contact Us
         </h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-semibold mb-6">Get In Touch</h3>
-            <p className="text-gray-700 mb-8">
+            <h3 className="text-2xl font-semibold mb-6 text-white">Get In Touch</h3>
+            <p className="text-gray-300 mb-8">
               Interested in our products or have questions? Fill out the form and our team will get back to you within 24 hours.
             </p>
             
@@ -66,8 +66,8 @@ const ContactSection = () => {
                   <Phone size={20} />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Phone</h4>
-                  <p className="text-gray-600">+91 9876543210</p>
+                  <h4 className="font-semibold text-white">Phone</h4>
+                  <p className="text-gray-300">+91 9876543210</p>
                 </div>
               </div>
               
@@ -76,8 +76,8 @@ const ContactSection = () => {
                   <Mail size={20} />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Email</h4>
-                  <p className="text-gray-600">contact@deepahosiery.com</p>
+                  <h4 className="font-semibold text-white">Email</h4>
+                  <p className="text-gray-300">contact@deepahosiery.com</p>
                 </div>
               </div>
               
@@ -86,21 +86,21 @@ const ContactSection = () => {
                   <MapPin size={20} />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Address</h4>
-                  <p className="text-gray-600">123 Business District, Mumbai, Maharashtra, India</p>
+                  <h4 className="font-semibold text-white">Address</h4>
+                  <p className="text-gray-300">123 Business District, Mumbai, Maharashtra, India</p>
                 </div>
               </div>
             </div>
             
             <div className="mt-10">
-              <h4 className="font-semibold mb-4">Business Hours</h4>
-              <table className="w-full text-gray-700">
+              <h4 className="font-semibold mb-4 text-white">Business Hours</h4>
+              <table className="w-full text-gray-300">
                 <tbody>
-                  <tr className="border-b">
+                  <tr className="border-b border-gray-700">
                     <td className="py-2">Monday - Friday</td>
                     <td className="py-2 text-right">9:00 AM - 6:00 PM</td>
                   </tr>
-                  <tr className="border-b">
+                  <tr className="border-b border-gray-700">
                     <td className="py-2">Saturday</td>
                     <td className="py-2 text-right">10:00 AM - 4:00 PM</td>
                   </tr>
