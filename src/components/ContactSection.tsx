@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -6,9 +5,10 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { Phone, Mail, MapPin } from 'lucide-react';
-
 const ContactSection = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     businessName: '',
@@ -17,23 +17,26 @@ const ContactSection = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    const {
+      name,
+      value
+    } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       toast({
         title: "Message Received",
-        description: "Thank you for contacting DEEPA HOSIERY. We'll get back to you shortly.",
+        description: "Thank you for contacting DEEPA HOSIERY. We'll get back to you shortly."
       });
-      
       setFormData({
         name: '',
         businessName: '',
@@ -41,13 +44,10 @@ const ContactSection = () => {
         phone: '',
         message: ''
       });
-      
       setIsSubmitting(false);
     }, 1500);
   };
-
-  return (
-    <section id="contact" className="py-16 bg-black">
+  return <section id="contact" className="py-16 bg-black">
       <div className="container mx-auto px-4">
         <h2 className="section-title text-center mx-auto mb-12 text-deepa-teal">
           Contact Us
@@ -67,7 +67,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-white">Phone</h4>
-                  <p className="text-gray-300">+91 9876543210</p>
+                  <p className="text-gray-300">+91 9165004768</p>
                 </div>
               </div>
               
@@ -122,30 +122,14 @@ const ContactSection = () => {
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                       Your Name
                     </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="John Doe"
-                      required
-                      className="w-full contact-input"
-                    />
+                    <Input id="name" name="name" value={formData.name} onChange={handleChange} placeholder="John Doe" required className="w-full contact-input" />
                   </div>
                   
                   <div>
                     <label htmlFor="businessName" className="block text-sm font-medium text-gray-700 mb-1">
                       Business Name
                     </label>
-                    <Input
-                      id="businessName"
-                      name="businessName"
-                      value={formData.businessName}
-                      onChange={handleChange}
-                      placeholder="Your Company"
-                      required
-                      className="w-full contact-input"
-                    />
+                    <Input id="businessName" name="businessName" value={formData.businessName} onChange={handleChange} placeholder="Your Company" required className="w-full contact-input" />
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -153,32 +137,14 @@ const ContactSection = () => {
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                         Email Address
                       </label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        placeholder="you@example.com"
-                        required
-                        className="w-full contact-input"
-                      />
+                      <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="you@example.com" required className="w-full contact-input" />
                     </div>
                     
                     <div>
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
                         Phone Number
                       </label>
-                      <Input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        placeholder="+91 9876543210"
-                        required
-                        className="w-full contact-input"
-                      />
+                      <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="+91 9876543210" required className="w-full contact-input" />
                     </div>
                   </div>
                   
@@ -186,22 +152,10 @@ const ContactSection = () => {
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                       Your Message
                     </label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="I'm interested in ordering your products..."
-                      required
-                      className="w-full min-h-32 contact-input"
-                    />
+                    <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="I'm interested in ordering your products..." required className="w-full min-h-32 contact-input" />
                   </div>
                   
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-deepa-teal hover:bg-deepa-dark-teal text-black py-3"
-                    disabled={isSubmitting}
-                  >
+                  <Button type="submit" className="w-full bg-deepa-teal hover:bg-deepa-dark-teal text-black py-3" disabled={isSubmitting}>
                     {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
@@ -210,8 +164,6 @@ const ContactSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ContactSection;
