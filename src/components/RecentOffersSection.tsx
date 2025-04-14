@@ -36,6 +36,8 @@ const offers = [
 
 const RecentOffersSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const whatsappNumber = "+919165004768"; // Your WhatsApp number
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hello%2C%20I'm%20interested%20in%20your%20special%20offers.`;
 
   useEffect(() => {
     // Set the animation to start after a short delay when component mounts
@@ -72,9 +74,14 @@ const RecentOffersSection = () => {
                     <CardContent className="p-4">
                       <h3 className="text-xl font-semibold text-white mb-2">{offer.title}</h3>
                       <p className="text-gray-300 text-sm">{offer.description}</p>
-                      <button className="mt-4 w-full bg-deepa-teal text-black py-2 rounded font-semibold hover:bg-deepa-dark-teal transition-colors">
+                      <a 
+                        href={whatsappLink}
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="block mt-4 w-full bg-deepa-teal text-black py-2 rounded font-semibold hover:bg-deepa-dark-teal transition-colors text-center"
+                      >
                         Contact for Details
-                      </button>
+                      </a>
                     </CardContent>
                   </Card>
                 </div>
