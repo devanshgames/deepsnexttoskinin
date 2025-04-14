@@ -25,23 +25,7 @@ const Footer = () => {
             </ul>
           </div>
           
-          <div>
-            <h3 className="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">Contact Us</h3>
-            <ul className="space-y-2">
-              <li className="text-gray-300">
-                <span className="block text-white">Address</span>
-                123 Business District, Mumbai, Maharashtra, India
-              </li>
-              <li className="text-gray-300">
-                <span className="block text-white">Phone</span>
-                +91 9876543210
-              </li>
-              <li className="text-gray-300">
-                <span className="block text-white">Email</span>
-                contact@deepahosiery.com
-              </li>
-            </ul>
-          </div>
+          
         </div>
         
         <div className="border-t border-gray-800 pt-8">
