@@ -1,7 +1,18 @@
+
 import React from 'react';
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  return <footer className="bg-gray-900 text-white pt-16 pb-8">
+  
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <footer className="bg-gray-900 text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="md:col-span-2">
@@ -17,14 +28,53 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="#products" className="text-gray-300 hover:text-white transition-colors">Products</a></li>
-              <li><a href="#about" className="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#testimonials" className="text-gray-300 hover:text-white transition-colors">Testimonials</a></li>
-              <li><a href="#why-us" className="text-gray-300 hover:text-white transition-colors">Why Choose Us</a></li>
-              <li><a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+              <li>
+                <a 
+                  href="#" 
+                  onClick={() => scrollToSection('products')} 
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Products
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#" 
+                  onClick={() => scrollToSection('about')} 
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#" 
+                  onClick={() => scrollToSection('testimonials')} 
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Testimonials
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#" 
+                  onClick={() => scrollToSection('why-us')} 
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Why Choose Us
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#" 
+                  onClick={() => scrollToSection('contact')} 
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
-          
           
         </div>
         
@@ -40,6 +90,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;
