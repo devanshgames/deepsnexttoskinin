@@ -77,7 +77,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-white">Email</h4>
-                  <p className="text-gray-300">contact@deepahosiery.com</p>
+                  <p className="text-gray-300">deepahosiery@gmail.com</p>
                 </div>
               </div>
               
@@ -87,7 +87,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-white">Address</h4>
-                  <p className="text-gray-300">123 Business District, Mumbai, Maharashtra, India</p>
+                  <p className="text-gray-300">4, kaseragali , marwari rd bhopal</p>
                 </div>
               </div>
             </div>
@@ -98,11 +98,11 @@ const ContactSection = () => {
                 <tbody>
                   <tr className="border-b border-gray-700">
                     <td className="py-2">Monday - Friday</td>
-                    <td className="py-2 text-right">9:00 AM - 6:00 PM</td>
+                    <td className="py-2 text-right">11:30AM - 9:00 PM</td>
                   </tr>
                   <tr className="border-b border-gray-700">
-                    <td className="py-2">Saturday</td>
-                    <td className="py-2 text-right">10:00 AM - 4:00 PM</td>
+                    
+                    
                   </tr>
                   <tr>
                     <td className="py-2">Sunday</td>
