@@ -43,6 +43,10 @@ const reasons = [
 ];
 
 const WhyChooseUsSection = () => {
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section id="why-us" className="py-16 bg-black">
       <div className="container mx-auto px-4">
@@ -75,12 +79,12 @@ const WhyChooseUsSection = () => {
           <h3 className="text-2xl font-display font-semibold text-white mb-4">
             Ready to experience the DEEPA HOSIERY difference?
           </h3>
-          <a 
-            href="#contact" 
-            className="inline-block bg-deepa-teal hover:bg-deepa-dark-teal text-black px-8 py-3 rounded-md transition-colors"
+          <button 
+            onClick={() => scrollToSection('contact')}
+            className="inline-block bg-deepa-teal hover:bg-deepa-dark-teal text-black px-8 py-3 rounded-md transition-colors cursor-pointer"
           >
             Contact Us Today
-          </a>
+          </button>
         </div>
       </div>
     </section>

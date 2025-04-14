@@ -15,10 +15,21 @@ const HeroSection = () => {
               With over 30 years of experience, DEEPA HOSIERY is your trusted partner for high-quality wholesale lingerie and undergarments.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-deepa-teal text-black hover:bg-opacity-90 px-8 py-6 text-lg">
+              <Button 
+                className="bg-deepa-teal text-black hover:bg-opacity-90 px-8 py-6 text-lg"
+                onClick={() => {
+                  document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 Browse Products
               </Button>
-              <Button variant="outline" className="border-deepa-teal text-deepa-teal hover:bg-deepa-teal hover:text-black px-8 py-6 text-lg">
+              <Button 
+                variant="outline" 
+                className="border-deepa-teal text-deepa-teal hover:bg-deepa-teal hover:text-black px-8 py-6 text-lg"
+                onClick={() => {
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 Contact Us
               </Button>
             </div>
