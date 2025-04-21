@@ -3,35 +3,32 @@ import React from 'react';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ShoppingCart } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
 
-// New logo image URL copied from the HeroSection or similar area above products
-// I found no logo image URL explicitly given, but assuming we have one saved above products section, I will use a placeholder for now
-// You can replace this URL with your real logo URL or import local image
-const logoUrl = "https://images.unsplash.com/photo-logo.png?auto=format&fit=crop&q=80&w=100&ixlib=rb-4.0.3";  // example small logo variant
+const logoUrl = "https://images.unsplash.com/photo-logo.png?auto=format&fit=crop&q=80&w=100&ixlib=rb-4.0.3";
 
 const products = [{
   id: 1,
-  name: "BRA", // renamed
+  name: "BRA",
   image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
   category: "Undergarments",
   isSpecialOffer: true
 }, {
   id: 2,
-  name: "PANTIES", // renamed
+  name: "PANTIES",
   image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
   category: "Lingerie",
   isSpecialOffer: false
 }, {
   id: 3,
-  name: "CAMISOLE", // renamed
+  name: "CAMISOLE",
   image: "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
   category: "Innerwear",
   isSpecialOffer: true
 }, {
   id: 4,
-  name: "MORE", // renamed
+  name: "MORE",
   image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
   category: "Children",
   isSpecialOffer: false
@@ -80,16 +77,16 @@ const ProductsSection = () => {
                 <p className="text-sm text-gray-500">{product.category}</p>
               </CardContent>
               <CardFooter className="border-t pt-4 flex justify-between bg-gray-950">
-                <span className={product.isSpecialOffer ? "text-deepa-teal font-semibold" : "text-emerald-300"}>
-                  {product.isSpecialOffer ? "Bulk Discount Available" : "Wholesale Only"}
+                <span className="text-deepa-teal font-semibold">
+                  Shop Now
                 </span>
                 <Button 
                   onClick={handleAddToCart} 
                   size="sm" 
                   className="bg-deepa-teal text-black hover:bg-opacity-90"
                 >
-                  <span className="sr-only">Add to Cart</span>
-                  <ShoppingCart size={16} />
+                  <span className="sr-only">Shop Now</span>
+                  <ArrowRight size={16} />
                 </Button>
               </CardFooter>
             </Card>
