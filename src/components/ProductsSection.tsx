@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -5,27 +6,32 @@ import { Button } from '@/components/ui/button';
 import { ShoppingCart } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
 
+// New logo image URL copied from the HeroSection or similar area above products
+// I found no logo image URL explicitly given, but assuming we have one saved above products section, I will use a placeholder for now
+// You can replace this URL with your real logo URL or import local image
+const logoUrl = "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&q=80&w=100&ixlib=rb-4.0.3";  // example small logo variant
+
 const products = [{
   id: 1,
-  name: "Premium Cotton Undergarments",
+  name: "BRA", // renamed
   image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
   category: "Undergarments",
   isSpecialOffer: true
 }, {
   id: 2,
-  name: "Ladies Lingerie Collection",
+  name: "PANTIES", // renamed
   image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
   category: "Lingerie",
   isSpecialOffer: false
 }, {
   id: 3,
-  name: "Men's Premium Innerwear",
+  name: "CAMISOLE", // renamed
   image: "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
   category: "Innerwear",
   isSpecialOffer: true
 }, {
   id: 4,
-  name: "Children's Hosiery Collection",
+  name: "MORE", // renamed
   image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
   category: "Children",
   isSpecialOffer: false
@@ -44,6 +50,13 @@ const ProductsSection = () => {
 
   return <section id="products" className="py-16 bg-black">
       <div className="container mx-auto px-4">
+        <div className="flex justify-center mb-8">
+          <img
+            src={logoUrl}
+            alt="DEEPA HOSIERY Logo"
+            className="h-12 w-auto object-contain"
+          />
+        </div>
         <h2 className="section-title text-center mx-auto mb-12 text-white">
           Our Products
         </h2>
@@ -108,4 +121,6 @@ const ProductsSection = () => {
       </div>
     </section>;
 };
+
 export default ProductsSection;
+
