@@ -4,7 +4,6 @@ import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
-import { useToast } from "@/hooks/use-toast";
 
 const logoUrl = "https://images.unsplash.com/photo-logo.png?auto=format&fit=crop&q=80&w=100&ixlib=rb-4.0.3";
 
@@ -35,14 +34,9 @@ const products = [{
 }];
 
 const ProductsSection = () => {
-  const { toast } = useToast();
-
+  // Remove toast usage to avoid popup
   const handleAddToCart = () => {
-    toast({
-      title: "Minimum Order Quantity",
-      description: "Please order a minimum of 12 pieces per product.",
-      variant: "default",
-    });
+    // Intentionally do nothing to remove popup
   };
 
   return <section id="products" className="py-16 bg-black">
