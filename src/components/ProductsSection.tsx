@@ -1,6 +1,10 @@
+
 import React from 'react';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { ShoppingCart } from 'lucide-react';
+import { useToast } from "@/hooks/use-toast";
 
 // Sample product data
 const products = [{
@@ -28,7 +32,18 @@ const products = [{
   category: "Children",
   isSpecialOffer: false
 }];
+
 const ProductsSection = () => {
+  const { toast } = useToast();
+
+  const handleAddToCart = () => {
+    toast({
+      title: "Minimum Order Quantity",
+      description: "Please order a minimum of 12 pieces per product.",
+      variant: "default",
+    });
+  };
+
   return <section id="products" className="py-16 bg-black">
       <div className="container mx-auto px-4">
         <h2 className="section-title text-center mx-auto mb-12 text-white">
@@ -49,7 +64,16 @@ const ProductsSection = () => {
                 <p className="text-sm text-gray-500">{product.category}</p>
               </CardContent>
               <CardFooter className="border-t pt-4 flex justify-between bg-gray-950">
-                {product.isSpecialOffer ? <span className="text-deepa-teal font-semibold">Bulk Discount Available</span> : <span className="text-emerald-300">Wholesale Only</span>}
+                <span className={product.isSpecialOffer ? "text-deepa-teal font-semibold" : "text-emerald-300"}>
+                  {product.isSpecialOffer ? "Bulk Discount Available" : "Wholesale Only"}
+                </span>
+                <Button 
+                  onClick={handleAddToCart} 
+                  size="sm" 
+                  className="bg-deepa-teal text-black hover:bg-opacity-90"
+                >
+                  <ShoppingCart size={16} />
+                </Button>
               </CardFooter>
             </Card>)}
         </div>

@@ -1,10 +1,12 @@
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { PhoneCall, X, Menu } from 'lucide-react';
+import { X, Menu, ShoppingCart } from 'lucide-react';
+import { useToast } from "@/hooks/use-toast";
 
 const NavBar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { toast } = useToast();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -12,6 +14,14 @@ const NavBar = () => {
       element.scrollIntoView({ behavior: 'smooth' });
       setMobileMenuOpen(false);
     }
+  };
+
+  const handleCartClick = () => {
+    toast({
+      title: "Minimum Order Quantity",
+      description: "Please order a minimum of 12 pieces per product.",
+      variant: "default",
+    });
   };
 
   return (
@@ -40,10 +50,10 @@ const NavBar = () => {
         
         <Button 
           className="bg-deepa-teal text-black hover:bg-opacity-90 hidden md:flex items-center gap-2"
-          onClick={() => scrollToSection('contact')}
+          onClick={handleCartClick}
         >
-          <PhoneCall size={16} />
-          Contact Us
+          <ShoppingCart size={16} />
+          Cart
         </Button>
         
         <Button 
@@ -68,10 +78,10 @@ const NavBar = () => {
               <a href="#" onClick={() => scrollToSection('contact')} className="text-deepa-teal hover:text-white transition-colors py-2">Contact</a>
               <Button 
                 className="bg-deepa-teal text-black hover:bg-opacity-90 w-full flex items-center justify-center gap-2 mt-2"
-                onClick={() => scrollToSection('contact')}
+                onClick={handleCartClick}
               >
-                <PhoneCall size={16} />
-                Contact Us
+                <ShoppingCart size={16} />
+                Cart
               </Button>
             </nav>
           </div>

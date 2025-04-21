@@ -9,7 +9,9 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 import WhyChooseUsSection from '@/components/WhyChooseUsSection';
 import ContactSection from '@/components/ContactSection';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import AIChatbot from '@/components/AIChatbot';
 import Footer from '@/components/Footer';
+import { Toaster } from "@/components/ui/toaster";
 
 const Index = () => {
   return (
@@ -24,8 +26,10 @@ const Index = () => {
         <WhyChooseUsSection />
         <ContactSection />
         <WhatsAppButton />
+        <AIChatbot />
       </main>
       <Footer />
+      <Toaster />
     </div>
   );
 };

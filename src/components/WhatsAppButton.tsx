@@ -11,9 +11,9 @@ const WhatsAppButton = () => {
       href={whatsappLink} 
       target="_blank" 
       rel="noopener noreferrer"
-      className="whatsapp-button animate-pulse-light"
+      className="fixed bottom-6 right-6 bg-green-500 text-white p-3 rounded-full shadow-lg z-50 hover:bg-green-600 transition-all duration-300 flex items-center justify-center"
     >
-      <MessageCircle size={28} className="text-white" />
+      <MessageCircle size={20} className="text-white" />
     </a>
   );
 };
