@@ -15,7 +15,7 @@ const offers = [
     id: 1,
     title: "Premium Cotton Collection",
     description: "30% off on bulk orders of Premium Cotton Undergarments",
-    image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
+    image: "",
     badge: "Limited Time"
   },
   {
