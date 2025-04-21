@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -6,7 +5,6 @@ import { Button } from '@/components/ui/button';
 import { ShoppingCart } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
 
-// Sample product data
 const products = [{
   id: 1,
   name: "Premium Cotton Undergarments",
@@ -54,7 +52,12 @@ const ProductsSection = () => {
         </p>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {products.map(product => <Card key={product.id} className="product-card">
+          {products.map((product, idx) => (
+            <Card 
+              key={product.id} 
+              className={`product-card animate-fade-in transition-all duration-700`}
+              style={{ animationDelay: `${0.12 * idx}s`, animationFillMode: "backwards" }}
+            >
               <div className="relative">
                 <img src={product.image} alt={product.name} className="w-full h-64 object-cover" />
                 {product.isSpecialOffer && <Badge className="absolute top-3 right-3 bg-deepa-teal">Special Offer</Badge>}
@@ -72,10 +75,12 @@ const ProductsSection = () => {
                   size="sm" 
                   className="bg-deepa-teal text-black hover:bg-opacity-90"
                 >
+                  <span className="sr-only">Add to Cart</span>
                   <ShoppingCart size={16} />
                 </Button>
               </CardFooter>
-            </Card>)}
+            </Card>
+          ))}
         </div>
         
         <div className="mt-16 bg-deepa-teal/10 p-8 rounded-lg">

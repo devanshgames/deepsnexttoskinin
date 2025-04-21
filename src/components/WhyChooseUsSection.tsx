@@ -61,8 +61,12 @@ const WhyChooseUsSection = () => {
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {reasons.map((reason) => (
-            <Card key={reason.id} className="hover:shadow-lg transition-shadow border-l-4 border-l-deepa-teal bg-[#111]">
+          {reasons.map((reason, idx) => (
+            <Card 
+              key={reason.id} 
+              className="hover:shadow-lg transition-shadow border-l-4 border-l-deepa-teal bg-[#111] animate-fade-in"
+              style={{ animationDelay: `${0.12 * idx}s`, animationFillMode: "backwards" }}
+            >
               <CardContent className="p-6">
                 <div className="flex items-start">
                   <div className="mr-4 mt-1 text-deepa-teal">
@@ -85,7 +89,8 @@ const WhyChooseUsSection = () => {
           <a 
             href="#" 
             onClick={() => scrollToSection('contact')}
-            className="inline-block bg-deepa-teal hover:bg-deepa-dark-teal text-black px-8 py-3 rounded-md transition-colors"
+            className="inline-block bg-deepa-teal hover:bg-deepa-dark-teal text-black px-8 py-3 rounded-md transition-colors animate-fade-in"
+            style={{ animationDelay: "0.8s", animationFillMode: "backwards" }}
           >
             Contact Us Today
           </a>

@@ -57,10 +57,10 @@ const RecentOffersSection = () => {
         
         <Carousel className="w-full max-w-5xl mx-auto">
           <CarouselContent>
-            {offers.map((offer) => (
+            {offers.map((offer, idx) => (
               <CarouselItem key={offer.id} className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-2">
-                  <Card className="bg-black border border-deepa-teal/30 overflow-hidden">
+                <div className={`p-2 animate-fade-in`} style={{ animationDelay: `${0.18 * idx}s`, animationFillMode: "backwards" }}>
+                  <Card className="bg-black border border-deepa-teal/30 overflow-hidden hover:scale-105 transition-transform duration-300">
                     <div className="relative h-48">
                       <img 
                         src={offer.image} 
@@ -78,7 +78,8 @@ const RecentOffersSection = () => {
                         href={whatsappLink}
                         target="_blank" 
                         rel="noopener noreferrer" 
-                        className="block mt-4 w-full bg-deepa-teal text-black py-2 rounded font-semibold hover:bg-deepa-dark-teal transition-colors text-center"
+                        className="block mt-4 w-full bg-deepa-teal text-black py-2 rounded font-semibold hover:bg-deepa-dark-teal transition-colors text-center animate-fade-in"
+                        style={{ animationDelay: `${0.3 + 0.18 * idx}s` }}
                       >
                         Contact for Details
                       </a>

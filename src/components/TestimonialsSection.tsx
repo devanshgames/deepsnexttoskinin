@@ -36,8 +36,8 @@ const TestimonialsSection = () => {
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial) => (
-            <Card key={testimonial.id} className="bg-[#111] shadow-md hover:shadow-lg transition-shadow">
+          {testimonials.map((testimonial, idx) => (
+            <Card key={testimonial.id} className="bg-[#111] shadow-md hover:shadow-lg transition-shadow animate-fade-in" style={{ animationDelay: `${0.12 * idx}s`, animationFillMode: "backwards" }}>
               <CardContent className="pt-6">
                 <div className="flex flex-col items-center mb-6">
                   <Avatar className="w-20 h-20 mb-4 border-2 border-deepa-teal">
