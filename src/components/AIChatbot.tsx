@@ -12,7 +12,7 @@ type Message = {
 
 const initialMessages: Message[] = [
   {
-    text: "Hello! I'm your personal assistant. How can I help you with Deepa Hosiery products today?",
+    text: "Hello! Your Deepa Hosiery assistant here. Got questions about price, minimum quantity, delivery to Bhopal, or material quality? Just ask! How can I help you today??",
     isBot: true,
     timestamp: new Date(),
   },
