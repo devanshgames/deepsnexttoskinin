@@ -9,7 +9,7 @@ import { useToast } from "@/hooks/use-toast";
 // New logo image URL copied from the HeroSection or similar area above products
 // I found no logo image URL explicitly given, but assuming we have one saved above products section, I will use a placeholder for now
 // You can replace this URL with your real logo URL or import local image
-const logoUrl = "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&q=80&w=100&ixlib=rb-4.0.3";  // example small logo variant
+const logoUrl = "https://images.unsplash.com/photo-logo.png?auto=format&fit=crop&q=80&w=100&ixlib=rb-4.0.3";  // example small logo variant
 
 const products = [{
   id: 1,
