@@ -62,21 +62,21 @@ const CartPage = () => {
 
   if (items.length === 0) {
     return (
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen bg-black text-white">
         <NavBar />
         <main className="flex-grow container mx-auto px-4 py-8">
           <div className="flex items-center mb-6">
-            <Button variant="ghost" onClick={() => navigate('/')} className="mr-2">
+            <Button variant="ghost" onClick={() => navigate('/')} className="mr-2 text-white hover:bg-deepa-teal/20">
               <ArrowLeft size={16} className="mr-2" />
               Back
             </Button>
             <h1 className="text-2xl font-bold">Your Cart</h1>
           </div>
           
-          <div className="bg-white rounded-lg shadow-md p-8 text-center">
+          <div className="bg-[#1A1F2C] rounded-lg shadow-md p-8 text-center">
             <h2 className="text-xl mb-4">Your cart is empty</h2>
-            <p className="mb-6 text-gray-600">Looks like you haven't added any items to your cart yet.</p>
-            <Button onClick={() => navigate('/')} className="bg-deepa-teal text-black">
+            <p className="mb-6 text-gray-400">Looks like you haven't added any items to your cart yet.</p>
+            <Button onClick={() => navigate('/')} className="bg-deepa-teal text-black hover:bg-deepa-teal/90">
               Continue Shopping
             </Button>
           </div>
@@ -88,19 +88,19 @@ const CartPage = () => {
   }
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-black text-white">
       <NavBar />
       <main className="flex-grow container mx-auto px-4 py-8">
         <div className="flex items-center mb-6">
-          <Button variant="ghost" onClick={() => navigate('/')} className="mr-2">
+          <Button variant="ghost" onClick={() => navigate('/')} className="mr-2 text-white hover:bg-deepa-teal/20">
             <ArrowLeft size={16} className="mr-2" />
             Back
           </Button>
           <h1 className="text-2xl font-bold">Your Cart</h1>
           <div className="ml-auto">
-            <div className="bg-white shadow-sm rounded-lg py-2 px-4">
+            <div className="bg-[#1A1F2C] shadow-sm rounded-lg py-2 px-4">
               <div className="font-bold">₹{total.toFixed(2)}</div>
-              <div className="text-sm text-gray-500">{items.reduce((acc, item) => acc + item.quantity, 0)} items</div>
+              <div className="text-sm text-gray-400">{items.reduce((acc, item) => acc + item.quantity, 0)} items</div>
             </div>
           </div>
         </div>
@@ -108,11 +108,11 @@ const CartPage = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2">
             {/* Have a question section */}
-            <div className="bg-white rounded-lg shadow-md p-4 mb-6">
+            <div className="bg-[#1A1F2C] rounded-lg shadow-md p-4 mb-6">
               <div className="flex justify-between items-center">
                 <div>
                   <h3 className="font-medium">Have a question?</h3>
-                  <p className="text-sm text-gray-500">Chat with us</p>
+                  <p className="text-sm text-gray-400">Chat with us</p>
                 </div>
                 <a 
                   href="https://wa.me/919165004768" 
@@ -129,11 +129,11 @@ const CartPage = () => {
             </div>
 
             {/* Order Items */}
-            <div className="bg-white rounded-lg shadow-md p-4 mb-6">
+            <div className="bg-[#1A1F2C] rounded-lg shadow-md p-4 mb-6">
               <h2 className="font-bold text-lg mb-4">Your order items</h2>
               
               {items.map(item => (
-                <div key={item.id} className="flex border-b py-4 last:border-b-0">
+                <div key={item.id} className="flex border-b border-gray-700 py-4 last:border-b-0">
                   <div className="w-20 h-20 mr-4">
                     <img src={item.image} alt={item.name} className="w-full h-full object-cover rounded" />
                   </div>
@@ -147,10 +147,10 @@ const CartPage = () => {
                     </div>
                     <div className="text-sm text-gray-500 mb-3">(1 set)</div>
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center border rounded">
+                      <div className="flex items-center border border-gray-700 rounded">
                         <button 
                           onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                          className="px-2 py-1 text-gray-600 hover:bg-gray-100"
+                          className="px-2 py-1 text-white hover:bg-deepa-teal/20"
                           disabled={item.quantity <= 1}
                         >
                           <Minus size={16} />
@@ -158,7 +158,7 @@ const CartPage = () => {
                         <span className="px-4 py-1">{item.quantity}</span>
                         <button 
                           onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                          className="px-2 py-1 text-gray-600 hover:bg-gray-100"
+                          className="px-2 py-1 text-white hover:bg-deepa-teal/20"
                         >
                           <Plus size={16} />
                         </button>
@@ -176,8 +176,8 @@ const CartPage = () => {
             </div>
 
             {/* Apply Coupon */}
-            <div className="bg-white rounded-lg shadow-md p-4 mb-6">
-              <div className="flex items-center text-blue-500">
+            <div className="bg-[#1A1F2C] rounded-lg shadow-md p-4 mb-6">
+              <div className="flex items-center text-deepa-teal">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M5 2a1 1 0 011-1h8a1 1 0 011 1v1h3a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V4a1 1 0 011-1h3V2zm6 11a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
                 </svg>
@@ -186,7 +186,7 @@ const CartPage = () => {
             </div>
 
             {/* Price Breakdown */}
-            <div className="bg-white rounded-lg shadow-md p-4 mb-6">
+            <div className="bg-[#1A1F2C] rounded-lg shadow-md p-4 mb-6">
               <div className="flex justify-between mb-2">
                 <span>Sub total</span>
                 <span className="font-medium">₹{subtotal.toFixed(2)}</span>
@@ -195,7 +195,7 @@ const CartPage = () => {
                 <span>Tax<br /><span className="text-sm text-gray-500">5% GST</span></span>
                 <span className="font-medium">₹{tax.toFixed(2)}</span>
               </div>
-              <div className="h-px bg-gray-200 my-2"></div>
+              <div className="h-px bg-gray-700 my-2"></div>
               <div className="flex justify-between font-bold">
                 <span>Total</span>
                 <span>₹{total.toFixed(2)}</span>
@@ -206,11 +206,11 @@ const CartPage = () => {
           <div className="lg:col-span-1">
             <form onSubmit={handleSubmit}>
               {/* Billing Details */}
-              <div className="bg-white rounded-lg shadow-md p-4 mb-6">
+              <div className="bg-[#1A1F2C] rounded-lg shadow-md p-4 mb-6">
                 <h2 className="font-bold text-lg mb-4">Billing details</h2>
                 
                 <div className="mb-4">
-                  <Label htmlFor="name" className="mb-1 block">Name*</Label>
+                  <Label htmlFor="name" className="mb-1 block text-white">Name*</Label>
                   <Input 
                     type="text" 
                     id="name" 
@@ -218,12 +218,13 @@ const CartPage = () => {
                     value={formData.name} 
                     onChange={handleInputChange} 
                     placeholder="Enter your name" 
+                    className="bg-black/40 border-gray-700 text-white"
                     required
                   />
                 </div>
                 
                 <div className="mb-4">
-                  <Label htmlFor="mobile" className="mb-1 block">Mobile number*</Label>
+                  <Label htmlFor="mobile" className="mb-1 block text-white">Mobile number*</Label>
                   <div className="flex">
                     <Input 
                       type="tel" 
@@ -232,15 +233,15 @@ const CartPage = () => {
                       value={formData.mobile} 
                       onChange={handleInputChange} 
                       placeholder="Enter your mobile number" 
-                      className="flex-1"
+                      className="flex-1 bg-black/40 border-gray-700 text-white"
                       required
                     />
-                    <button type="button" className="text-blue-500 text-sm ml-2">Change Number</button>
+                    <button type="button" className="text-deepa-teal text-sm ml-2">Change Number</button>
                   </div>
                 </div>
                 
                 <div className="mb-4">
-                  <Label htmlFor="email" className="mb-1 block">Email</Label>
+                  <Label htmlFor="email" className="mb-1 block text-white">Email</Label>
                   <Input 
                     type="email" 
                     id="email" 
@@ -248,16 +249,17 @@ const CartPage = () => {
                     value={formData.email} 
                     onChange={handleInputChange} 
                     placeholder="Please enter your email address" 
+                    className="bg-black/40 border-gray-700 text-white"
                   />
                 </div>
               </div>
 
               {/* Shipping Address */}
-              <div className="bg-white rounded-lg shadow-md p-4 mb-6">
+              <div className="bg-[#1A1F2C] rounded-lg shadow-md p-4 mb-6">
                 <h2 className="font-bold text-lg mb-4">Shipping address</h2>
                 
                 <div className="mb-4">
-                  <Label htmlFor="country" className="mb-1 block">Country*</Label>
+                  <Label htmlFor="country" className="mb-1 block text-white">Country*</Label>
                   <Input 
                     type="text" 
                     id="country" 
@@ -265,12 +267,13 @@ const CartPage = () => {
                     value={formData.country} 
                     onChange={handleInputChange} 
                     placeholder="Please enter your country" 
+                    className="bg-black/40 border-gray-700 text-white"
                     required
                   />
                 </div>
                 
                 <div className="mb-4">
-                  <Label htmlFor="postalCode" className="mb-1 block">Pincode/Zipcode/Postal code*</Label>
+                  <Label htmlFor="postalCode" className="mb-1 block text-white">Pincode/Zipcode/Postal code*</Label>
                   <Input 
                     type="text" 
                     id="postalCode" 
@@ -278,12 +281,13 @@ const CartPage = () => {
                     value={formData.postalCode} 
                     onChange={handleInputChange} 
                     placeholder="Please enter your Pincode/Zipcode/Postal code" 
+                    className="bg-black/40 border-gray-700 text-white"
                     required
                   />
                 </div>
                 
                 <div className="mb-4">
-                  <Label htmlFor="address" className="mb-1 block">Flat, House no., Building, Company, Apartment*</Label>
+                  <Label htmlFor="address" className="mb-1 block text-white">Flat, House no., Building, Company, Apartment*</Label>
                   <Input 
                     type="text" 
                     id="address" 
@@ -291,12 +295,13 @@ const CartPage = () => {
                     value={formData.address} 
                     onChange={handleInputChange} 
                     placeholder="Flat, House no., Building, Company, Apartment" 
+                    className="bg-black/40 border-gray-700 text-white"
                     required
                   />
                 </div>
                 
                 <div className="mb-4">
-                  <Label htmlFor="area" className="mb-1 block">Area, Colony, Street, Sector, Village*</Label>
+                  <Label htmlFor="area" className="mb-1 block text-white">Area, Colony, Street, Sector, Village*</Label>
                   <Input 
                     type="text" 
                     id="area" 
@@ -304,12 +309,13 @@ const CartPage = () => {
                     value={formData.area} 
                     onChange={handleInputChange} 
                     placeholder="Area, Colony, Street, Sector, Village" 
+                    className="bg-black/40 border-gray-700 text-white"
                     required
                   />
                 </div>
                 
                 <div className="mb-4">
-                  <Label htmlFor="landmark" className="mb-1 block">Landmark</Label>
+                  <Label htmlFor="landmark" className="mb-1 block text-white">Landmark</Label>
                   <Input 
                     type="text" 
                     id="landmark" 
@@ -317,11 +323,12 @@ const CartPage = () => {
                     value={formData.landmark} 
                     onChange={handleInputChange} 
                     placeholder="near post-office, hospital, school, bank, etc" 
+                    className="bg-black/40 border-gray-700 text-white"
                   />
                 </div>
                 
                 <div className="mb-4">
-                  <Label htmlFor="state" className="mb-1 block">State*</Label>
+                  <Label htmlFor="state" className="mb-1 block text-white">State*</Label>
                   <Input 
                     type="text" 
                     id="state" 
@@ -329,12 +336,13 @@ const CartPage = () => {
                     value={formData.state} 
                     onChange={handleInputChange} 
                     placeholder="Type state name" 
+                    className="bg-black/40 border-gray-700 text-white"
                     required
                   />
                 </div>
                 
                 <div className="mb-4">
-                  <Label htmlFor="city" className="mb-1 block">City*</Label>
+                  <Label htmlFor="city" className="mb-1 block text-white">City*</Label>
                   <Input 
                     type="text" 
                     id="city" 
@@ -342,6 +350,7 @@ const CartPage = () => {
                     value={formData.city} 
                     onChange={handleInputChange} 
                     placeholder="Type city name" 
+                    className="bg-black/40 border-gray-700 text-white"
                     required
                   />
                 </div>
@@ -350,7 +359,7 @@ const CartPage = () => {
               {/* Confirm Order Button */}
               <Button 
                 type="submit" 
-                className="w-full py-4 bg-blue-600 hover:bg-blue-700 text-white rounded flex items-center justify-center"
+                className="w-full py-4 bg-deepa-teal text-black hover:bg-deepa-teal/90 rounded flex items-center justify-center"
               >
                 CONFIRM ORDER
                 <ArrowRight className="ml-2" size={20} />
@@ -366,3 +375,4 @@ const CartPage = () => {
 };
 
 export default CartPage;
+
