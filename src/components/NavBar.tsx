@@ -1,21 +1,13 @@
 
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { X, Menu, ArrowRight } from 'lucide-react';
+import { X, Menu, ShoppingCart } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { useToast } from "@/hooks/use-toast";
+import { useCart } from '@/contexts/CartContext';
 
 const NavBar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { toast } = useToast();
-
-  const handleCartClick = () => {
-    toast({
-      title: "Minimum Order Quantity",
-      description: "Please order a minimum of 12 pieces per product.",
-      variant: "default",
-    });
-  };
+  const { itemCount } = useCart();
 
   return (
     <header className="bg-black shadow-sm py-4 sticky top-0 z-50">
@@ -43,13 +35,19 @@ const NavBar = () => {
           <Link to="/contact" className="text-deepa-teal hover:text-white transition-colors">Contact</Link>
         </nav>
         
-        <Button 
-          className="bg-deepa-teal text-black hover:bg-opacity-90 hidden md:flex items-center gap-2"
-          onClick={handleCartClick}
-        >
-          <ArrowRight size={16} />
-          Shop Now
-        </Button>
+        <Link to="/cart">
+          <Button 
+            className="bg-deepa-teal text-black hover:bg-opacity-90 hidden md:flex items-center gap-2 relative"
+          >
+            <ShoppingCart size={16} />
+            Cart
+            {itemCount > 0 && (
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                {itemCount}
+              </span>
+            )}
+          </Button>
+        </Link>
         
         <Button 
           variant="ghost" 
@@ -71,16 +69,19 @@ const NavBar = () => {
               <Link to="/testimonials" onClick={() => setMobileMenuOpen(false)} className="text-deepa-teal hover:text-white transition-colors py-2">Testimonials</Link>
               <Link to="/why-us" onClick={() => setMobileMenuOpen(false)} className="text-deepa-teal hover:text-white transition-colors py-2">Why Us</Link>
               <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="text-deepa-teal hover:text-white transition-colors py-2">Contact</Link>
-              <Button 
-                className="bg-deepa-teal text-black hover:bg-opacity-90 w-full flex items-center justify-center gap-2 mt-2"
-                onClick={() => {
-                  handleCartClick();
-                  setMobileMenuOpen(false);
-                }}
-              >
-                <ArrowRight size={16} />
-                Shop Now
-              </Button>
+              <Link to="/cart" onClick={() => setMobileMenuOpen(false)}>
+                <Button 
+                  className="bg-deepa-teal text-black hover:bg-opacity-90 w-full flex items-center justify-center gap-2 mt-2 relative"
+                >
+                  <ShoppingCart size={16} />
+                  Cart
+                  {itemCount > 0 && (
+                    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                      {itemCount}
+                    </span>
+                  )}
+                </Button>
+              </Link>
             </nav>
           </div>
         </div>

@@ -3,8 +3,10 @@ import React from 'react';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ShoppingCart } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
+import { useCart } from '@/contexts/CartContext';
+import { useNavigate } from 'react-router-dom';
 
 const logoUrl = "https://images.unsplash.com/photo-logo.png?auto=format&fit=crop&q=80&w=100&ixlib=rb-4.0.3";
 
@@ -36,12 +38,14 @@ const products = [{
 
 const ProductsSection = () => {
   const { toast } = useToast();
+  const { addToCart } = useCart();
+  const navigate = useNavigate();
 
-  const handleAddToCart = () => {
+  const handleAddToCart = (product: any) => {
+    addToCart(product);
     toast({
-      title: "Hey there! 👋",
-      description: "What brings you our way today?",
-      variant: "default",
+      title: "Added to cart",
+      description: `${product.name} has been added to your cart`,
     });
   };
 
@@ -78,15 +82,15 @@ const ProductsSection = () => {
               </CardContent>
               <CardFooter className="border-t pt-4 flex justify-between bg-gray-950">
                 <span className="text-deepa-teal font-semibold">
-                  Shop Now
+                  Add to Cart
                 </span>
                 <Button 
-                  onClick={handleAddToCart} 
+                  onClick={() => handleAddToCart(product)} 
                   size="sm" 
                   className="bg-deepa-teal text-black hover:bg-opacity-90"
                 >
-                  <span className="sr-only">Shop Now</span>
-                  <ArrowRight size={16} />
+                  <span className="sr-only">Add to Cart</span>
+                  <ShoppingCart size={16} />
                 </Button>
               </CardFooter>
             </Card>

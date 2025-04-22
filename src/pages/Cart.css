@@ -1,0 +1,11 @@
+
+@media (max-width: 768px) {
+  .cart-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cart-item-image {
+    width: 60px;
+    height: 60px;
+  }
+}
