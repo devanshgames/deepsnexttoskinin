@@ -6,10 +6,12 @@ import Footer from '@/components/Footer';
 import { Toaster } from "@/components/ui/toaster";
 import { useCart } from '@/contexts/CartContext';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Minus, Plus, ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import EmptyCart from '@/components/cart/EmptyCart';
+import CartItem from '@/components/cart/CartItem';
+import CartSummary from '@/components/cart/CartSummary';
+import ShippingForm from '@/components/cart/ShippingForm';
 
 const CartPage = () => {
   const { items, removeFromCart, updateQuantity, subtotal, clearCart } = useCart();
@@ -55,7 +57,6 @@ const CartPage = () => {
       description: "Your order has been placed successfully!",
     });
     
-    // Clear cart and redirect to home
     clearCart();
     setTimeout(() => navigate('/'), 2000);
   };
@@ -72,14 +73,7 @@ const CartPage = () => {
             </Button>
             <h1 className="text-2xl font-bold">Your Cart</h1>
           </div>
-          
-          <div className="bg-[#1A1F2C] rounded-lg shadow-md p-8 text-center">
-            <h2 className="text-xl mb-4">Your cart is empty</h2>
-            <p className="mb-6 text-gray-400">Looks like you haven't added any items to your cart yet.</p>
-            <Button onClick={() => navigate('/')} className="bg-deepa-teal text-black hover:bg-deepa-teal/90">
-              Continue Shopping
-            </Button>
-          </div>
+          <EmptyCart />
         </main>
         <Footer />
         <Toaster />
@@ -97,12 +91,12 @@ const CartPage = () => {
             Back
           </Button>
           <h1 className="text-2xl font-bold">Your Cart</h1>
-          <div className="ml-auto">
-            <div className="bg-[#1A1F2C] shadow-sm rounded-lg py-2 px-4">
-              <div className="font-bold">₹{total.toFixed(2)}</div>
-              <div className="text-sm text-gray-400">{items.reduce((acc, item) => acc + item.quantity, 0)} items</div>
-            </div>
-          </div>
+          <CartSummary 
+            subtotal={subtotal}
+            tax={tax}
+            total={total}
+            itemCount={items.reduce((acc, item) => acc + item.quantity, 0)}
+          />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -131,240 +125,23 @@ const CartPage = () => {
             {/* Order Items */}
             <div className="bg-[#1A1F2C] rounded-lg shadow-md p-4 mb-6">
               <h2 className="font-bold text-lg mb-4">Your order items</h2>
-              
               {items.map(item => (
-                <div key={item.id} className="flex border-b border-gray-700 py-4 last:border-b-0">
-                  <div className="w-20 h-20 mr-4">
-                    <img src={item.image} alt={item.name} className="w-full h-full object-cover rounded" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex justify-between">
-                      <h3 className="font-medium">{item.name}</h3>
-                      <div className="text-right">
-                        <div className="font-bold">₹{(item.price * item.quantity).toFixed(2)}</div>
-                        <div className="text-xs text-gray-500">+ 5% tax</div>
-                      </div>
-                    </div>
-                    <div className="text-sm text-gray-500 mb-3">(1 set)</div>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center border border-gray-700 rounded">
-                        <button 
-                          onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                          className="px-2 py-1 text-white hover:bg-deepa-teal/20"
-                          disabled={item.quantity <= 1}
-                        >
-                          <Minus size={16} />
-                        </button>
-                        <span className="px-4 py-1">{item.quantity}</span>
-                        <button 
-                          onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                          className="px-2 py-1 text-white hover:bg-deepa-teal/20"
-                        >
-                          <Plus size={16} />
-                        </button>
-                      </div>
-                      <button 
-                        onClick={() => removeFromCart(item.id)}
-                        className="text-red-500 text-sm"
-                      >
-                        Remove
-                      </button>
-                    </div>
-                  </div>
-                </div>
+                <CartItem 
+                  key={item.id}
+                  item={item}
+                  onUpdateQuantity={updateQuantity}
+                  onRemove={removeFromCart}
+                />
               ))}
-            </div>
-
-            {/* Apply Coupon */}
-            <div className="bg-[#1A1F2C] rounded-lg shadow-md p-4 mb-6">
-              <div className="flex items-center text-deepa-teal">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M5 2a1 1 0 011-1h8a1 1 0 011 1v1h3a1 1 0 011 1v12a1 1 0 01-1 1H3a1 1 0 01-1-1V4a1 1 0 011-1h3V2zm6 11a3 3 0 100-6 3 3 0 000 6z" clipRule="evenodd" />
-                </svg>
-                Apply coupon
-              </div>
-            </div>
-
-            {/* Price Breakdown */}
-            <div className="bg-[#1A1F2C] rounded-lg shadow-md p-4 mb-6">
-              <div className="flex justify-between mb-2">
-                <span>Sub total</span>
-                <span className="font-medium">₹{subtotal.toFixed(2)}</span>
-              </div>
-              <div className="flex justify-between mb-2">
-                <span>Tax<br /><span className="text-sm text-gray-500">5% GST</span></span>
-                <span className="font-medium">₹{tax.toFixed(2)}</span>
-              </div>
-              <div className="h-px bg-gray-700 my-2"></div>
-              <div className="flex justify-between font-bold">
-                <span>Total</span>
-                <span>₹{total.toFixed(2)}</span>
-              </div>
             </div>
           </div>
 
           <div className="lg:col-span-1">
-            <form onSubmit={handleSubmit}>
-              {/* Billing Details */}
-              <div className="bg-[#1A1F2C] rounded-lg shadow-md p-4 mb-6">
-                <h2 className="font-bold text-lg mb-4">Billing details</h2>
-                
-                <div className="mb-4">
-                  <Label htmlFor="name" className="mb-1 block text-white">Name*</Label>
-                  <Input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
-                    value={formData.name} 
-                    onChange={handleInputChange} 
-                    placeholder="Enter your name" 
-                    className="bg-black/40 border-gray-700 text-white"
-                    required
-                  />
-                </div>
-                
-                <div className="mb-4">
-                  <Label htmlFor="mobile" className="mb-1 block text-white">Mobile number*</Label>
-                  <div className="flex">
-                    <Input 
-                      type="tel" 
-                      id="mobile" 
-                      name="mobile" 
-                      value={formData.mobile} 
-                      onChange={handleInputChange} 
-                      placeholder="Enter your mobile number" 
-                      className="flex-1 bg-black/40 border-gray-700 text-white"
-                      required
-                    />
-                    <button type="button" className="text-deepa-teal text-sm ml-2">Change Number</button>
-                  </div>
-                </div>
-                
-                <div className="mb-4">
-                  <Label htmlFor="email" className="mb-1 block text-white">Email</Label>
-                  <Input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    value={formData.email} 
-                    onChange={handleInputChange} 
-                    placeholder="Please enter your email address" 
-                    className="bg-black/40 border-gray-700 text-white"
-                  />
-                </div>
-              </div>
-
-              {/* Shipping Address */}
-              <div className="bg-[#1A1F2C] rounded-lg shadow-md p-4 mb-6">
-                <h2 className="font-bold text-lg mb-4">Shipping address</h2>
-                
-                <div className="mb-4">
-                  <Label htmlFor="country" className="mb-1 block text-white">Country*</Label>
-                  <Input 
-                    type="text" 
-                    id="country" 
-                    name="country" 
-                    value={formData.country} 
-                    onChange={handleInputChange} 
-                    placeholder="Please enter your country" 
-                    className="bg-black/40 border-gray-700 text-white"
-                    required
-                  />
-                </div>
-                
-                <div className="mb-4">
-                  <Label htmlFor="postalCode" className="mb-1 block text-white">Pincode/Zipcode/Postal code*</Label>
-                  <Input 
-                    type="text" 
-                    id="postalCode" 
-                    name="postalCode" 
-                    value={formData.postalCode} 
-                    onChange={handleInputChange} 
-                    placeholder="Please enter your Pincode/Zipcode/Postal code" 
-                    className="bg-black/40 border-gray-700 text-white"
-                    required
-                  />
-                </div>
-                
-                <div className="mb-4">
-                  <Label htmlFor="address" className="mb-1 block text-white">Flat, House no., Building, Company, Apartment*</Label>
-                  <Input 
-                    type="text" 
-                    id="address" 
-                    name="address" 
-                    value={formData.address} 
-                    onChange={handleInputChange} 
-                    placeholder="Flat, House no., Building, Company, Apartment" 
-                    className="bg-black/40 border-gray-700 text-white"
-                    required
-                  />
-                </div>
-                
-                <div className="mb-4">
-                  <Label htmlFor="area" className="mb-1 block text-white">Area, Colony, Street, Sector, Village*</Label>
-                  <Input 
-                    type="text" 
-                    id="area" 
-                    name="area" 
-                    value={formData.area} 
-                    onChange={handleInputChange} 
-                    placeholder="Area, Colony, Street, Sector, Village" 
-                    className="bg-black/40 border-gray-700 text-white"
-                    required
-                  />
-                </div>
-                
-                <div className="mb-4">
-                  <Label htmlFor="landmark" className="mb-1 block text-white">Landmark</Label>
-                  <Input 
-                    type="text" 
-                    id="landmark" 
-                    name="landmark" 
-                    value={formData.landmark} 
-                    onChange={handleInputChange} 
-                    placeholder="near post-office, hospital, school, bank, etc" 
-                    className="bg-black/40 border-gray-700 text-white"
-                  />
-                </div>
-                
-                <div className="mb-4">
-                  <Label htmlFor="state" className="mb-1 block text-white">State*</Label>
-                  <Input 
-                    type="text" 
-                    id="state" 
-                    name="state" 
-                    value={formData.state} 
-                    onChange={handleInputChange} 
-                    placeholder="Type state name" 
-                    className="bg-black/40 border-gray-700 text-white"
-                    required
-                  />
-                </div>
-                
-                <div className="mb-4">
-                  <Label htmlFor="city" className="mb-1 block text-white">City*</Label>
-                  <Input 
-                    type="text" 
-                    id="city" 
-                    name="city" 
-                    value={formData.city} 
-                    onChange={handleInputChange} 
-                    placeholder="Type city name" 
-                    className="bg-black/40 border-gray-700 text-white"
-                    required
-                  />
-                </div>
-              </div>
-
-              {/* Confirm Order Button */}
-              <Button 
-                type="submit" 
-                className="w-full py-4 bg-deepa-teal text-black hover:bg-deepa-teal/90 rounded flex items-center justify-center"
-              >
-                CONFIRM ORDER
-                <ArrowRight className="ml-2" size={20} />
-              </Button>
-            </form>
+            <ShippingForm 
+              formData={formData}
+              onInputChange={handleInputChange}
+              onSubmit={handleSubmit}
+            />
           </div>
         </div>
       </main>
@@ -375,4 +152,3 @@ const CartPage = () => {
 };
 
 export default CartPage;
-
