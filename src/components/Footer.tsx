@@ -1,15 +1,9 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
@@ -29,49 +23,44 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a 
-                  href="#" 
-                  onClick={() => scrollToSection('products')} 
+                <Link 
+                  to="/" 
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  Products
-                </a>
+                  Home
+                </Link>
               </li>
               <li>
-                <a 
-                  href="#" 
-                  onClick={() => scrollToSection('about')} 
+                <Link 
+                  to="/about" 
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="#" 
-                  onClick={() => scrollToSection('testimonials')} 
+                <Link 
+                  to="/testimonials" 
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   Testimonials
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="#" 
-                  onClick={() => scrollToSection('why-us')} 
+                <Link 
+                  to="/why-us" 
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   Why Choose Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a 
-                  href="#" 
-                  onClick={() => scrollToSection('contact')} 
+                <Link 
+                  to="/contact" 
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

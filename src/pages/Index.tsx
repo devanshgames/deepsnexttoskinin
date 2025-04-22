@@ -4,10 +4,6 @@ import NavBar from '@/components/NavBar';
 import HeroSection from '@/components/HeroSection';
 import RecentOffersSection from '@/components/RecentOffersSection';
 import ProductsSection from '@/components/ProductsSection';
-import AboutSection from '@/components/AboutSection';
-import TestimonialsSection from '@/components/TestimonialsSection';
-import WhyChooseUsSection from '@/components/WhyChooseUsSection';
-import ContactSection from '@/components/ContactSection';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import AIChatbot from '@/components/AIChatbot';
 import Footer from '@/components/Footer';
@@ -21,10 +17,6 @@ const Index = () => {
         <HeroSection />
         <RecentOffersSection />
         <ProductsSection />
-        <AboutSection />
-        <TestimonialsSection />
-        <WhyChooseUsSection />
-        <ContactSection />
         <WhatsAppButton />
         <AIChatbot />
       </main>
