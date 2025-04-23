@@ -3,24 +3,25 @@ import React, { useEffect, useState } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { useToast } from "@/hooks/use-toast";
 
 const offers = [{
   id: 1,
   title: "Summer Collection Sale",
   description: "30% off on our latest collection",
-  image: "/public/lovable-uploads/e015dfa2-dec9-409a-9bce-35b731c654ca.png",
+  image: "/lovable-uploads/e015dfa2-dec9-409a-9bce-35b731c654ca.png",
   badge: "30% OFF"
 }, {
   id: 2,
   title: "Bulk Order Special",
   description: "Buy 100 get 20 free on selected items",
-  image: "/public/lovable-uploads/2cf4d015-43c5-43c0-9544-0b2e8a6944df.png",
+  image: "/lovable-uploads/2cf4d015-43c5-43c0-9544-0b2e8a6944df.png",
   badge: "Special Offer"
 }, {
   id: 3,
   title: "New Arrivals",
   description: "Shop our latest products",
-  image: "/public/lovable-uploads/d8733e29-8424-4cff-84df-78bd3cde30db.png",
+  image: "/lovable-uploads/d8733e29-8424-4cff-84df-78bd3cde30db.png",
   badge: "New"
 }];
 
@@ -28,17 +29,24 @@ const RecentOffersSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const whatsappNumber = "+919165004768";
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hello%2C%20I'm%20interested%20in%20your%20special%20offers.`;
+  const { toast } = useToast();
 
   useEffect(() => {
+    // Shorter delay for better visibility
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 500);
+      // Show a toast to confirm section is loaded
+      toast({
+        title: "Special Offers",
+        description: "Check out our latest offers!",
+      });
+    }, 300);
     return () => clearTimeout(timer);
-  }, []);
+  }, [toast]);
 
   return (
-    <section className={`py-12 bg-black transition-all duration-1000 transform ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}>
-      <div className="container mx-auto px-4">
+    <section className="py-12 relative z-10">
+      <div className={`container mx-auto px-4 transition-all duration-700 transform ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}>
         <h2 className="text-3xl font-display font-bold text-deepa-teal mb-8 text-center">
           Special Offers
         </h2>
@@ -54,12 +62,16 @@ const RecentOffersSection = () => {
                     animationFillMode: "backwards"
                   }}
                 >
-                  <Card className="bg-black border border-deepa-teal/30 overflow-hidden hover:scale-105 transition-transform duration-300">
+                  <Card className="bg-black/80 border border-deepa-teal/30 overflow-hidden hover:scale-105 transition-transform duration-300">
                     <div className="relative h-64">
                       <img 
                         src={offer.image} 
                         alt={offer.title} 
                         className="w-full h-full object-contain"
+                        onError={(e) => {
+                          console.error(`Image failed to load: ${offer.image}`);
+                          e.currentTarget.src = '/placeholder.svg';
+                        }}
                       />
                       <Badge className="absolute top-2 right-2 bg-deepa-teal text-black font-semibold">
                         {offer.badge}
@@ -76,6 +88,12 @@ const RecentOffersSection = () => {
                         style={{
                           animationDelay: `${0.3 + 0.18 * idx}s`
                         }}
+                        onClick={() => {
+                          toast({
+                            title: "WhatsApp Contact",
+                            description: "Opening WhatsApp chat...",
+                          });
+                        }}
                       >
                         Contact for Details
                       </a>
@@ -85,8 +103,10 @@ const RecentOffersSection = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="left-1 bg-deepa-teal text-black border-none hover:bg-deepa-dark-teal" />
-          <CarouselNext className="right-1 bg-deepa-teal text-black border-none hover:bg-deepa-dark-teal" />
+          <div className="flex items-center justify-center mt-4">
+            <CarouselPrevious className="mr-2 bg-deepa-teal text-black border-none hover:bg-deepa-dark-teal static transform-none" />
+            <CarouselNext className="ml-2 bg-deepa-teal text-black border-none hover:bg-deepa-dark-teal static transform-none" />
+          </div>
         </Carousel>
       </div>
     </section>
@@ -94,4 +114,3 @@ const RecentOffersSection = () => {
 };
 
 export default RecentOffersSection;
-
