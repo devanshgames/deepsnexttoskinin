@@ -22,7 +22,7 @@ const offers = [
     id: 2,
     title: "Summer Essentials",
     description: "Buy 100 get 20 free on selected Summer Collection items",
-    image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
+    image: "/public/White Gold Minimalist Special Offers Instagram Post.png",
     badge: "Bestseller"
   },
   {
