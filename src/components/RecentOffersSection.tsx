@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Card, CardContent } from '@/components/ui/card';
@@ -45,28 +44,31 @@ const RecentOffersSection = () => {
   }, [toast]);
 
   return (
-    <section className="py-12 relative z-10">
+    // Added bg-black class to change the background color of the section to black
+    <section className="py-12 relative z-10 bg-black">
       <div className={`container mx-auto px-4 transition-all duration-700 transform ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'}`}>
+        {/* You might want to change the text color of the heading for better contrast on a black background */}
         <h2 className="text-3xl font-display font-bold text-deepa-teal mb-8 text-center">
           Special Offers
         </h2>
-        
+
         <Carousel className="w-full max-w-5xl mx-auto">
           <CarouselContent>
             {offers.map((offer, idx) => (
               <CarouselItem key={offer.id} className="md:basis-1/2 lg:basis-1/3">
-                <div 
-                  className={`p-2 animate-fade-in`} 
+                <div
+                  className={`p-2 animate-fade-in`}
                   style={{
                     animationDelay: `${0.18 * idx}s`,
                     animationFillMode: "backwards"
                   }}
                 >
+                  {/* The card background is already set to bg-black/80 */}
                   <Card className="bg-black/80 border border-deepa-teal/30 overflow-hidden hover:scale-105 transition-transform duration-300">
                     <div className="relative h-64">
-                      <img 
-                        src={offer.image} 
-                        alt={offer.title} 
+                      <img
+                        src={offer.image}
+                        alt={offer.title}
                         className="w-full h-full object-contain"
                         onError={(e) => {
                           console.error(`Image failed to load: ${offer.image}`);
@@ -78,12 +80,13 @@ const RecentOffersSection = () => {
                       </Badge>
                     </div>
                     <CardContent className="p-4">
+                      {/* Card content text color is already set to white/gray which works well on black */}
                       <h3 className="text-xl font-semibold text-white mb-2">{offer.title}</h3>
                       <p className="text-gray-300 text-sm">{offer.description}</p>
-                      <a 
-                        href={whatsappLink} 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
+                      <a
+                        href={whatsappLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="block mt-4 w-full bg-deepa-teal text-black py-2 rounded font-semibold hover:bg-deepa-dark-teal transition-colors text-center animate-fade-in"
                         style={{
                           animationDelay: `${0.3 + 0.18 * idx}s`
@@ -114,3 +117,4 @@ const RecentOffersSection = () => {
 };
 
 export default RecentOffersSection;
+
