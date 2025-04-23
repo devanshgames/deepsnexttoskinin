@@ -17,7 +17,7 @@ const NavBar = () => {
           <Link to="/" className="flex items-center">
             <div className="mr-3 w-12 h-12 flex items-center justify-center">
               <img 
-                src="/lovable-uploads/b7336af0-7fbd-46ab-a96d-203b091adb25.png" 
+                src="/lovable-uploads/LOGO.png" 
                 alt="Deep's Logo" 
                 className="max-h-full max-w-full object-contain"
               />
