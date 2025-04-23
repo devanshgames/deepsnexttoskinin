@@ -6,11 +6,13 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%/0.7; /* Black */
+    /* Changed background to use rgba for transparency */
+    --background: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
     --foreground: 135 100% 90%; /* Light Teal */
-    --card: 0 0% 0% / 0.7; /* Semi-transparent Black */
+    /* Changed card and popover background to use rgba for transparency */
+    --card: rgba(0, 0, 0, 0.7); /* Semi-transparent Black */
     --card-foreground: 135 100% 90%; /* Light Teal */
-    --popover: 0 0% 0% / 0.7; /* Semi-transparent Black */
+    --popover: rgba(0, 0, 0, 0.7); /* Semi-transparent Black */
     --popover-foreground: 135 100% 90%; /* Light Teal */
     --primary: 135 100% 90%; /* Light Teal */
     --primary-foreground: 0 0% 0%; /* Black */
@@ -29,8 +31,12 @@
   }
 
   body {
-    @apply bg-transparent;
+    /* Apply the transparent background color */
+    background-color: var(--background);
+    /* Keep the existing gradient for a subtle glossy texture */
     background-image: linear-gradient(135deg, rgba(144, 228, 193, 0.05) 0%, rgba(101, 176, 149, 0.03) 100%);
+    /* Ensure the background covers the whole viewport */
+    min-height: 100vh;
   }
 }
 
@@ -48,25 +54,26 @@
   .hero-gradient {
     background: linear-gradient(135deg, rgba(144, 228, 193, 0.1) 0%, rgba(101, 176, 149, 0.05) 100%);
   }
-  
+
   .section-title {
     @apply text-3xl md:text-4xl font-display font-semibold text-deepa-teal mb-6 relative;
   }
-  
+
   .section-title::after {
     content: "";
     @apply absolute left-0 -bottom-2 w-16 h-1 bg-deepa-teal;
   }
-  
+
   .product-card {
     @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-lg hover:-translate-y-1;
   }
-  
+
   .contact-input {
     @apply w-full rounded-md border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-deepa-teal focus:border-transparent;
   }
-  
+
   .whatsapp-button {
     @apply fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg z-50 hover:bg-green-600 transition-all duration-300 flex items-center justify-center;
   }
 }
+
