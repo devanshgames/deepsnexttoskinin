@@ -6,7 +6,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 0%; /* Black */
+    --background: 0 0% 0%/0.7; /* Black */
     --foreground: 135 100% 90%; /* Light Teal */
     --card: 0 0% 0% / 0.7; /* Semi-transparent Black */
     --card-foreground: 135 100% 90%; /* Light Teal */
