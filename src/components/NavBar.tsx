@@ -11,7 +11,8 @@ const NavBar = () => {
 
   return (
     <header className="bg-black shadow-sm py-4 sticky top-0 z-50">
-      <div className="container mx-auto px-4 flex justify-between items-center">
+      <div className="container mx-auto px-4 flex justify-between items-center relative">
+        {/* Logo + Brand */}
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
             <div className="mr-3 w-12 h-12 flex items-center justify-center">
@@ -27,6 +28,7 @@ const NavBar = () => {
           </Link>
         </div>
         
+        {/* Main nav - desktop */}
         <nav className="hidden md:flex items-center space-x-8">
           <Link to="/" className="text-deepa-teal hover:text-white transition-colors">Home</Link>
           <Link to="/about" className="text-deepa-teal hover:text-white transition-colors">About</Link>
@@ -35,9 +37,10 @@ const NavBar = () => {
           <Link to="/contact" className="text-deepa-teal hover:text-white transition-colors">Contact</Link>
         </nav>
         
-        <Link to="/cart">
+        {/* Cart Button - desktop */}
+        <Link to="/cart" className="hidden md:block">
           <Button 
-            className="bg-deepa-teal text-black hover:bg-opacity-90 hidden md:flex items-center gap-2 relative"
+            className="bg-deepa-teal text-black hover:bg-opacity-90 flex items-center gap-2 relative"
           >
             <ShoppingCart size={16} />
             Cart
@@ -48,10 +51,26 @@ const NavBar = () => {
             )}
           </Button>
         </Link>
-        
+
+        {/* Small Cart Icon - mobile */}
+        <Link to="/cart" className="md:hidden absolute right-14 top-1/2 -translate-y-1/2 z-20">
+          <Button 
+            variant="ghost"
+            className="relative text-deepa-teal p-2"
+          >
+            <ShoppingCart size={22} />
+            {itemCount > 0 && (
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                {itemCount}
+              </span>
+            )}
+          </Button>
+        </Link>
+
+        {/* Hamburger menu - only on mobile */}
         <Button 
           variant="ghost" 
-          className="md:hidden text-deepa-teal" 
+          className="md:hidden text-deepa-teal ml-2 relative z-30" 
           aria-label="Menu"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
@@ -59,7 +78,7 @@ const NavBar = () => {
         </Button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu dropdown */}
       {mobileMenuOpen && (
         <div className="md:hidden bg-black border-t border-gray-800 py-4 animate-fade-in">
           <div className="container mx-auto px-4">
@@ -69,19 +88,6 @@ const NavBar = () => {
               <Link to="/testimonials" onClick={() => setMobileMenuOpen(false)} className="text-deepa-teal hover:text-white transition-colors py-2">Testimonials</Link>
               <Link to="/why-us" onClick={() => setMobileMenuOpen(false)} className="text-deepa-teal hover:text-white transition-colors py-2">Why Us</Link>
               <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="text-deepa-teal hover:text-white transition-colors py-2">Contact</Link>
-              <Link to="/cart" onClick={() => setMobileMenuOpen(false)}>
-                <Button 
-                  className="bg-deepa-teal text-black hover:bg-opacity-90 w-full flex items-center justify-center gap-2 mt-2 relative"
-                >
-                  <ShoppingCart size={16} />
-                  Cart
-                  {itemCount > 0 && (
-                    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                      {itemCount}
-                    </span>
-                  )}
-                </Button>
-              </Link>
             </nav>
           </div>
         </div>

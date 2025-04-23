@@ -91,12 +91,6 @@ const CartPage = () => {
             Back
           </Button>
           <h1 className="text-2xl font-bold">Your Cart</h1>
-          <CartSummary 
-            subtotal={subtotal}
-            tax={tax}
-            total={total}
-            itemCount={items.reduce((acc, item) => acc + item.quantity, 0)}
-          />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -134,8 +128,14 @@ const CartPage = () => {
                 />
               ))}
             </div>
+            {/* Cart summary at the bottom for both mobile and desktop */}
+            <CartSummary 
+              subtotal={subtotal}
+              tax={tax}
+              total={total}
+              itemCount={items.reduce((acc, item) => acc + item.quantity, 0)}
+            />
           </div>
-
           <div className="lg:col-span-1">
             <ShippingForm 
               formData={formData}
