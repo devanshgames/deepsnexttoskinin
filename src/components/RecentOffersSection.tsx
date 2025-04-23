@@ -15,7 +15,7 @@ const offers = [
     id: 1,
     title: "Premium Cotton Collection",
     description: "30% off on bulk orders of Premium Cotton Undergarments",
-    image: "/lovable-uploads/Brown and Pink Modern Seasonal Cosmetics Sale Instagram Post.png",
+    image: "/public/Brown and Pink Modern Seasonal Cosmetics Sale Instagram Post.png",
     badge: "Limited Time"
   },
   {
