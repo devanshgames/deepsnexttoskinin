@@ -50,6 +50,11 @@ const App = () => (
             <Route path="/products/panties" element={<PantiesPage />} />
             <Route path="/products/camisole" element={<CamisolePage />} />
             <Route path="/products/more" element={<MorePage />} />
+            <Route path="/products/bra/deeps" element={<DeepsPage />} />
+            <Route path="/products/bra/beautyplus" element={<BeautyplusPage />} />
+            <Route path="/products/bra/bodica" element={<BodicaPage />} />
+            <Route path="/products/bra/rani" element={<RaniPage />} />
+            <Route path="/products/bra/mothercool" element={<MothercoolPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
