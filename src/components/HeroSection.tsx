@@ -40,13 +40,8 @@ const HeroSection = () => {
                 className="w-full h-auto rounded-md object-cover"
                 src="/lovable-uploads/c44b5526-793f-4572-99a7-a49df064af05.png"
               />
+            </div>   
             </div>
-            
-              
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
   );
 };
