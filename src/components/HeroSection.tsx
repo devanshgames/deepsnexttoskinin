@@ -42,11 +42,7 @@ const HeroSection = () => {
               />
             </div>
             <div className="bg-black p-4 rounded-lg shadow-lg border border-deepa-teal">
-              <img
-                alt="DEEPA HOSIERY Store Front"
-                className="w-full h-auto rounded-md object-cover"
-                src="/lovable-uploads/ae61480c-7c1b-41df-b4a1-9d2b1abfe5bd.png"
-              />
+              
             </div>
           </div>
         </div>
