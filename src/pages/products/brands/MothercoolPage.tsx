@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const DeepsPage = () => {
+const MothercoolPage = () => {
   return (
     <div className="min-h-screen bg-black">
       <NavBar />
@@ -17,20 +17,20 @@ const DeepsPage = () => {
           </Link>
         </div>
         
-        <h1 className="text-4xl font-display font-bold text-deepa-teal mb-8">DEEP'S Collection</h1>
+        <h1 className="text-4xl font-display font-bold text-deepa-teal mb-8">MOTHERCOOL Collection</h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="rounded-lg overflow-hidden">
             <img 
-              src="/lovable-uploads/TSPAD1.jpg"
-              alt="DEEP'S Collection"
+              src="/lovable-uploads/FRONT.jpg"
+              alt="MOTHERCOOL Collection"
               className="w-full h-[400px] object-cover"
             />
           </div>
           <div className="flex flex-col justify-center">
-            <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4">Premium DEEP'S Bras</h2>
+            <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4">Premium MOTHERCOOL Bras</h2>
             <p className="text-gray-300 mb-6">
-              Discover our signature DEEP'S collection, known for its exceptional quality and comfort.
+              The MOTHERCOOL collection is specially designed for new mothers, providing both comfort and functionality.
             </p>
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-center">
@@ -54,4 +54,4 @@ const DeepsPage = () => {
   );
 };
 
-export default DeepsPage;
+export default MothercoolPage;

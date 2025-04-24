@@ -17,6 +17,11 @@ import BraPage from "./pages/products/Bra";
 import PantiesPage from "./pages/products/Panties";
 import CamisolePage from "./pages/products/Camisole";
 import MorePage from "./pages/products/More";
+import DeepsPage from "./pages/products/brands/DeepsPage";
+import BeautyplusPage from "./pages/products/brands/BeautyplusPage";
+import BodicaPage from "./pages/products/brands/BodicaPage";
+import RaniPage from "./pages/products/brands/RaniPage";
+import MothercoolPage from "./pages/products/brands/MothercoolPage";
 
 // ScrollToTop component to handle scroll restoration
 const ScrollToTop = () => {
