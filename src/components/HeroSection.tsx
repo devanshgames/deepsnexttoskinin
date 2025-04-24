@@ -34,7 +34,7 @@ const HeroSection = () => {
           <div className="md:w-1/2 md:pl-12 animate-fade-in space-y-4" style={{
             animationDelay: '0.2s'
           }}>
-            <div className="bg-black p-4 rounded-lg shadow-lg border border-deepa-teal">
+            <div className="bg-black rounded-lg shadow-lg border border-deepa-teal">
               <img
                 alt="DEEPA HOSIERY Business Display"
                 className="w-full h-auto rounded-md object-cover"
