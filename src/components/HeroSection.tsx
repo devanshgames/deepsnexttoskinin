@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
+
 const HeroSection = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -9,7 +10,9 @@ const HeroSection = () => {
       });
     }
   };
-  return <section className="bg-black py-16 md:py-24">
+
+  return (
+    <section className="bg-black py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0 animate-fade-in">
@@ -28,15 +31,28 @@ const HeroSection = () => {
               </Button>
             </div>
           </div>
-          <div className="md:w-1/2 md:pl-12 animate-fade-in" style={{
-          animationDelay: '0.2s'
-        }}>
+          <div className="md:w-1/2 md:pl-12 animate-fade-in space-y-4" style={{
+            animationDelay: '0.2s'
+          }}>
             <div className="bg-black p-4 rounded-lg shadow-lg border border-deepa-teal">
-              <img alt="DEEPA HOSIERY Business Display" className="w-full h-auto rounded-md object-cover" src="/lovable-uploads/ca1f3117-1350-490b-aaea-780abf8e31f0.jpg" />
+              <img
+                alt="DEEPA HOSIERY Business Display"
+                className="w-full h-auto rounded-md object-cover"
+                src="/lovable-uploads/c44b5526-793f-4572-99a7-a49df064af05.png"
+              />
+            </div>
+            <div className="bg-black p-4 rounded-lg shadow-lg border border-deepa-teal">
+              <img
+                alt="DEEPA HOSIERY Store Front"
+                className="w-full h-auto rounded-md object-cover"
+                src="/lovable-uploads/ae61480c-7c1b-41df-b4a1-9d2b1abfe5bd.png"
+              />
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default HeroSection;
