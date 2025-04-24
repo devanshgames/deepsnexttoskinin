@@ -7,12 +7,12 @@
 @layer base {
   :root {
     /* Changed background to use rgba for transparency */
-    --background: rgba(0, 0, 0, 0.5); /* Black with 70% opacity */
+    --background: rgba(0, 0, 0, 0.8); /* Black with 70% opacity */
     --foreground: 135 100% 90%; /* Light Teal */
     /* Changed card and popover background to use rgba for transparency */
     --card: rgba(0, 0, 0, 0.5); /* Semi-transparent Black */
     --card-foreground: 135 100% 90%; /* Light Teal */
-    --popover: rgba(0, 0, 0, 0.5); /* Semi-transparent Black */
+    --popover: rgba(0, 0, 0, 0.8); /* Semi-transparent Black */
     --popover-foreground: 135 100% 90%; /* Light Teal */
     --primary: 135 100% 90%; /* Light Teal */
     --primary-foreground: 0 0% 0%; /* Black */
