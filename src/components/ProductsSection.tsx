@@ -1,12 +1,9 @@
-
 import React from 'react';
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ShoppingCart } from 'lucide-react';
-import { useToast } from "@/hooks/use-toast";
-import { useCart } from '@/contexts/CartContext';
-import { useNavigate } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const logoUrl = "https://images.unsplash.com/photo-logo.png?auto=format&fit=crop&q=80&w=100&ixlib=rb-4.0.3";
 
@@ -15,40 +12,32 @@ const products = [{
   name: "BRA",
   image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
   category: "Undergarments",
-  isSpecialOffer: true
+  isSpecialOffer: true,
+  link: "/products/bra"
 }, {
   id: 2,
   name: "PANTIES",
   image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
   category: "Lingerie",
-  isSpecialOffer: false
+  isSpecialOffer: false,
+  link: "/products/panties"
 }, {
   id: 3,
   name: "CAMISOLE",
   image: "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
   category: "Innerwear",
-  isSpecialOffer: true
+  isSpecialOffer: true,
+  link: "/products/camisole"
 }, {
   id: 4,
   name: "MORE",
   image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
   category: "Children",
-  isSpecialOffer: false
+  isSpecialOffer: false,
+  link: "/products/more"
 }];
 
 const ProductsSection = () => {
-  const { toast } = useToast();
-  const { addToCart } = useCart();
-  const navigate = useNavigate();
-
-  const handleAddToCart = (product: any) => {
-    addToCart(product);
-    toast({
-      title: "Added to cart",
-      description: `${product.name} has been added to your cart`,
-    });
-  };
-
   return <section id="products" className="py-16 bg-black">
       <div className="container mx-auto px-4">
         <div className="flex justify-center mb-8">
@@ -79,20 +68,15 @@ const ProductsSection = () => {
               <CardContent className="pt-4">
                 <h3 className="text-xl font-semibold mb-2 text-slate-900">{product.name}</h3>
                 <p className="text-sm text-gray-500">{product.category}</p>
+                <Link to={product.link}>
+                  <Button 
+                    className="w-full mt-4 bg-deepa-teal text-black hover:bg-opacity-90 flex items-center justify-center gap-2"
+                  >
+                    View Details
+                    <ArrowRight size={16} />
+                  </Button>
+                </Link>
               </CardContent>
-              <CardFooter className="border-t pt-4 flex justify-between bg-gray-950">
-                <span className="text-deepa-teal font-semibold">
-                  Add to Cart
-                </span>
-                <Button 
-                  onClick={() => handleAddToCart(product)} 
-                  size="sm" 
-                  className="bg-deepa-teal text-black hover:bg-opacity-90"
-                >
-                  <span className="sr-only">Add to Cart</span>
-                  <ShoppingCart size={16} />
-                </Button>
-              </CardFooter>
             </Card>
           ))}
         </div>
