@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 
@@ -41,9 +42,11 @@ const HeroSection = () => {
                 src="/lovable-uploads/c44b5526-793f-4572-99a7-a49df064af05.png"
               />
             </div>   
-            </div>
-    </section> 
-    );
-      
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default HeroSection;
