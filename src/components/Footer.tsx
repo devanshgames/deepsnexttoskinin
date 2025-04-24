@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  
+  // Add a scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
 
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
@@ -26,6 +31,7 @@ const Footer = () => {
                 <Link 
                   to="/" 
                   className="text-gray-300 hover:text-white transition-colors"
+                  onClick={scrollToTop}
                 >
                   Home
                 </Link>
@@ -34,6 +40,7 @@ const Footer = () => {
                 <Link 
                   to="/about" 
                   className="text-gray-300 hover:text-white transition-colors"
+                  onClick={scrollToTop}
                 >
                   About Us
                 </Link>
@@ -42,6 +49,7 @@ const Footer = () => {
                 <Link 
                   to="/testimonials" 
                   className="text-gray-300 hover:text-white transition-colors"
+                  onClick={scrollToTop}
                 >
                   Testimonials
                 </Link>
@@ -50,6 +58,7 @@ const Footer = () => {
                 <Link 
                   to="/why-us" 
                   className="text-gray-300 hover:text-white transition-colors"
+                  onClick={scrollToTop}
                 >
                   Why Choose Us
                 </Link>
@@ -58,6 +67,7 @@ const Footer = () => {
                 <Link 
                   to="/contact" 
                   className="text-gray-300 hover:text-white transition-colors"
+                  onClick={scrollToTop}
                 >
                   Contact
                 </Link>

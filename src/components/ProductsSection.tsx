@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -38,6 +39,11 @@ const products = [{
 }];
 
 const ProductsSection = () => {
+  // Add a scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   return <section id="products" className="py-16 bg-black">
       <div className="container mx-auto px-4">
         <div className="flex justify-center mb-8">
@@ -68,7 +74,7 @@ const ProductsSection = () => {
               <CardContent className="pt-4">
                 <h3 className="text-xl font-semibold mb-2 text-slate-900">{product.name}</h3>
                 <p className="text-sm text-gray-500">{product.category}</p>
-                <Link to={product.link}>
+                <Link to={product.link} onClick={scrollToTop}>
                   <Button 
                     className="w-full mt-4 bg-deepa-teal text-black hover:bg-opacity-90 flex items-center justify-center gap-2"
                   >
