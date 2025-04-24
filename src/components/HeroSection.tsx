@@ -41,7 +41,7 @@ const HeroSection = () => {
                 src="/lovable-uploads/c44b5526-793f-4572-99a7-a49df064af05.png"
               />
             </div>
-            <div className="bg-black p-4 rounded-lg shadow-lg border border-deepa-teal">
+            
               
             </div>
           </div>
