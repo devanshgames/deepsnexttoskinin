@@ -2,7 +2,7 @@
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, PackageOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const PantyBodicaPage = () => {
@@ -19,34 +19,12 @@ const PantyBodicaPage = () => {
         
         <h1 className="text-4xl font-display font-bold text-deepa-teal mb-8">BODICA Panties Collection</h1>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="rounded-lg overflow-hidden">
-            <img 
-              src="/lovable-uploads/TSPAD 3.jpg"
-              alt="BODICA Panties Collection"
-              className="w-full h-[400px] object-cover"
-            />
-          </div>
-          <div className="flex flex-col justify-center">
-            <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4">Premium BODICA Panties</h2>
-            <p className="text-gray-300 mb-6">
-              Experience the excellence of our BODICA panties collection, featuring superior craftsmanship and quality materials.
-            </p>
-            <ul className="space-y-4 text-gray-300">
-              <li className="flex items-center">
-                <ArrowRight className="text-deepa-teal mr-2" size={16} />
-                Premium cotton material
-              </li>
-              <li className="flex items-center">
-                <ArrowRight className="text-deepa-teal mr-2" size={16} />
-                Available in multiple sizes
-              </li>
-              <li className="flex items-center">
-                <ArrowRight className="text-deepa-teal mr-2" size={16} />
-                Comfortable fit
-              </li>
-            </ul>
-          </div>
+        <div className="flex flex-col items-center justify-center py-16 text-center">
+          <PackageOpen className="text-deepa-teal mb-4" size={64} />
+          <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4">Arriving Soon!</h2>
+          <p className="text-gray-300 max-w-md">
+            Get ready for our newest collection! BODICA Panties will be available soon, bringing you comfort and style in every piece.
+          </p>
         </div>
       </main>
       <Footer />
