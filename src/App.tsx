@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -22,8 +21,17 @@ import BeautyplusPage from "./pages/products/brands/BeautyplusPage";
 import BodicaPage from "./pages/products/brands/BodicaPage";
 import RaniPage from "./pages/products/brands/RaniPage";
 import MothercoolPage from "./pages/products/brands/MothercoolPage";
+import PantyDeepsPage from "./pages/products/Panties/Deeps";
+import PantyBeautyplusPage from "./pages/products/Panties/Beautyplus";
+import PantyBodicaPage from "./pages/products/Panties/Bodica";
+import PantyRaniPage from "./pages/products/Panties/Rani";
+import PantyMothercoolPage from "./pages/products/Panties/Mothercool";
+import CamisoleDeepsPage from "./pages/products/Camisole/Deeps";
+import CamisoleBeautyplusPage from "./pages/products/Camisole/Beautyplus";
+import CamisoleBodicaPage from "./pages/products/Camisole/Bodica";
+import CamisoleRaniPage from "./pages/products/Camisole/Rani";
+import CamisoleMothercoolPage from "./pages/products/Camisole/Mothercool";
 
-// ScrollToTop component to handle scroll restoration
 const ScrollToTop = () => {
   const { pathname } = useLocation();
   
@@ -60,6 +68,16 @@ const App = () => (
             <Route path="/products/bra/bodica" element={<BodicaPage />} />
             <Route path="/products/bra/rani" element={<RaniPage />} />
             <Route path="/products/bra/mothercool" element={<MothercoolPage />} />
+            <Route path="/products/panties/deeps" element={<PantyDeepsPage />} />
+            <Route path="/products/panties/beautyplus" element={<PantyBeautyplusPage />} />
+            <Route path="/products/panties/bodica" element={<PantyBodicaPage />} />
+            <Route path="/products/panties/rani" element={<PantyRaniPage />} />
+            <Route path="/products/panties/mothercool" element={<PantyMothercoolPage />} />
+            <Route path="/products/camisole/deeps" element={<CamisoleDeepsPage />} />
+            <Route path="/products/camisole/beautyplus" element={<CamisoleBeautyplusPage />} />
+            <Route path="/products/camisole/bodica" element={<CamisoleBodicaPage />} />
+            <Route path="/products/camisole/rani" element={<CamisoleRaniPage />} />
+            <Route path="/products/camisole/mothercool" element={<CamisoleMothercoolPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

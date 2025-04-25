@@ -3,6 +3,7 @@ import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const PantiesPage = () => {
   return (
@@ -13,29 +14,46 @@ const PantiesPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="rounded-lg overflow-hidden">
             <img 
-              src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3"
+              src="/lovable-uploads/TSPAD1.jpg"
               alt="Panties Collection"
               className="w-full h-[400px] object-cover"
             />
           </div>
           <div className="flex flex-col justify-center">
-            <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4">Premium Quality Panties</h2>
+            <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4">Our Brands</h2>
             <p className="text-gray-300 mb-6">
-              Explore our selection of comfortable and elegant panties.
-              Made with the finest materials for daily comfort and style.
+              Explore our premium collection of comfortable and stylish panties from our various brands.
             </p>
-            <ul className="space-y-4 text-gray-300 mb-6">
-              <li className="flex items-center">
-                <ArrowRight className="text-deepa-teal mr-2" size={16} />
-                Soft and breathable fabric
+            <ul className="space-y-4 text-gray-300">
+              <li>
+                <Link to="/products/panties/deeps" className="flex items-center group hover:text-deepa-teal transition-colors">
+                  <ArrowRight className="text-deepa-teal mr-2 group-hover:translate-x-1 transition-transform" size={16} />
+                  DEEP'S
+                </Link>
               </li>
-              <li className="flex items-center">
-                <ArrowRight className="text-deepa-teal mr-2" size={16} />
-                Multiple styles available
+              <li>
+                <Link to="/products/panties/beautyplus" className="flex items-center group hover:text-deepa-teal transition-colors">
+                  <ArrowRight className="text-deepa-teal mr-2 group-hover:translate-x-1 transition-transform" size={16} />
+                  BEAUTYPLUS APPARELS
+                </Link>
               </li>
-              <li className="flex items-center">
-                <ArrowRight className="text-deepa-teal mr-2" size={16} />
-                Perfect fit guarantee
+              <li>
+                <Link to="/products/panties/bodica" className="flex items-center group hover:text-deepa-teal transition-colors">
+                  <ArrowRight className="text-deepa-teal mr-2 group-hover:translate-x-1 transition-transform" size={16} />
+                  BODICA
+                </Link>
+              </li>
+              <li>
+                <Link to="/products/panties/rani" className="flex items-center group hover:text-deepa-teal transition-colors">
+                  <ArrowRight className="text-deepa-teal mr-2 group-hover:translate-x-1 transition-transform" size={16} />
+                  RANI
+                </Link>
+              </li>
+              <li>
+                <Link to="/products/panties/mothercool" className="flex items-center group hover:text-deepa-teal transition-colors">
+                  <ArrowRight className="text-deepa-teal mr-2 group-hover:translate-x-1 transition-transform" size={16} />
+                  MOTHERCOOL
+                </Link>
               </li>
             </ul>
           </div>
