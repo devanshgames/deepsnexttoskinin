@@ -11,7 +11,7 @@ const logoUrl = "https://images.unsplash.com/photo-logo.png?auto=format&fit=crop
 const products = [{
   id: 1,
   name: "BRA",
-  image: "/lovable-uploads/Photoroom-20250427_131412.png",
+  image: "/lovable-uploads/Photoroom-20250427_131412.png?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
   category: "Undergarments",
   isSpecialOffer: true,
   link: "/products/bra"
