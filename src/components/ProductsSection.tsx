@@ -32,7 +32,7 @@ const products = [{
 }, {
   id: 4,
   name: "MORE",
-  image: "/lovable-uploads/Photoroom-20250427_132845.png?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
+  image: "/lovable-uploads/Photoroom-20250427_133242.png?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
   category: "Children",
   isSpecialOffer: false,
   link: "/products/more"
