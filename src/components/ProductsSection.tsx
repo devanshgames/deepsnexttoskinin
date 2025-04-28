@@ -6,7 +6,6 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const logoUrl = "https://images.unsplash.com/photo-logo.png?auto=format&fit=crop&q=80&w=100&ixlib=rb-4.0.3";
 
 const products = [{
   id: 1,
