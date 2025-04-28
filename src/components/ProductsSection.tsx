@@ -1,13 +1,10 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const logoUrl = "https://images.unsplash.com/photo-logo.png?auto=format&fit=crop&q=80&w=100&ixlib=rb-4.0.3";
-
 const products = [{
   id: 1,
   name: "BRA",
@@ -37,21 +34,15 @@ const products = [{
   isSpecialOffer: false,
   link: "/products/more"
 }];
-
 const ProductsSection = () => {
   // Add a scroll to top function
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
-
   return <section id="products" className="py-16 bg-black">
       <div className="container mx-auto px-4">
         <div className="flex justify-center mb-8">
-          <img
-            src={logoUrl}
-            alt="DEEPA HOSIERY Logo"
-            className="h-12 w-auto object-contain"
-          />
+          
         </div>
         <h2 className="section-title text-center mx-auto mb-12 text-white">
           Our Products
@@ -61,12 +52,10 @@ const ProductsSection = () => {
         </p>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {products.map((product, idx) => (
-            <Card 
-              key={product.id} 
-              className={`product-card animate-fade-in transition-all duration-700`}
-              style={{ animationDelay: `${0.12 * idx}s`, animationFillMode: "backwards" }}
-            >
+          {products.map((product, idx) => <Card key={product.id} className={`product-card animate-fade-in transition-all duration-700`} style={{
+          animationDelay: `${0.12 * idx}s`,
+          animationFillMode: "backwards"
+        }}>
               <div className="relative">
                 <img src={product.image} alt={product.name} className="w-full h-64 object-cover" />
                 {product.isSpecialOffer && <Badge className="absolute top-3 right-3 bg-deepa-teal">Special Offer</Badge>}
@@ -75,16 +64,13 @@ const ProductsSection = () => {
                 <h3 className="text-xl font-semibold mb-2 text-slate-900">{product.name}</h3>
                 <p className="text-sm text-gray-500">{product.category}</p>
                 <Link to={product.link} onClick={scrollToTop}>
-                  <Button 
-                    className="w-full mt-4 bg-deepa-teal text-black hover:bg-opacity-90 flex items-center justify-center gap-2"
-                  >
+                  <Button className="w-full mt-4 bg-deepa-teal text-black hover:bg-opacity-90 flex items-center justify-center gap-2">
                     View Details
                     <ArrowRight size={16} />
                   </Button>
                 </Link>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
         
         <div className="mt-16 bg-deepa-teal/10 p-8 rounded-lg">
@@ -112,5 +98,4 @@ const ProductsSection = () => {
       </div>
     </section>;
 };
-
 export default ProductsSection;
