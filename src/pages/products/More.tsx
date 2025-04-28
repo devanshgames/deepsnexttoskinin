@@ -13,7 +13,7 @@ const MorePage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="rounded-lg overflow-hidden">
             <img 
-              src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3"
+              src="/lovable-uploads/Photoroom-20250427_133242.pngauto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3"
               alt="More Products"
               className="w-full h-[400px] object-cover"
             />
