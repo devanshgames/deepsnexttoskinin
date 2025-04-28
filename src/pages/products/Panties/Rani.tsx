@@ -17,7 +17,7 @@ const PantyRaniPage = () => {
           </Link>
         </div>
         
-        <h1 className="text-4xl font-display font-bold text-deepa-teal mb-8">BEAUTYPLUS APPARELS Panties Collection</h1>
+        <h1 className="text-4xl font-display font-bold text-deepa-teal mb-8">RANI PANTIES</h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="rounded-lg overflow-hidden">
