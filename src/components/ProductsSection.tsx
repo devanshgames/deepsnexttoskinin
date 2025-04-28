@@ -18,7 +18,7 @@ const products = [{
 }, {
   id: 2,
   name: "PANTIES",
-  image: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
+  image: "lovable-uploads/Photoroom-20250427_132024 (1).png?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
   category: "Lingerie",
   isSpecialOffer: false,
   link: "/products/panties"
