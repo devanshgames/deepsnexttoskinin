@@ -1,13 +1,10 @@
-
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const BeautyplusPage = () => {
-  return (
-    <div className="min-h-screen bg-black">
+  return <div className="min-h-screen bg-black">
       <NavBar />
       <main className="container mx-auto px-4 py-16">
         <div className="mb-6">
@@ -21,11 +18,7 @@ const BeautyplusPage = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="rounded-lg overflow-hidden">
-            <img 
-              src="/lovable-uploads/TSPAD 2.jpg"
-              alt="BEAUTYPLUS APPARELS Collection"
-              className="w-full h-[400px] object-cover"
-            />
+            <img alt="BEAUTYPLUS APPARELS Collection" src="/lovable-uploads/a97e144c-56c6-4e82-8ff3-05e6f262d223.png" className="w-full h-[700px] object-cover" />
           </div>
           <div className="flex flex-col justify-center">
             <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4">Premium BEAUTYPLUS APPARELS Bras</h2>
@@ -50,8 +43,6 @@ const BeautyplusPage = () => {
         </div>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default BeautyplusPage;
