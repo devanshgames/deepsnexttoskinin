@@ -28,7 +28,7 @@ const PantyRaniPage = () => {
             />
           </div>
           <div className="flex flex-col justify-center">
-            <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4">Premium BEAUTYPLUS APPARELS Panties</h2>
+            <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4">Premium RANI Panties</h2>
             <p className="text-gray-300 mb-6">
               Experience luxury and comfort with our BEAUTYPLUS APPARELS panties collection.
             </p>
