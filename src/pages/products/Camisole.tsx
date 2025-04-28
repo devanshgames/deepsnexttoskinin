@@ -14,7 +14,7 @@ const CamisolePage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="rounded-lg overflow-hidden">
             <img 
-              src="/lovable-uploads/TSPAD 3.jpg"
+              src="/lovable-uploads/Photoroom-20250427_132845.png"
               alt="Camisole Collection"
               className="w-full h-[400px] object-cover"
             />
