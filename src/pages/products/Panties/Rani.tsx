@@ -23,7 +23,7 @@ const PantyRaniPage = () => {
           <div className="rounded-lg overflow-hidden">
             <img 
               src="/lovable-uploads/TSPAD 2.jpg"
-              alt="BEAUTYPLUS APPARELS Panties Collection"
+              alt="RANI PANTIES"
               className="w-full h-[400px] object-cover"
             />
           </div>
