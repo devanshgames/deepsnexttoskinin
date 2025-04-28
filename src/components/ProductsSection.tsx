@@ -25,7 +25,7 @@ const products = [{
 }, {
   id: 3,
   name: "CAMISOLE",
-  image: "https://images.unsplash.com/photo-1493397212122-2b85dda8106b?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
+  image: "/lovable-uploads/Photoroom-20250427_132845.png?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
   category: "Innerwear",
   isSpecialOffer: true,
   link: "/products/camisole"
