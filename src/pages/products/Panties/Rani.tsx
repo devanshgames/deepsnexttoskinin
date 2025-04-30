@@ -11,7 +11,7 @@ const PantyRaniPage = () => {
       <NavBar />
       <main className="container mx-auto px-4 py-16">
         <div className="mb-6">
-          <Link to="/products/panties" className="text-deepa-teal hover:underline flex items-center">
+          <Link to="/products/panties" className="text-deepa-teal hover:underline flex items-center"/>
             <ArrowRight className="rotate-180 mr-2" size={16} />
             Back to Panties Collection
           </Link>
