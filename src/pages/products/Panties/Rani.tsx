@@ -4,6 +4,7 @@ import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import { ArrowRight, PackageOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Button } from 'react-day-picker';
 
 const PantyRaniPage = () => {
   return (
@@ -45,10 +46,7 @@ const PantyRaniPage = () => {
                   <ArrowRight className="text-deepa-teal mr-2" size={16} />
                   Comfortable fit
                 </li>
-                <li className="flex items-center">
-                  <ArrowRight className="text-deepa-teal mr-2" size={16} />
-                  DOWNLOAD OUR CATALOGUE
-                  </li>
+              
               </ul>
             </div>
           </div>
