@@ -24,8 +24,8 @@ const PantyRaniPage = () => {
             <img 
               src="/lovable-uploads/TSPAD 2.jpg"
               alt="RANI PANTIES"
-              className="w-full h-[400px] object-cover"
-            />
+              className="w-full h-[400px] object-cover">
+            </div>
           </div>
           <div className="flex flex-col justify-center">
             <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4">Premium RANI Panties</h2>
