@@ -57,7 +57,7 @@ const ProductsSection = () => {
           animationFillMode: "backwards"
         }}>
               <div className="relative">
-                <img src={product.image} alt={product.name} className="w-full h-64 object-cover" />
+                <img src={product.image} alt={product.name} className="w-full h-64 object-contain" />
                 {product.isSpecialOffer && <Badge className="absolute top-3 right-3 bg-deepa-teal">Special Offer</Badge>}
               </div>
               <CardContent className="pt-4">
