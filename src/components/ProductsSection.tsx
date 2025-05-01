@@ -15,7 +15,7 @@ const products = [{
 }, {
   id: 2,
   name: "PANTIES",
-  image: "/lovable-uploads/Photoroom-20250427_132024.png?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
+  image: "/lovable-uploads/IMG_20250428_132532.jpg?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3",
   category: "Lingerie",
   isSpecialOffer: false,
   link: "/products/panties"
