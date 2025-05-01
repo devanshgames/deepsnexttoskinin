@@ -49,7 +49,6 @@ const PantyRaniPage = () => {
                 <ArrowRight className="text-deepa-teal mr-2" size={16} />
                 Comfortable fit
               </li>
-              
             </ul>
           </div>
         </div>
