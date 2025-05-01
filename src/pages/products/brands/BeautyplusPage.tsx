@@ -26,7 +26,10 @@ const BeautyplusPage = () => {
               Discover our luxurious BEAUTYPLUS APPARELS collection, designed for ultimate comfort and style.
             </p>
             <ul className="space-y-4 text-gray-300">
-              public/b+ samples.pdf
+            <ArrowRight className="text-deepa-teal mr-2" size={16} />
+              <li className="flex items-center">
+             <a href="public/b+ samples.pdf" download="BEAUTYPLUS.pdf" className="hover:text-deepa-teal transition-colors">Download Product Catalog</a>
+              </li>
               <li className="flex items-center">
                 <ArrowRight className="text-deepa-teal mr-2" size={16} />
                 Premium cotton material
