@@ -17,20 +17,20 @@ const PantyBodicaPage = () => {
           </Link>
         </div>
         
-        <h1 className="text-4xl font-display font-bold text-deepa-teal mb-8">BEAUTYPLUS APPARELS Panties Collection</h1>
+        <h1 className="text-4xl font-display font-bold text-deepa-teal mb-8">BODICA Panties Collection</h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="rounded-lg overflow-hidden">
             <img 
               src="/lovable-uploads/TSPAD 2.jpg"
-              alt="BEAUTYPLUS APPARELS Panties Collection"
+              alt="BODICA PANTIES"
               className="w-full h-[400px] object-cover"
             />
           </div>
           <div className="flex flex-col justify-center">
-            <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4">Premium BEAUTYPLUS APPARELS Panties</h2>
+            <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4">Premium BODICA Panties</h2>
             <p className="text-gray-300 mb-6">
-              Experience luxury and comfort with our BEAUTYPLUS APPARELS panties collection.
+              Experience luxury and comfort with our BODICA panties collection.
             </p>
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-center">
