@@ -47,7 +47,7 @@ const CamisoleMothercoolPage = () => {
               </li>
               <li className="flex items-center">
                 <ArrowRight className="text-deepa-teal mr-2" size={16} />
-                <a href="/SLIP.pdf" download="MOTHERCOOL_Catalog.pdf" className="hover:text-deepa-teal transition-colors">Download Product Catalog</a>
+                <a href="/public/SLIP.pdf" download="MOTHERCOOL_Catalog.pdf" className="hover:text-deepa-teal transition-colors">Download Product Catalog</a>
               </li>
             </ul>
           </div>
