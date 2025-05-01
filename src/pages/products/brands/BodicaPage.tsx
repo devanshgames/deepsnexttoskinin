@@ -18,7 +18,7 @@ const BodicaPage = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="rounded-lg overflow-hidden">
-            <img alt="BODICA Collection" className="w-full h-[400px] object-cover" src="/lovable-uploads/396d3e41-e6ef-4e0e-8aeb-120664bd4741.png" />
+            <img alt="BODICA Collection" src="/lovable-uploads/396d3e41-e6ef-4e0e-8aeb-120664bd4741.png" className="w-full h-[400px] object-contain" />
           </div>
           <div className="flex flex-col justify-center">
             <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4">Premium BODICA Bras</h2>
