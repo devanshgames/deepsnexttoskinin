@@ -51,7 +51,7 @@ const PantyRaniPage = () => {
               </li>
                <li className="flex items-center">
                 <ArrowRight className="text-deepa-teal mr-2" size={16} />
-                <a href="/public/ranisample.pdf" download="RANISAMPLE.pdf" className="hover:text-deepa-teal transition-colors">Download Product Catalog</a>
+                <a href="/public/rani sample.pdf" download="RANISAMPLE.pdf" className="hover:text-deepa-teal transition-colors">Download Product Catalog</a>
               </li>
             </ul>
           </div>
