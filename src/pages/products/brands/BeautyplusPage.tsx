@@ -28,7 +28,7 @@ const BeautyplusPage = () => {
             <ul className="space-y-4 text-gray-300">
             <li className="flex items-center">
             <ArrowRight className="text-deepa-teal mr-2" size={16} />
-             <a href="/public/b+ samples.pdf" download="BEAUTYPLUS.pdf" className="hover:text-deepa-teal transition-colors">Download Product Catalog</a>
+             <a href="public/b+ samples.pdf" download="BEAUTYPLUS.pdf" className="hover:text-deepa-teal transition-colors">Download Product Catalog</a>
               </li>
               <li className="flex items-center">
                 <ArrowRight className="text-deepa-teal mr-2" size={16} />
