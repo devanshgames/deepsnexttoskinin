@@ -31,10 +31,7 @@ const CamisolePage = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/products/camisole/rani" className="flex items-center group hover:text-deepa-teal transition-colors">
-                  <ArrowRight className="text-deepa-teal mr-2 group-hover:translate-x-1 transition-transform" size={16} />
-                  RANI
-                </Link>
+                
               </li>
               <li>
                 <Link to="/products/camisole/mothercool" className="flex items-center group hover:text-deepa-teal transition-colors">
