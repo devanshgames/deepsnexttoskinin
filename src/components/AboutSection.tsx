@@ -2,7 +2,7 @@ import React from 'react';
 const AboutSection = () => {
   return <section id="about" className="py-16">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center gap-12 bg-slate-950">
+        <div className="flex flex-col md:flex-row items-center gap-12 bg-black">
           <div className="md:w-1/2">
             <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3" alt="DEEPA HOSIERY Facility" className="rounded-lg shadow-lg w-full h-auto" />
           </div>
