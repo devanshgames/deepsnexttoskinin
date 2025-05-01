@@ -19,28 +19,16 @@ const CamisolePage = () => {
             </p>
             <ul className="space-y-4 text-gray-300">
               <li>
-                <Link to="/products/camisole/deeps" className="flex items-center group hover:text-deepa-teal transition-colors">
-                  <ArrowRight className="text-deepa-teal mr-2 group-hover:translate-x-1 transition-transform" size={16} />
-                  DEEP'S
-                </Link>
+                
               </li>
               <li>
-                <Link to="/products/camisole/beautyplus" className="flex items-center group hover:text-deepa-teal transition-colors">
-                  <ArrowRight className="text-deepa-teal mr-2 group-hover:translate-x-1 transition-transform" size={16} />
-                  BEAUTYPLUS APPARELS
-                </Link>
+                
               </li>
               <li>
-                <Link to="/products/camisole/bodica" className="flex items-center group hover:text-deepa-teal transition-colors">
-                  <ArrowRight className="text-deepa-teal mr-2 group-hover:translate-x-1 transition-transform" size={16} />
-                  BODICA
-                </Link>
+                
               </li>
               <li>
-                <Link to="/products/camisole/rani" className="flex items-center group hover:text-deepa-teal transition-colors">
-                  <ArrowRight className="text-deepa-teal mr-2 group-hover:translate-x-1 transition-transform" size={16} />
-                  RANI
-                </Link>
+                
               </li>
               <li>
                 <Link to="/products/camisole/mothercool" className="flex items-center group hover:text-deepa-teal transition-colors">
