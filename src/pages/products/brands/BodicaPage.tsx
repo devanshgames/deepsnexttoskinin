@@ -28,7 +28,7 @@ const BodicaPage = () => {
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-center">
                 <ArrowRight className="text-deepa-teal mr-2" size={16} />
-                <a href="/public/BODICApanty_AVAILABLE_11-01-25_pdf-merged-merged[1].pdf" download="BODICASAMPLE.pdf" className="hover:text-deepa-teal transition-colors">Download Product Catalog</a>
+                <a href="/public/BRA.pdf 11-01-25 AVAILABLE ITEM-merged-merged.pdf" download="BODICASAMPLE.pdf" className="hover:text-deepa-teal transition-colors">Download Product Catalog</a>
               </li>
               <li className="flex items-center">
                 <ArrowRight className="text-deepa-teal mr-2" size={16} />
