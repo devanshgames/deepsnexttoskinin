@@ -46,7 +46,11 @@ const PantyRaniPage = () => {
                   <ArrowRight className="text-deepa-teal mr-2" size={16} />
                   Comfortable fit
                 </li>
-                <div className="flex justify-center mt-6">
+              
+              </ul>
+            </div>
+          </div>
+            <div className="flex justify-center mt-6">
   <a
     href="/path/to/your/file.pdf" // Update this path to the actual PDF file location
     download="RANI_Collection.pdf" // Change the file name as needed
@@ -55,9 +59,6 @@ const PantyRaniPage = () => {
     Download PDF
   </a>
 </div>
-              </ul>
-            </div>
-          </div>
         </main>
         <Footer />
       </div>
