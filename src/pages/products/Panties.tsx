@@ -1,3 +1,4 @@
+
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -19,15 +20,9 @@ const PantiesPage = () => {
             </p>
             <ul className="space-y-4 text-gray-300">
               <li>
-                <Link to="/products/panties/deeps" className="flex items-center group hover:text-deepa-teal transition-colors">
+                <Link to="/products/panties/rani" className="flex items-center group hover:text-deepa-teal transition-colors">
                   <ArrowRight className="text-deepa-teal mr-2 group-hover:translate-x-1 transition-transform" size={16} />
-                  DEEP'S
-                </Link>
-              </li>
-              <li>
-                <Link to="/products/panties/beautyplus" className="flex items-center group hover:text-deepa-teal transition-colors">
-                  <ArrowRight className="text-deepa-teal mr-2 group-hover:translate-x-1 transition-transform" size={16} />
-                  BEAUTYPLUS APPARELS
+                  RANI
                 </Link>
               </li>
               <li>
@@ -37,15 +32,21 @@ const PantiesPage = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/products/panties/rani" className="flex items-center group hover:text-deepa-teal transition-colors">
+                <Link to="/products/panties/beautyplus" className="flex items-center group hover:text-deepa-teal transition-colors">
                   <ArrowRight className="text-deepa-teal mr-2 group-hover:translate-x-1 transition-transform" size={16} />
-                  RANI
+                  BEAUTYPLUS APPARELS
                 </Link>
               </li>
               <li>
                 <Link to="/products/panties/mothercool" className="flex items-center group hover:text-deepa-teal transition-colors">
                   <ArrowRight className="text-deepa-teal mr-2 group-hover:translate-x-1 transition-transform" size={16} />
                   MOTHERCOOL
+                </Link>
+              </li>
+              <li>
+                <Link to="/products/panties/deeps" className="flex items-center group hover:text-deepa-teal transition-colors">
+                  <ArrowRight className="text-deepa-teal mr-2 group-hover:translate-x-1 transition-transform" size={16} />
+                  DEEP'S
                 </Link>
               </li>
             </ul>
