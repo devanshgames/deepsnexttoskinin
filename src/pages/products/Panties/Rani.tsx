@@ -46,9 +46,15 @@ const PantyRaniPage = () => {
                   <ArrowRight className="text-deepa-teal mr-2" size={16} />
                   Comfortable fit
                 </li>
-                <li className="flex items-center">
-                  <ArrowRight className="text-deepa-teal mr-2" size={16} <a href="path/to/your/document.pdf" download="document.pdf">Download PDF</a>/>
-                </li>
+                <div className="flex justify-center mt-6">
+  <a
+    href="/path/to/your/file.pdf" // Update this path to the actual PDF file location
+    download="RANI_Collection.pdf" // Change the file name as needed
+    className="px-6 py-3 bg-deepa-teal text-white rounded-lg shadow-md hover:bg-deepa-teal-dark"
+  >
+    Download PDF
+  </a>
+</div>
               </ul>
             </div>
           </div>
