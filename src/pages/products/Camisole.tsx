@@ -1,8 +1,10 @@
+
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const CamisolePage = () => {
   return <div className="min-h-screen bg-black">
       <NavBar />
@@ -19,16 +21,28 @@ const CamisolePage = () => {
             </p>
             <ul className="space-y-4 text-gray-300">
               <li>
-                
+                <Link to="/products/camisole/deeps" className="flex items-center group hover:text-deepa-teal transition-colors">
+                  <ArrowRight className="text-deepa-teal mr-2 group-hover:translate-x-1 transition-transform" size={16} />
+                  DEEP'S
+                </Link>
               </li>
               <li>
-                
+                <Link to="/products/camisole/beautyplus" className="flex items-center group hover:text-deepa-teal transition-colors">
+                  <ArrowRight className="text-deepa-teal mr-2 group-hover:translate-x-1 transition-transform" size={16} />
+                  BEAUTYPLUS
+                </Link>
               </li>
               <li>
-                
+                <Link to="/products/camisole/bodica" className="flex items-center group hover:text-deepa-teal transition-colors">
+                  <ArrowRight className="text-deepa-teal mr-2 group-hover:translate-x-1 transition-transform" size={16} />
+                  BODICA
+                </Link>
               </li>
               <li>
-                
+                <Link to="/products/camisole/rani" className="flex items-center group hover:text-deepa-teal transition-colors">
+                  <ArrowRight className="text-deepa-teal mr-2 group-hover:translate-x-1 transition-transform" size={16} />
+                  RANI
+                </Link>
               </li>
               <li>
                 <Link to="/products/camisole/mothercool" className="flex items-center group hover:text-deepa-teal transition-colors">
@@ -43,4 +57,5 @@ const CamisolePage = () => {
       <Footer />
     </div>;
 };
+
 export default CamisolePage;

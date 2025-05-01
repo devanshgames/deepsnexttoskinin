@@ -29,9 +29,9 @@ import PantyRaniPage from "./pages/products/Panties/Rani";
 import PantyMothercoolPage from "./pages/products/Panties/Mothercool";
 // Corrected import paths for Camisole brand pages
 import CamisoleDeepsPage from "./pages/products/brands/CamisoleDeepsPage";
-import CamisoleBeautyplusPage from "./pages/products/Camisole/Beautyplus";
-import CamisoleBodicaPage from "./pages/products/Camisole/Bodica";
-import CamisoleRaniPage from "./pages/products/Camisole/Rani";
+import CamisoleBeautyplusPage from "./pages/products/brands/CamisoleBeautyplusPage";
+import CamisoleBodicaPage from "./pages/products/brands/CamisoleBodicaPage";
+import CamisoleRaniPage from "./pages/products/brands/CamisoleRaniPage";
 import CamisoleMothercoolPage from "./pages/products/Camisole/Mothercool";
 
 const ScrollToTop = () => {
