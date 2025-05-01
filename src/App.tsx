@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -26,7 +27,8 @@ import PantyBeautyplusPage from "./pages/products/Panties/Beautyplus";
 import PantyBodicaPage from "./pages/products/Panties/Bodica";
 import PantyRaniPage from "./pages/products/Panties/Rani";
 import PantyMothercoolPage from "./pages/products/Panties/Mothercool";
-import CamisoleDeepsPage from "./pages/products/Camisole/Deeps";
+// Corrected import paths for Camisole brand pages
+import CamisoleDeepsPage from "./pages/products/brands/CamisoleDeepsPage";
 import CamisoleBeautyplusPage from "./pages/products/Camisole/Beautyplus";
 import CamisoleBodicaPage from "./pages/products/Camisole/Bodica";
 import CamisoleRaniPage from "./pages/products/Camisole/Rani";
