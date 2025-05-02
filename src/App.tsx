@@ -12,6 +12,7 @@ import WhyUs from "./pages/WhyUs";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
 import NotFound from "./pages/NotFound";
+import Products from "./pages/Products";
 import BraPage from "./pages/products/Bra";
 import PantiesPage from "./pages/products/Panties";
 import CamisolePage from "./pages/products/Camisole";
@@ -59,6 +60,7 @@ const App = () => (
             <Route path="/why-us" element={<WhyUs />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/products" element={<Products />} />
             <Route path="/products/bra" element={<BraPage />} />
             <Route path="/products/panties" element={<PantiesPage />} />
             <Route path="/products/camisole" element={<CamisolePage />} />
