@@ -18,7 +18,7 @@ const BeautyplusPage = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="rounded-lg overflow-hidden">
-            <img alt="BEAUTYPLUS APPARELS Collection" src="/lovable-uploads/a97e144c-56c6-4e82-8ff3-05e6f262d223.png" className="w-full h-[700px] object-cover" />
+            <img alt="BEAUTYPLUS APPARELS Collection" src="/public/IMG_20250427_130420.jpg" className="w-full h-[700px] object-cover" />
           </div>
           <div className="flex flex-col justify-center">
             <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4">Premium BEAUTYPLUS APPARELS Bras</h2>
