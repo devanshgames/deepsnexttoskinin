@@ -36,8 +36,8 @@ const NavBar = () => {
         {/* Main nav - desktop */}
         <nav className="hidden md:flex items-center space-x-8">
           <Link to="/" className="text-deepa-teal hover:text-white transition-colors" onClick={scrollToTop}>Home</Link>
+          <Link to="/products/bra" className="text-deepa-teal hover:text-white transition-colors" onClick={scrollToTop}>Products</Link>
           <Link to="/about" className="text-deepa-teal hover:text-white transition-colors" onClick={scrollToTop}>About</Link>
-          <Link to="/testimonials" className="text-deepa-teal hover:text-white transition-colors" onClick={scrollToTop}>Testimonials</Link>
           <Link to="/why-us" className="text-deepa-teal hover:text-white transition-colors" onClick={scrollToTop}>Why Us</Link>
           <Link to="/contact" className="text-deepa-teal hover:text-white transition-colors" onClick={scrollToTop}>Contact</Link>
         </nav>
@@ -89,8 +89,8 @@ const NavBar = () => {
           <div className="container mx-auto px-4">
             <nav className="flex flex-col space-y-4">
               <Link to="/" onClick={() => {setMobileMenuOpen(false); scrollToTop();}} className="text-deepa-teal hover:text-white transition-colors py-2">Home</Link>
+              <Link to="/products/bra" onClick={() => {setMobileMenuOpen(false); scrollToTop();}} className="text-deepa-teal hover:text-white transition-colors py-2">Products</Link>
               <Link to="/about" onClick={() => {setMobileMenuOpen(false); scrollToTop();}} className="text-deepa-teal hover:text-white transition-colors py-2">About</Link>
-              <Link to="/testimonials" onClick={() => {setMobileMenuOpen(false); scrollToTop();}} className="text-deepa-teal hover:text-white transition-colors py-2">Testimonials</Link>
               <Link to="/why-us" onClick={() => {setMobileMenuOpen(false); scrollToTop();}} className="text-deepa-teal hover:text-white transition-colors py-2">Why Us</Link>
               <Link to="/contact" onClick={() => {setMobileMenuOpen(false); scrollToTop();}} className="text-deepa-teal hover:text-white transition-colors py-2">Contact</Link>
             </nav>

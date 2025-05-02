@@ -8,7 +8,6 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { CartProvider } from "@/contexts/CartContext";
 import Index from "./pages/Index";
 import About from "./pages/About";
-import Testimonials from "./pages/Testimonials";
 import WhyUs from "./pages/WhyUs";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
@@ -57,7 +56,6 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
-            <Route path="/testimonials" element={<Testimonials />} />
             <Route path="/why-us" element={<WhyUs />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />

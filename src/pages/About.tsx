@@ -2,6 +2,7 @@
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import AboutSection from '@/components/AboutSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
 import Footer from '@/components/Footer';
 import { Toaster } from "@/components/ui/toaster";
 
@@ -11,6 +12,7 @@ const About = () => {
       <NavBar />
       <main className="flex-grow">
         <AboutSection />
+        <TestimonialsSection />
       </main>
       <Footer />
       <Toaster />
