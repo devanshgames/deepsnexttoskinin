@@ -14,9 +14,9 @@ const Index = () => {
     <div className="flex flex-col min-h-screen">
       <NavBar />
       <main className="flex-grow">
+        <RecentOffersSection />
         <HeroSection />
         <ProductsSection />
-        <RecentOffersSection />
         <WhatsAppButton />
         <AIChatbot />
       </main>
