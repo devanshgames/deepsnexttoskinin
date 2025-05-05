@@ -27,6 +27,10 @@ const FeelsLingeriePage = () => {
               The FEELS LINGERIE collection offers premium comfort and exquisite style for the modern woman.
             </p>
             <ul className="space-y-4 text-gray-300">
+               <li className="flex items-center">
+                <ArrowRight className="text-deepa-teal mr-2" size={16} />
+                
+              </li>
               <li className="flex items-center">
                 <ArrowRight className="text-deepa-teal mr-2" size={16} />
                 Premium cotton material
