@@ -21,7 +21,7 @@ import DeepsPage from "./pages/products/brands/DeepsPage";
 import BeautyplusPage from "./pages/products/brands/BeautyplusPage";
 import BodicaPage from "./pages/products/brands/BodicaPage";
 import RaniPage from "./pages/products/brands/RaniPage";
-import MothercoolPage from "./pages/products/brands/MothercoolPage";
+import FeelsLingeriePage from "./pages/products/brands/FeelsLingeriePage";
 import PantyDeepsPage from "./pages/products/Panties/Deeps";
 import PantyBeautyplusPage from "./pages/products/Panties/Beautyplus";
 import PantyBodicaPage from "./pages/products/Panties/Bodica";
@@ -69,7 +69,7 @@ const App = () => (
             <Route path="/products/bra/beautyplus" element={<BeautyplusPage />} />
             <Route path="/products/bra/bodica" element={<BodicaPage />} />
             <Route path="/products/bra/rani" element={<RaniPage />} />
-            <Route path="/products/bra/mothercool" element={<MothercoolPage />} />
+            <Route path="/products/bra/feelslingerie" element={<FeelsLingeriePage />} />
             <Route path="/products/panties/deeps" element={<PantyDeepsPage />} />
             <Route path="/products/panties/beautyplus" element={<PantyBeautyplusPage />} />
             <Route path="/products/panties/bodica" element={<PantyBodicaPage />} />

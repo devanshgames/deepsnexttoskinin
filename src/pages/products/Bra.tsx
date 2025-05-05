@@ -1,3 +1,4 @@
+
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -40,9 +41,9 @@ const BraPage = () => {
                 
               </li>
               <li>
-                <Link to="/products/bra/mothercool" className="flex items-center group hover:text-deepa-teal transition-colors">
+                <Link to="/products/bra/feelslingerie" className="flex items-center group hover:text-deepa-teal transition-colors">
                   <ArrowRight className="text-deepa-teal mr-2 group-hover:translate-x-1 transition-transform" size={16} />
-                  MOTHERCOOL
+                  FEELS LINGERIE
                 </Link>
               </li>
             </ul>
