@@ -22,7 +22,7 @@ const DeepsPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="rounded-lg overflow-hidden">
             <img 
-              src="/lovable-uploads/TSPAD1.jpg"
+              src="/lovable-uploads/FRONT.jpg"
               alt="DEEP'S Collection"
               className="w-full h-[400px] object-cover"
             />
