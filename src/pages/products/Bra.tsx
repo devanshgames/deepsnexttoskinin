@@ -1,4 +1,3 @@
-
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -11,7 +10,7 @@ const BraPage = () => {
         <h1 className="text-4xl font-display font-bold text-deepa-teal mb-8">BRA Collection</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="rounded-lg overflow-hidden">
-            <img src="/lovable-uploads/Photoroom-20250427_131412.png" alt="Bra Collection" className="w-full h-[400px] object-cover" />
+            <img src="/lovable-uploads/Photoroom-20250427_131412.png" alt="Bra Collection" className="w-full h-[400px] object-contain" />
           </div>
           <div className="flex flex-col justify-center">
             <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4">Our Brands</h2>
