@@ -22,7 +22,7 @@ const PantyBodicaPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="rounded-lg overflow-hidden">
             <img 
-              src="/lovable-uploads/TSPAD 2.jpg"
+              src="/lovable-uploads/photo_2025-05-05_15-45-14.jpg"
               alt="BODICA PANTIES"
               className="w-full h-[400px] object-cover"
             />
