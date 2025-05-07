@@ -28,7 +28,7 @@ const FeelsLingeriePage = () => {
             <ul className="space-y-4 text-gray-300">
                <li className="flex items-center">
                 <ArrowRight className="text-deepa-teal mr-2" size={16} />
-                 <a href="/public/rani sample.pdf" download="RANISAMPLE.pdf" className="hover:text-deepa-teal transition-colors px-0">Download Product Catalog</a>
+                 <a href="/lovable-uploads/feels.pdf" download="FEELS.pdf" className="hover:text-deepa-teal transition-colors px-0">Download Product Catalog</a>
               </li>
               <li className="flex items-center">
                 <ArrowRight className="text-deepa-teal mr-2" size={16} />
