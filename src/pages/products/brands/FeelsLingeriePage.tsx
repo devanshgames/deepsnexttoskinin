@@ -1,4 +1,3 @@
-
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -19,7 +18,7 @@ const FeelsLingeriePage = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="rounded-lg overflow-hidden">
-            <img alt="FEELS LINGERIE Collection" src="/lovable-uploads/eba84f84-4403-423f-9f70-347e3daa4c36.jpg" className="w-full h-[400px] object-contain" />
+            <img alt="FEELS LINGERIE Collection" src="/lovable-uploads/eba84f84-4403-423f-9f70-347e3daa4c36.jpg" className="w-full h-[400px] object-cover" />
           </div>
           <div className="flex flex-col justify-center">
             <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4">Premium FEELS LINGERIE Bras</h2>
