@@ -49,10 +49,6 @@ const PantyBodicaPage = () => {
                 <ArrowRight className="text-deepa-teal mr-2" size={16} />
                 Comfortable fit
               </li>
-              <li className="flex items-center">
-                <ArrowRight className="text-deepa-teal mr-2" size={16} />
-                <a href="path/to/your/document.pdf" download="document.pdf">Download PDF</a>
-              </li>
             </ul>
           </div>
         </div>
