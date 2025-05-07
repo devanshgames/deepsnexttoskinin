@@ -18,7 +18,7 @@ const FeelsLingeriePage = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="rounded-lg overflow-hidden">
-            <img alt="FEELS LINGERIE Collection" src="/lovable-uploads/FEELSCOVER.png" className="w-full h-[400px] object-cover" />
+            <img alt="FEELS LINGERIE Collection" src="/lovable-uploads/FEELSCOVER.png" className="w-full h-[400px] object-contain" />
           </div>
           <div className="flex flex-col justify-center">
             <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4">Premium FEELS LINGERIE Bras</h2>
