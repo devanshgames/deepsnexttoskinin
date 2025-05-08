@@ -25,12 +25,12 @@ const PantyBeautyplusPage = () => {
             <p className="text-gray-300 mb-6">
               Experience luxury and comfort with our BEAUTYPLUS APPARELS panties collection.
             </p>
-              <li className="flex items-center">
-                <ArrowRight className="text-deepa-teal mr-2" size={16} />
-                <a href="/lovable-uploads/b+panties.pdf" download="b+panties.pdf">Download PDF</a>
-              </li>
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-center">
+                <ArrowRight className="text-deepa-teal mr-2" size={16} />
+                <a href="/lovable-uploads/b+panties.pdf" download="b+panties.pdf" className="hover:text-deepa-teal transition-colors">Download PDF</a>
+              </li>
+             <li className="flex items-center">
                 <ArrowRight className="text-deepa-teal mr-2" size={16} />
                 Premium cotton material
               </li>
