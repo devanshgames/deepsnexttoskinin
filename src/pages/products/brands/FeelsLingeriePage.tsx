@@ -1,8 +1,11 @@
+
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+
 const FeelsLingeriePage = () => {
   return <div className="min-h-screen bg-black">
       <NavBar />
@@ -27,8 +30,12 @@ const FeelsLingeriePage = () => {
             </p>
             <ul className="space-y-4 text-gray-300">
                <li className="flex items-center">
-                <ArrowRight className="text-deepa-teal mr-2" size={16} />
-                 <a href="/lovable-uploads/feels.pdf" download="FEELS.pdf" className="hover:text-deepa-teal transition-colors px-0">Download Product Catalog</a>
+                <Button asChild className="bg-deepa-teal hover:bg-deepa-dark-teal text-black flex items-center gap-2 w-full md:w-auto">
+                  <a href="/lovable-uploads/feels.pdf" download="FEELS.pdf">
+                    <Download size={18} />
+                    Download Product Catalog
+                  </a>
+                </Button>
               </li>
               <li className="flex items-center">
                 <ArrowRight className="text-deepa-teal mr-2" size={16} />

@@ -2,8 +2,9 @@
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
-import { ArrowRight, PackageOpen } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 
 const PantyBodicaPage = () => {
   return (
@@ -34,8 +35,12 @@ const PantyBodicaPage = () => {
             </p>
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-center">
-                <ArrowRight className="text-deepa-teal mr-2" size={16} />
-                <a href="/public/BODICApanty_AVAILABLE_11-01-25_pdf-merged-merged[1].pdf" download="BODICASAMPLE.pdf" className="hover:text-deepa-teal transition-colors">Download Product Catalog</a>
+                <Button asChild className="bg-deepa-teal hover:bg-deepa-dark-teal text-black flex items-center gap-2 w-full md:w-auto">
+                  <a href="/public/BODICApanty_AVAILABLE_11-01-25_pdf-merged-merged[1].pdf" download="BODICASAMPLE.pdf">
+                    <Download size={18} />
+                    Download Product Catalog
+                  </a>
+                </Button>
               </li>
               <li className="flex items-center">
                 <ArrowRight className="text-deepa-teal mr-2" size={16} />
