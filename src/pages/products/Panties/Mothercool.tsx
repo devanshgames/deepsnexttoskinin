@@ -28,7 +28,7 @@ const PantyMothercoolPage = () => {
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-center">
                 <ArrowRight className="text-deepa-teal mr-2" size={16} />
-                <a href="/lovable-uploads/MOTHER COOL_panties.pdf" download="MCOOL.pdf">Download PDF</a>
+                <a href="/lovable-uploads/MOTHER COOL_panties.pdf"  download="MCOOL.pdf" className="hover:text-deepa-teal transition-colors">Download PDF</a>
               </li>
               <li className="flex items-center">
                 <ArrowRight className="text-deepa-teal mr-2" size={16} />
