@@ -25,10 +25,7 @@ const CamisolePage = () => {
                 
               </li>
               <li>
-                <Link to="/products/camisole/bodica" className="flex items-center group hover:text-deepa-teal transition-colors">
-                  <ArrowRight className="text-deepa-teal mr-2 group-hover:translate-x-1 transition-transform" size={16} />
-                  BODICA
-                </Link>
+                
               </li>
               <li>
                 
