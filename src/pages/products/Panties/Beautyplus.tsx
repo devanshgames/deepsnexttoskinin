@@ -22,7 +22,7 @@ const PantyBeautyplusPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="rounded-lg overflow-hidden">
             <img 
-              src="/lovable-uploads/TSPAD 2.jpg"
+              src="/lovable-uploads/new shoot pdf_page-0001.jpg"
               alt="BEAUTYPLUS APPARELS Panties Collection"
               className="w-full h-[400px] object-cover"
             />
