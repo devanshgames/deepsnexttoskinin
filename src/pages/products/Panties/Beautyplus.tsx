@@ -21,7 +21,7 @@ const PantyBeautyplusPage = () => {
             <img src="/lovable-uploads/new shoot pdf_page-0001.jpg" alt="BEAUTYPLUS APPARELS Panties Collection" className="w-full h-[400px] object-contain" />
           </div>
           <div className="flex flex-col justify-center">
-            <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4">Premium BEAUTYPLUS APPARELS Panties</h2>
+            <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4"> BEAUTYPLUS APPARELS Panties</h2>
             <p className="text-gray-300 mb-6">
               Experience luxury and comfort with our BEAUTYPLUS APPARELS panties collection.
             </p>
