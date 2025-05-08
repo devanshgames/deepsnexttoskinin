@@ -21,7 +21,7 @@ const BeautyplusPage = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="rounded-lg overflow-hidden">
-            <img alt="BEAUTYPLUS APPARELS Collection" src="/public/IMG_20250427_130420.jpg" className="w-full h-[700px] object-cover" />
+            <img alt="BEAUTYPLUS APPARELS Collection" src="/lovable-uploads/b+cover.jpg" className="w-full h-[700px] object-cover" />
           </div>
           <div className="flex flex-col justify-center">
             <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4">Premium BEAUTYPLUS APPARELS Bras</h2>
@@ -31,7 +31,7 @@ const BeautyplusPage = () => {
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-center">
                 <Button asChild className="bg-deepa-teal hover:bg-deepa-dark-teal text-black flex items-center gap-2 w-full md:w-auto">
-                  <a href="/public/b+ samples.pdf" download="BEAUTYPLUS.pdf">
+                  <a href="/lovable-uploads/b+ samples.pdf" download="BEAUTYPLUS.pdf">
                     <Download size={18} />
                     Download Product Catalog
                   </a>
