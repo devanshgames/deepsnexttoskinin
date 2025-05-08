@@ -22,7 +22,7 @@ const PantyMothercoolPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="rounded-lg overflow-hidden">
             <img 
-              src="/lovable-uploads/FRONT.jpg"
+              src="lovable-uploads/MOTHER COOL_page-0009.jpg"
               alt="MOTHERCOOL Panties Collection"
               className="w-full h-[400px] object-cover"
             />
