@@ -36,7 +36,7 @@ const PantyBodicaPage = () => {
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-center">
                 <Button asChild className="bg-deepa-teal hover:bg-deepa-dark-teal text-black flex items-center gap-2 w-full md:w-auto">
-                  <a href="/public/BODICApanty_AVAILABLE_11-01-25_pdf-merged-merged[1].pdf" download="BODICASAMPLE.pdf">
+                  <a href="/lovable-uploads/BODICApanty_AVAILABLE_11-01-25_pdf-merged-merged[1].pdf" download="BODICASAMPLE.pdf">
                     <Download size={18} />
                     Download Product Catalog
                   </a>
