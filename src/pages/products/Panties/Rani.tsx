@@ -31,7 +31,7 @@ const PantyRaniPage = () => {
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-center">
                 <Button asChild className="bg-deepa-teal hover:bg-deepa-dark-teal text-black flex items-center gap-2 w-full md:w-auto">
-                  <a href="/public/rani sample.pdf" download="RANISAMPLE.pdf">
+                  <a href="/lovable-uploads/rani sample.pdf" download="RANISAMPLE.pdf">
                     <Download size={18} />
                     Download Product Catalog
                   </a>
