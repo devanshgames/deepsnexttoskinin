@@ -1,14 +1,11 @@
-
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import { ArrowRight, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-
 const CamisoleMothercoolPage = () => {
-  return (
-    <div className="min-h-screen bg-black">
+  return <div className="min-h-screen bg-black">
       <NavBar />
       <main className="container mx-auto px-4 py-16">
         <div className="mb-6">
@@ -22,11 +19,7 @@ const CamisoleMothercoolPage = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="rounded-lg overflow-hidden">
-            <img 
-              src="/lovable-uploads/FRONT.jpg"
-              alt="MOTHERCOOL Camisole Collection"
-              className="w-full h-[400px] object-cover"
-            />
+            <img alt="MOTHERCOOL Camisole Collection" src="/lovable-uploads/2181061d-20ab-47fb-8c51-487beb5d3b87.jpg" className="w-full h-[400px] object-contain" />
           </div>
           <div className="flex flex-col justify-center">
             <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4">Premium MOTHERCOOL Camisoles</h2>
@@ -59,8 +52,6 @@ const CamisoleMothercoolPage = () => {
         </div>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default CamisoleMothercoolPage;
