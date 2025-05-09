@@ -17,10 +17,10 @@ const Index = () => {
         <RecentOffersSection />
         <HeroSection />
         <ProductsSection />
-        <WhatsAppButton />
-        <AIChatbot />
       </main>
       <Footer />
+      <WhatsAppButton />
+      <AIChatbot />
       <Toaster />
     </div>
   );

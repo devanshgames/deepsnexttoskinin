@@ -5,6 +5,9 @@ import Footer from '../../../components/Footer';
 import { ArrowRight, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import WhatsAppButton from '@/components/WhatsAppButton';
+import AIChatbot from '@/components/AIChatbot';
+import { Toaster } from "@/components/ui/toaster";
 
 const PantyRaniPage = () => {
   return <div className="min-h-screen bg-black">
@@ -54,6 +57,9 @@ const PantyRaniPage = () => {
         </div>
       </main>
       <Footer />
+      <WhatsAppButton />
+      <AIChatbot />
+      <Toaster />
     </div>;
 };
 export default PantyRaniPage;

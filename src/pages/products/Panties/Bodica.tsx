@@ -5,6 +5,9 @@ import Footer from '@/components/Footer';
 import { ArrowRight, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import WhatsAppButton from '@/components/WhatsAppButton';
+import AIChatbot from '@/components/AIChatbot';
+import { Toaster } from "@/components/ui/toaster";
 
 const PantyBodicaPage = () => {
   return (
@@ -59,6 +62,9 @@ const PantyBodicaPage = () => {
         </div>
       </main>
       <Footer />
+      <WhatsAppButton />
+      <AIChatbot />
+      <Toaster />
     </div>
   );
 };

@@ -12,7 +12,7 @@ type Message = {
 
 const initialMessages: Message[] = [
   {
-    text: "Hello! Your Deepa Hosiery assistant here. Got questions about price, minimum quantity, delivery to Bhopal, or material quality? Just ask! How can I help you today??",
+    text: "Hello! Your Deepa Hosiery assistant here. Got questions about price, minimum quantity, delivery to Bhopal, material quality, or our product catalogs? Just ask! How can I help you today??",
     isBot: true,
     timestamp: new Date(),
   },
@@ -67,8 +67,10 @@ const AIChatbot = () => {
         botResponse = "We use premium cotton and blended fabrics for our hosiery products. All our materials are carefully selected for comfort and durability.";
       } else if (userMessageLower.includes("contact") || userMessageLower.includes("whatsapp")) {
         botResponse = "You can reach us on WhatsApp at +919165004768. We're available to assist you from 9 AM to 6 PM, Monday through Saturday.";
+      } else if (userMessageLower.includes("catalog") || userMessageLower.includes("pdf") || userMessageLower.includes("download")) {
+        botResponse = "We offer product catalogs for all our brands including DEEPS, BEAUTYPLUS, BODICA, RANI, and MOTHERCOOL. You can download these catalogs directly from each product page using the teal download buttons.";
       } else {
-        botResponse = "Thank you for your message. For specific inquiries about our products, pricing, or orders, please contact us on WhatsApp at +919165004768.";
+        botResponse = "Thank you for your message. For specific inquiries about our products, pricing, catalogs, or orders, please contact us on WhatsApp at +919165004768.";
       }
       
       const aiMessage: Message = {
@@ -97,13 +99,13 @@ const AIChatbot = () => {
     <>
       <button
         onClick={toggleChatbot}
-        className="fixed bottom-6 left-6 bg-deepa-teal text-black p-3 rounded-full shadow-lg z-50 hover:bg-opacity-90 transition-all duration-300"
+        className="fixed bottom-20 right-6 bg-deepa-teal text-black p-3 rounded-full shadow-lg z-50 hover:bg-opacity-90 transition-all duration-300"
       >
         <Bot size={20} />
       </button>
 
       {isOpen && (
-        <div className="fixed bottom-20 left-6 w-80 sm:w-96 h-96 bg-black border border-deepa-teal rounded-lg shadow-xl z-50 flex flex-col">
+        <div className="fixed bottom-24 right-6 w-80 sm:w-96 h-96 bg-black border border-deepa-teal rounded-lg shadow-xl z-50 flex flex-col">
           <div className="bg-deepa-teal text-black px-4 py-3 rounded-t-lg flex justify-between items-center">
             <h3 className="font-semibold flex items-center gap-2">
               <Bot size={18} /> AI Assistant
