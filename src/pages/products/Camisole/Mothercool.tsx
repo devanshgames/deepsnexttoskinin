@@ -1,4 +1,3 @@
-
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -23,7 +22,7 @@ const CamisoleMothercoolPage = () => {
             <img alt="MOTHERCOOL Camisole Collection" src="/lovable-uploads/2181061d-20ab-47fb-8c51-487beb5d3b87.jpg" className="w-full h-[400px] object-contain" />
           </div>
           <div className="flex flex-col justify-center">
-            <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4">Premium MOTHERCOOL Camisoles</h2>
+            <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4"> MOTHERCOOL Camisoles</h2>
             <p className="text-gray-300 mb-6">
               The MOTHERCOOL collection is specially designed for new mothers, providing both comfort and functionality.
             </p>
