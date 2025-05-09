@@ -30,7 +30,7 @@ const CamisoleMothercoolPage = () => {
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-center">
                 <Button asChild className="bg-deepa-teal hover:bg-deepa-dark-teal text-black flex items-center gap-2 w-full md:w-auto">
-                  <a href="/lovable-uploads/MOTHER COOL_panties.pdf" download="MOTHERCOOL_Catalog.pdf">
+                  <a href="/lovable-uploads/SLIP.pdf" download="MOTHERCOOL_Catalog.pdf">
                     <Download size={18} />
                     Download Product Catalog
                   </a>
