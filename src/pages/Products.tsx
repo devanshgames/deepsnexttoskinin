@@ -60,29 +60,33 @@ const Products = () => {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {products.map((product, idx) => (
-            <Card 
-              key={product.id} 
-              className="product-card animate-fade-in transition-all duration-700" 
-              style={{
-                animationDelay: `${0.12 * idx}s`,
-                animationFillMode: "backwards"
-              }}
+            <Link 
+              to={product.link}
+              onClick={scrollToTop}
+              key={product.id}
+              className="block"
             >
-              <div className="relative">
-                <img src={product.image} alt={product.name} className="w-full h-64 object-contain" />
-                {product.isSpecialOffer && <Badge className="absolute top-3 right-3 bg-deepa-teal">Special Offer</Badge>}
-              </div>
-              <CardContent className="pt-4">
-                <h3 className="text-xl font-semibold mb-2 text-slate-900">{product.name}</h3>
-                <p className="text-sm text-gray-500">{product.category}</p>
-                <Link to={product.link} onClick={scrollToTop}>
-                  <Button className="w-full mt-4 bg-deepa-teal text-black hover:bg-opacity-90 flex items-center justify-center gap-2">
+              <Card 
+                className="product-card animate-fade-in transition-all duration-700 hover:shadow-lg hover:shadow-deepa-teal/20 cursor-pointer" 
+                style={{
+                  animationDelay: `${0.12 * idx}s`,
+                  animationFillMode: "backwards"
+                }}
+              >
+                <div className="relative">
+                  <img src={product.image} alt={product.name} className="w-full h-64 object-contain" />
+                  {product.isSpecialOffer && <Badge className="absolute top-3 right-3 bg-deepa-teal">Special Offer</Badge>}
+                </div>
+                <CardContent className="pt-4">
+                  <h3 className="text-xl font-semibold mb-2 text-slate-900">{product.name}</h3>
+                  <p className="text-sm text-gray-500">{product.category}</p>
+                  <div className="w-full mt-4 bg-deepa-teal text-black hover:bg-opacity-90 flex items-center justify-center gap-2 py-2 px-4 rounded-md">
                     View Details
                     <ArrowRight size={16} />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
         

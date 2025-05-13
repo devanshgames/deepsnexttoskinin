@@ -1,9 +1,10 @@
+
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const logoUrl = "https://images.unsplash.com/photo-logo.png?auto=format&fit=crop&q=80&w=100&ixlib=rb-4.0.3";
 const products = [{
   id: 1,
@@ -34,11 +35,13 @@ const products = [{
   isSpecialOffer: false,
   link: "/products/more"
 }];
+
 const ProductsSection = () => {
   // Add a scroll to top function
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
+  
   return <section id="products" className="py-16 bg-black">
       <div className="container mx-auto px-4">
         <div className="flex justify-center mb-8">
@@ -52,25 +55,32 @@ const ProductsSection = () => {
         </p>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {products.map((product, idx) => <Card key={product.id} className={`product-card animate-fade-in transition-all duration-700`} style={{
-          animationDelay: `${0.12 * idx}s`,
-          animationFillMode: "backwards"
-        }}>
-              <div className="relative">
-                <img src={product.image} alt={product.name} className="w-full h-64 object-contain" />
-                {product.isSpecialOffer && <Badge className="absolute top-3 right-3 bg-deepa-teal">Special Offer</Badge>}
-              </div>
-              <CardContent className="pt-4">
-                <h3 className="text-xl font-semibold mb-2 text-slate-900">{product.name}</h3>
-                <p className="text-sm text-gray-500">{product.category}</p>
-                <Link to={product.link} onClick={scrollToTop}>
-                  <Button className="w-full mt-4 bg-deepa-teal text-black hover:bg-opacity-90 flex items-center justify-center gap-2">
+          {products.map((product, idx) => (
+            <Link 
+              to={product.link}
+              onClick={scrollToTop}
+              key={product.id}
+              className="block"
+            >
+              <Card className={`product-card animate-fade-in transition-all duration-700 hover:shadow-lg hover:shadow-deepa-teal/20 cursor-pointer`} style={{
+                animationDelay: `${0.12 * idx}s`,
+                animationFillMode: "backwards"
+              }}>
+                <div className="relative">
+                  <img src={product.image} alt={product.name} className="w-full h-64 object-contain" />
+                  {product.isSpecialOffer && <Badge className="absolute top-3 right-3 bg-deepa-teal">Special Offer</Badge>}
+                </div>
+                <CardContent className="pt-4">
+                  <h3 className="text-xl font-semibold mb-2 text-slate-900">{product.name}</h3>
+                  <p className="text-sm text-gray-500">{product.category}</p>
+                  <div className="w-full mt-4 bg-deepa-teal text-black hover:bg-opacity-90 flex items-center justify-center gap-2 py-2 px-4 rounded-md">
                     View Details
                     <ArrowRight size={16} />
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>)}
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+          ))}
         </div>
         
         <div className="mt-16 bg-deepa-teal/10 p-8 rounded-lg">
@@ -98,4 +108,5 @@ const ProductsSection = () => {
       </div>
     </section>;
 };
+
 export default ProductsSection;
