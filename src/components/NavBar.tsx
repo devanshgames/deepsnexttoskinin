@@ -20,14 +20,14 @@ const NavBar = () => {
         {/* Logo + Brand */}
         <div className="flex items-center">
           <Link to="/" className="flex items-center" onClick={scrollToTop}>
-            <div className="mr-3 w-12 h-12 flex items-center justify-center">
+            <div className="mr-2 w-10 h-10 flex items-center justify-center">
               <img 
                 src="/lovable-uploads/LOGO.png" 
                 alt="Deep's Logo" 
                 className="max-h-full max-w-full object-contain"
               />
             </div>
-            <h1 className="text-2xl font-display font-bold text-deepa-teal">
+            <h1 className="text-lg md:text-xl font-display font-medium text-deepa-teal">
               DEEPA <span className="text-white">HOSIERY</span>
             </h1>
           </Link>
