@@ -8,9 +8,60 @@ import { Button } from '@/components/ui/button';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import AIChatbot from '@/components/AIChatbot';
 import { Toaster } from "@/components/ui/toaster";
+import ProductCard from '@/components/ProductCard';
 
 const PantyRaniPage = () => {
-  return <div className="min-h-screen bg-black">
+  // Sample product data for Rani Panties
+  const products = [
+    {
+      id: 901,
+      name: "RANI Cotton Panty",
+      image: "/lovable-uploads/photo_2025-05-05_15-45-16.jpg",
+      mrp: 350,
+      discountedPrice: 300,
+      colors: ["Black", "White", "Skin"],
+      photoCount: 3
+    },
+    {
+      id: 902,
+      name: "RANI Seamless Comfort",
+      image: "/lovable-uploads/TSPAD1.jpg",
+      mrp: 380,
+      discountedPrice: 320,
+      colors: ["Skin", "Black"],
+      photoCount: 2
+    },
+    {
+      id: 903,
+      name: "RANI Everyday Panty",
+      image: "/lovable-uploads/TSPAD 0.jpg",
+      mrp: 340,
+      discountedPrice: 290,
+      colors: ["White", "Blue"],
+      photoCount: 4
+    },
+    {
+      id: 904,
+      name: "RANI Full Coverage",
+      image: "/lovable-uploads/TSPAD 2.jpg",
+      mrp: 400,
+      discountedPrice: 350,
+      colors: ["Red", "Black", "Skin"],
+      photoCount: 3
+    },
+    {
+      id: 905,
+      name: "RANI Lightweight Panty",
+      image: "/lovable-uploads/TSPAD 3.jpg",
+      mrp: 320,
+      discountedPrice: 270,
+      colors: ["Pink", "White"],
+      photoCount: 2
+    }
+  ];
+  
+  return (
+    <div className="min-h-screen bg-black">
       <NavBar />
       <main className="container mx-auto px-4 py-16">
         <div className="mb-6">
@@ -22,9 +73,13 @@ const PantyRaniPage = () => {
         
         <h1 className="text-4xl font-display font-bold text-deepa-teal mb-8">RANI Panties Collection</h1>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div className="rounded-lg overflow-hidden">
-            <img src="/lovable-uploads/photo_2025-05-05_15-45-16.jpg" alt="BEAUTYPLUS APPARELS Panties Collection" className="w-full h-[400px] object-contain" />
+            <img 
+              src="/lovable-uploads/photo_2025-05-05_15-45-16.jpg" 
+              alt="RANI Panties Collection" 
+              className="w-full h-[400px] object-contain" 
+            />
           </div>
           <div className="flex flex-col justify-center">
             <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4">Premium RANI Panties</h2>
@@ -55,11 +110,23 @@ const PantyRaniPage = () => {
             </ul>
           </div>
         </div>
+
+        <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-6">Our Products</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-12">
+          {products.map(product => (
+            <ProductCard 
+              key={product.id} 
+              {...product}
+            />
+          ))}
+        </div>
       </main>
       <Footer />
       <WhatsAppButton />
       <AIChatbot />
       <Toaster />
-    </div>;
+    </div>
+  );
 };
+
 export default PantyRaniPage;
