@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -44,7 +45,11 @@ const ProductCard: React.FC<ProductProps> = ({
   const cardContent = <>
       <div className="relative overflow-hidden rounded-t-lg h-48">
         <img src={image} alt={name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
-        {photoCount}
+        {photoCount && (
+          <div className="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded-full">
+            {photoCount} Photos
+          </div>
+        )}
       </div>
       
       <CardContent className="p-4">

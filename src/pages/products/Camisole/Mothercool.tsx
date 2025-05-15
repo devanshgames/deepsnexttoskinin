@@ -1,3 +1,4 @@
+
 import React from 'react';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
@@ -13,7 +14,7 @@ const CamisoleMothercoolPage = () => {
   const products = [
     {
       id: 1101,
-      name: "MOTHERCOOL Cotton Panty",
+      name: "MOTHERCOOL Cotton Camisole",
       image: "/lovable-uploads/afa52506-1b2b-4a5a-91fa-d19e3f16bf32.jpg",
       mrp: 370,
       discountedPrice: 320,
@@ -31,7 +32,7 @@ const CamisoleMothercoolPage = () => {
     },
     {
       id: 1103,
-      name: "MOTHERCOOL Everyday Panty",
+      name: "MOTHERCOOL Everyday Camisole",
       image: "/lovable-uploads/TSPAD1.jpg",
       mrp: 350,
       discountedPrice: 300,
@@ -49,7 +50,7 @@ const CamisoleMothercoolPage = () => {
     },
     {
       id: 1105,
-      name: "MOTHERCOOL Lightweight Panty",
+      name: "MOTHERCOOL Lightweight Camisole",
       image: "/lovable-uploads/TSPAD 3.jpg",
       mrp: 340,
       discountedPrice: 290,
@@ -103,8 +104,21 @@ const CamisoleMothercoolPage = () => {
             </ul>
           </div>
         </div>
+        
+        <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-6 mt-12">Our Products</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-12">
+          {products.map(product => (
+            <ProductCard 
+              key={product.id} 
+              {...product}
+            />
+          ))}
+        </div>
       </main>
       <Footer />
+      <WhatsAppButton />
+      <AIChatbot />
+      <Toaster />
     </div>;
 };
 export default CamisoleMothercoolPage;
