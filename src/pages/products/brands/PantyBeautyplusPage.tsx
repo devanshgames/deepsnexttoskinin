@@ -10,7 +10,7 @@ import ProductCard from '@/components/ProductCard';
 const PantyBeautyplusPage = () => {
   const products = [
     {
-      id: 101,
+      id: 601,
       name: "DEEP'S Cotton Comfort",
       image: "/lovable-uploads/FRONT.jpg",
       mrp: 580,
@@ -19,7 +19,7 @@ const PantyBeautyplusPage = () => {
       photoCount: 5
     },
     {
-      id: 102,
+      id: 602,
       name: "DEEP'S Seamless Bra",
       image: "/lovable-uploads/TSPAD1.jpg",
       mrp: 650,
@@ -28,7 +28,7 @@ const PantyBeautyplusPage = () => {
       photoCount: 3
     },
     {
-      id: 103,
+      id: 603,
       name: "DEEP'S Everyday Support",
       image: "/lovable-uploads/TSPAD 0.jpg",
       mrp: 550,
@@ -37,7 +37,7 @@ const PantyBeautyplusPage = () => {
       photoCount: 4
     },
     {
-      id: 104,
+      id: 604,
       name: "DEEP'S Full Coverage",
       image: "/lovable-uploads/TSPAD 2.jpg",
       mrp: 720,
@@ -46,7 +46,7 @@ const PantyBeautyplusPage = () => {
       photoCount: 6
     },
     {
-      id: 105,
+      id: 605,
       name: "DEEP'S Lightweight Comfort",
       image: "/lovable-uploads/TSPAD 3.jpg",
       mrp: 490,
