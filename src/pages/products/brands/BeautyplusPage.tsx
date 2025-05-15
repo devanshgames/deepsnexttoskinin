@@ -5,8 +5,58 @@ import Footer from '@/components/Footer';
 import { ArrowRight, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import ProductCard from '@/components/ProductCard';
 
 const BeautyplusPage = () => {
+  // Sample product data for BeautyPlus
+  const products = [
+    {
+      id: 201,
+      name: "BEAUTYPLUS Comfort Fit",
+      image: "/lovable-uploads/FRONT.jpg",
+      mrp: 550,
+      discountedPrice: 450,
+      colors: ["Black", "White", "Skin"],
+      photoCount: 4
+    },
+    {
+      id: 202,
+      name: "BEAUTYPLUS Seamless",
+      image: "/lovable-uploads/TSPAD1.jpg",
+      mrp: 650,
+      discountedPrice: 520,
+      colors: ["Skin", "Black"],
+      photoCount: 3
+    },
+    {
+      id: 203,
+      name: "BEAUTYPLUS Everyday",
+      image: "/lovable-uploads/TSPAD 0.jpg",
+      mrp: 500,
+      discountedPrice: 430,
+      colors: ["White", "Pink"],
+      photoCount: 4
+    },
+    {
+      id: 204,
+      name: "BEAUTYPLUS Full Support",
+      image: "/lovable-uploads/TSPAD 2.jpg",
+      mrp: 700,
+      discountedPrice: 580,
+      colors: ["Red", "Black", "Skin"],
+      photoCount: 5
+    },
+    {
+      id: 205,
+      name: "BEAUTYPLUS Lightweight",
+      image: "/lovable-uploads/TSPAD 3.jpg",
+      mrp: 480,
+      discountedPrice: 400,
+      colors: ["Pink", "White"],
+      photoCount: 3
+    }
+  ];
+
   return <div className="min-h-screen bg-black">
       <NavBar />
       <main className="container mx-auto px-4 py-16">
@@ -19,7 +69,7 @@ const BeautyplusPage = () => {
         
         <h1 className="text-4xl font-display font-bold text-deepa-teal mb-8">BEAUTYPLUS APPARELS Collection</h1>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div className="rounded-lg overflow-hidden">
             <img alt="BEAUTYPLUS APPARELS Collection" src="/lovable-uploads/b+cover.jpg" className="w-full h-[700px] object-cover" />
           </div>
@@ -51,6 +101,16 @@ const BeautyplusPage = () => {
               </li>
             </ul>
           </div>
+        </div>
+
+        <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-6">Our Products</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-12">
+          {products.map(product => (
+            <ProductCard 
+              key={product.id} 
+              {...product}
+            />
+          ))}
         </div>
       </main>
       <Footer />

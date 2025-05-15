@@ -5,8 +5,58 @@ import Footer from '@/components/Footer';
 import { ArrowRight, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import ProductCard from '@/components/ProductCard';
 
 const BodicaPage = () => {
+  // Sample product data for Bodica
+  const products = [
+    {
+      id: 301,
+      name: "BODICA Comfort Fit",
+      image: "/lovable-uploads/photo_2025-05-05_15-45-11.jpg",
+      mrp: 580,
+      discountedPrice: 480,
+      colors: ["Black", "White", "Skin"],
+      photoCount: 5
+    },
+    {
+      id: 302,
+      name: "BODICA Seamless Bra",
+      image: "/lovable-uploads/TSPAD1.jpg",
+      mrp: 650,
+      discountedPrice: 520,
+      colors: ["Skin", "Black"],
+      photoCount: 3
+    },
+    {
+      id: 303,
+      name: "BODICA Everyday Support",
+      image: "/lovable-uploads/TSPAD 0.jpg",
+      mrp: 550,
+      discountedPrice: 450,
+      colors: ["White", "Blue"],
+      photoCount: 4
+    },
+    {
+      id: 304,
+      name: "BODICA Full Coverage",
+      image: "/lovable-uploads/TSPAD 2.jpg",
+      mrp: 720,
+      discountedPrice: 599,
+      colors: ["Red", "Black", "Skin"],
+      photoCount: 6
+    },
+    {
+      id: 305,
+      name: "BODICA Lightweight",
+      image: "/lovable-uploads/TSPAD 3.jpg",
+      mrp: 490,
+      discountedPrice: 420,
+      colors: ["Pink", "White"],
+      photoCount: 3
+    }
+  ];
+
   return <div className="min-h-screen bg-black">
       <NavBar />
       <main className="container mx-auto px-4 py-16">
@@ -19,7 +69,7 @@ const BodicaPage = () => {
         
         <h1 className="text-4xl font-display font-bold text-deepa-teal mb-8">BODICA Collection</h1>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div className="rounded-lg overflow-hidden">
             <img alt="BODICA Collection" src="/lovable-uploads/photo_2025-05-05_15-45-11.jpg" className="w-full h-[400px] object-contain" />
           </div>
@@ -51,6 +101,16 @@ const BodicaPage = () => {
               </li>
             </ul>
           </div>
+        </div>
+
+        <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-6">Our Products</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-12">
+          {products.map(product => (
+            <ProductCard 
+              key={product.id} 
+              {...product}
+            />
+          ))}
         </div>
       </main>
       <Footer />
