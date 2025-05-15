@@ -4,9 +4,58 @@ import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import { ArrowRight, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button'
+import ProductCard from '@/components/ProductCard';
 
 const PantyBeautyplusPage = () => {
+
+  const products = [
+    {
+      id: 101,
+      name: "DEEP'S Cotton Comfort",
+      image: "/lovable-uploads/FRONT.jpg",
+      mrp: 580,
+      discountedPrice: 480,
+      colors: ["Black", "White", "Skin"],
+      photoCount: 5
+    },
+    {
+      id: 102,
+      name: "DEEP'S Seamless Bra",
+      image: "/lovable-uploads/TSPAD1.jpg",
+      mrp: 650,
+      discountedPrice: 520,
+      colors: ["Skin", "Black"],
+      photoCount: 3
+    },
+    {
+      id: 103,
+      name: "DEEP'S Everyday Support",
+      image: "/lovable-uploads/TSPAD 0.jpg",
+      mrp: 550,
+      discountedPrice: 450,
+      colors: ["White", "Blue"],
+      photoCount: 4
+    },
+    {
+      id: 104,
+      name: "DEEP'S Full Coverage",
+      image: "/lovable-uploads/TSPAD 2.jpg",
+      mrp: 720,
+      discountedPrice: 599,
+      colors: ["Red", "Black", "Skin"],
+      photoCount: 6
+    },
+    {
+      id: 105,
+      name: "DEEP'S Lightweight Comfort",
+      image: "/lovable-uploads/TSPAD 3.jpg",
+      mrp: 490,
+      discountedPrice: 420,
+      colors: ["Pink", "White"],
+      photoCount: 3
+    }
+  ];
   return <div className="min-h-screen bg-black">
       <NavBar />
       <main className="container mx-auto px-4 py-16">
