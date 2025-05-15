@@ -4,7 +4,60 @@ import Footer from '@/components/Footer';
 import { ArrowRight, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import ProductCard from '@/components/ProductCard';
+import WhatsAppButton from '@/components/WhatsAppButton';
+import AIChatbot from '@/components/AIChatbot';
+import { Toaster } from "@/components/ui/toaster";
+
 const CamisoleMothercoolPage = () => {
+  const products = [
+    {
+      id: 1101,
+      name: "MOTHERCOOL Cotton Panty",
+      image: "/lovable-uploads/afa52506-1b2b-4a5a-91fa-d19e3f16bf32.jpg",
+      mrp: 370,
+      discountedPrice: 320,
+      colors: ["Black", "White", "Skin"],
+      photoCount: 3
+    },
+    {
+      id: 1102,
+      name: "MOTHERCOOL Seamless Comfort",
+      image: "/lovable-uploads/TSPAD 0.jpg",
+      mrp: 390,
+      discountedPrice: 340,
+      colors: ["Skin", "Black"],
+      photoCount: 2
+    },
+    {
+      id: 1103,
+      name: "MOTHERCOOL Everyday Panty",
+      image: "/lovable-uploads/TSPAD1.jpg",
+      mrp: 350,
+      discountedPrice: 300,
+      colors: ["White", "Blue"],
+      photoCount: 4
+    },
+    {
+      id: 1104,
+      name: "MOTHERCOOL Full Coverage",
+      image: "/lovable-uploads/TSPAD 2.jpg",
+      mrp: 410,
+      discountedPrice: 360,
+      colors: ["Red", "Black", "Skin"],
+      photoCount: 3
+    },
+    {
+      id: 1105,
+      name: "MOTHERCOOL Lightweight Panty",
+      image: "/lovable-uploads/TSPAD 3.jpg",
+      mrp: 340,
+      discountedPrice: 290,
+      colors: ["Pink", "White"],
+      photoCount: 2
+    }
+  ];
+
   return <div className="min-h-screen bg-black">
       <NavBar />
       <main className="container mx-auto px-4 py-16">
