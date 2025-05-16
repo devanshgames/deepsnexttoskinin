@@ -1,6 +1,9 @@
+
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import { Separator } from '@/components/ui/separator';
 import { CheckCircle, Award, Clock, ThumbsUp, RefreshCw, Shield } from 'lucide-react';
+
 const reasons = [{
   id: 1,
   title: "30+ Years Experience",
@@ -32,13 +35,17 @@ const reasons = [{
   description: "Count on us for consistent supply, timely delivery, and long-term business partnership.",
   icon: Shield
 }];
+
 const AboutSection = () => {
   return <>
       <section id="about" className="py-16 bg-black">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
-              <img alt="DEEPA HOSIERY Facility" className="rounded-lg shadow-lg w-full h-auto" src="/lovable-uploads/547fb491-4b7b-49ba-9ed4-d4209c194d4e.jpg" />
+              <div className="space-y-6">
+                <img alt="DEEPA HOSIERY Facility" className="rounded-lg shadow-lg w-full h-auto" src="/lovable-uploads/547fb491-4b7b-49ba-9ed4-d4209c194d4e.jpg" />
+                <img alt="DEEPA HOSIERY Inventory" className="rounded-lg shadow-lg w-full h-auto animate-fade-in" src="/lovable-uploads/843d7026-c4b2-4e9e-a40f-1be06ad78e0b.png" />
+              </div>
             </div>
             
             <div className="md:w-1/2">
@@ -108,4 +115,5 @@ const AboutSection = () => {
       </section>
     </>;
 };
+
 export default AboutSection;
