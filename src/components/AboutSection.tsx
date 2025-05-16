@@ -45,15 +45,15 @@ const reasons = [
 const AboutSection = () => {
   return (
     <>
-      <section id="about" className="py-16">
+      <section id="about" className="py-16 bg-black">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center gap-12 bg-black">
+          <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
               <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3" alt="DEEPA HOSIERY Facility" className="rounded-lg shadow-lg w-full h-auto" />
             </div>
             
             <div className="md:w-1/2">
-              <h2 className="section-title">About DEEPA HOSIERY</h2>
+              <h2 className="section-title text-white">About DEEPA HOSIERY</h2>
               <p className="mb-6 text-emerald-600">
                 For over three decades, DEEPA HOSIERY has been a trusted name in the wholesale 
                 undergarment and lingerie industry. Based in India, we specialize in manufacturing 
@@ -66,21 +66,21 @@ const AboutSection = () => {
                 has unique needs and requirements.
               </p>
               <div className="grid grid-cols-2 gap-6 mt-8">
-                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                <div className="text-center p-4 bg-gray-900 rounded-lg">
                   <span className="text-4xl font-bold text-deepa-teal block mb-2">30+</span>
-                  <span className="text-gray-600">Years Experience</span>
+                  <span className="text-gray-300">Years Experience</span>
                 </div>
-                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                <div className="text-center p-4 bg-gray-900 rounded-lg">
                   <span className="text-4xl font-bold text-deepa-teal block mb-2">1000+</span>
-                  <span className="text-gray-600">Business Clients</span>
+                  <span className="text-gray-300">Business Clients</span>
                 </div>
-                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                <div className="text-center p-4 bg-gray-900 rounded-lg">
                   <span className="text-4xl font-bold text-deepa-teal block mb-2">50+</span>
-                  <span className="text-gray-600">Product Varieties</span>
+                  <span className="text-gray-300">Product Varieties</span>
                 </div>
-                <div className="text-center p-4 bg-gray-50 rounded-lg">
+                <div className="text-center p-4 bg-gray-900 rounded-lg">
                   <span className="text-4xl font-bold text-deepa-teal block mb-2">12</span>
-                  <span className="text-gray-600">States Covered</span>
+                  <span className="text-gray-300">States Covered</span>
                 </div>
               </div>
             </div>
