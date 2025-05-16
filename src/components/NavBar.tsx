@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { X, Menu, ShoppingCart } from 'lucide-react';
@@ -19,7 +18,7 @@ const NavBar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center relative">
         {/* Logo + Brand */}
         <div className="flex items-center">
-          <Link to="/" className="flex items-center" onClick={scrollToTop}>
+          <Link to="/why-us" className="flex items-center" onClick={scrollToTop}>
             <div className="mr-2 w-10 h-10 flex items-center justify-center">
               <img 
                 src="/lovable-uploads/LOGO.png" 
