@@ -1,17 +1,13 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+
   // Add a scroll to top function
   const scrollToTop = () => {
     window.scrollTo(0, 0);
   };
-
-  return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8">
+  return <footer className="bg-gray-900 text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="md:col-span-2">
@@ -28,47 +24,25 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link 
-                  to="/" 
-                  className="text-gray-300 hover:text-white transition-colors"
-                  onClick={scrollToTop}
-                >
+                <Link to="/" className="text-gray-300 hover:text-white transition-colors" onClick={scrollToTop}>
                   Home
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/about" 
-                  className="text-gray-300 hover:text-white transition-colors"
-                  onClick={scrollToTop}
-                >
+                <Link to="/about" className="text-gray-300 hover:text-white transition-colors" onClick={scrollToTop}>
                   About Us
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/testimonials" 
-                  className="text-gray-300 hover:text-white transition-colors"
-                  onClick={scrollToTop}
-                >
-                  Testimonials
-                </Link>
+                
               </li>
               <li>
-                <Link 
-                  to="/why-us" 
-                  className="text-gray-300 hover:text-white transition-colors"
-                  onClick={scrollToTop}
-                >
+                <Link to="/why-us" className="text-gray-300 hover:text-white transition-colors" onClick={scrollToTop}>
                   Why Choose Us
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/contact" 
-                  className="text-gray-300 hover:text-white transition-colors"
-                  onClick={scrollToTop}
-                >
+                <Link to="/contact" className="text-gray-300 hover:text-white transition-colors" onClick={scrollToTop}>
                   Contact
                 </Link>
               </li>
@@ -89,8 +63,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
