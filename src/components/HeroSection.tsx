@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   const scrollToSection = (id: string) => {
@@ -35,13 +36,15 @@ const HeroSection = () => {
           <div className="md:w-1/2 md:pl-12 animate-fade-in space-y-4" style={{
             animationDelay: '0.2s'
           }}>
-            <div className="bg-black rounded-lg shadow-lg border border-deepa-teal">
-              <img
-                alt="DEEPA HOSIERY Business Display"
-                className="w-full h-auto rounded-md object-cover"
-                src="/lovable-uploads/c44b5526-793f-4572-99a7-a49df064af05.png"
-              />
-            </div>   
+            <Link to="/why-us">
+              <div className="bg-black rounded-lg shadow-lg border border-deepa-teal hover:shadow-xl transition-shadow cursor-pointer">
+                <img
+                  alt="DEEPA HOSIERY Business Display"
+                  className="w-full h-auto rounded-md object-cover"
+                  src="/lovable-uploads/c44b5526-793f-4572-99a7-a49df064af05.png"
+                />
+              </div>
+            </Link>   
           </div>
         </div>
       </div>
