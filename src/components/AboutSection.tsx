@@ -1,55 +1,44 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { CheckCircle, Award, Clock, ThumbsUp, RefreshCw, Shield } from 'lucide-react';
-
-const reasons = [
-  {
-    id: 1,
-    title: "30+ Years Experience",
-    description: "Benefit from our three decades of industry knowledge and expertise in hosiery manufacturing.",
-    icon: Clock
-  },
-  {
-    id: 2,
-    title: "Quality Assurance",
-    description: "Every product undergoes rigorous quality checks before shipping to ensure the best for your customers.",
-    icon: CheckCircle
-  },
-  {
-    id: 3,
-    title: "Fair Business Practices",
-    description: "We believe in transparent pricing and honest business dealings with all our partners.",
-    icon: ThumbsUp
-  },
-  {
-    id: 4,
-    title: "Flexible Approach",
-    description: "We adapt to your business needs with customized solutions and flexible ordering options.",
-    icon: RefreshCw
-  },
-  {
-    id: 5,
-    title: "Premium Materials",
-    description: "Our products are made with high-quality materials for comfort, durability, and customer satisfaction.",
-    icon: Award
-  },
-  {
-    id: 6,
-    title: "Reliable Partner",
-    description: "Count on us for consistent supply, timely delivery, and long-term business partnership.",
-    icon: Shield
-  }
-];
-
+const reasons = [{
+  id: 1,
+  title: "30+ Years Experience",
+  description: "Benefit from our three decades of industry knowledge and expertise in hosiery manufacturing.",
+  icon: Clock
+}, {
+  id: 2,
+  title: "Quality Assurance",
+  description: "Every product undergoes rigorous quality checks before shipping to ensure the best for your customers.",
+  icon: CheckCircle
+}, {
+  id: 3,
+  title: "Fair Business Practices",
+  description: "We believe in transparent pricing and honest business dealings with all our partners.",
+  icon: ThumbsUp
+}, {
+  id: 4,
+  title: "Flexible Approach",
+  description: "We adapt to your business needs with customized solutions and flexible ordering options.",
+  icon: RefreshCw
+}, {
+  id: 5,
+  title: "Premium Materials",
+  description: "Our products are made with high-quality materials for comfort, durability, and customer satisfaction.",
+  icon: Award
+}, {
+  id: 6,
+  title: "Reliable Partner",
+  description: "Count on us for consistent supply, timely delivery, and long-term business partnership.",
+  icon: Shield
+}];
 const AboutSection = () => {
-  return (
-    <>
+  return <>
       <section id="about" className="py-16 bg-black">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
-              <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=800&ixlib=rb-4.0.3" alt="DEEPA HOSIERY Facility" className="rounded-lg shadow-lg w-full h-auto" />
+              <img alt="DEEPA HOSIERY Facility" className="rounded-lg shadow-lg w-full h-auto" src="/lovable-uploads/547fb491-4b7b-49ba-9ed4-d4209c194d4e.jpg" />
             </div>
             
             <div className="md:w-1/2">
@@ -98,12 +87,10 @@ const AboutSection = () => {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {reasons.map((reason, idx) => (
-              <Card 
-                key={reason.id} 
-                className="hover:shadow-lg transition-shadow border-l-4 border-l-deepa-teal bg-[#111] animate-fade-in"
-                style={{ animationDelay: `${0.12 * idx}s`, animationFillMode: "backwards" }}
-              >
+            {reasons.map((reason, idx) => <Card key={reason.id} className="hover:shadow-lg transition-shadow border-l-4 border-l-deepa-teal bg-[#111] animate-fade-in" style={{
+            animationDelay: `${0.12 * idx}s`,
+            animationFillMode: "backwards"
+          }}>
                 <CardContent className="p-6">
                   <div className="flex items-start">
                     <div className="mr-4 mt-1 text-deepa-teal">
@@ -115,13 +102,10 @@ const AboutSection = () => {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
-    </>
-  );
+    </>;
 };
-
 export default AboutSection;
