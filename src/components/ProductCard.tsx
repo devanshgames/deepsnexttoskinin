@@ -7,7 +7,7 @@ import { toast } from '@/hooks/use-toast';
 import { Link } from 'react-router-dom';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
-import { images } from 'lucide-react';
+import { Image } from 'lucide-react';
 
 export interface ProductProps {
   id: number;
@@ -92,7 +92,7 @@ const ProductCard: React.FC<ProductProps> = ({
               setIsOpen(true);
             }}
           >
-            <images className="mr-1" size={12} />
+            <Image className="mr-1" size={12} />
             {photoCount} Photos
           </div>
         )}
