@@ -33,18 +33,54 @@ const ProductCard: React.FC<ProductProps> = ({
   const { addToCart } = useCart();
   const [isOpen, setIsOpen] = useState(false);
   
-  // Generate sample product images based on the main image and photoCount
+  // Generate unique product images based on the product ID and main image
   const generateProductImages = () => {
     const images = [image];
     if (photoCount && photoCount > 1) {
-      // Use the TSPAD images as sample additional images
-      const additionalImages = [
-        "/lovable-uploads/TSPAD 0.jpg",
-        "/lovable-uploads/TSPAD1.jpg",
-        "/lovable-uploads/TSPAD 2.jpg", 
-        "/lovable-uploads/TSPAD 3.jpg",
-        "/lovable-uploads/TSPAD4.jpg"
-      ];
+      // Create a set of unique images based on product ID
+      // Use different image patterns for different product types
+      const productType = id.toString()[0]; // First digit of ID to determine product type
+      
+      let additionalImages;
+      
+      // Select different sets of images based on product ID ranges
+      if (productType === '1' || productType === '5') { // DEEP'S or FEELS
+        additionalImages = [
+          "/lovable-uploads/FRONT.jpg",
+          "/lovable-uploads/TSPAD 0.jpg",
+          "/lovable-uploads/TSPAD1.jpg",
+          "/lovable-uploads/TSPAD 2.jpg"
+        ];
+      } else if (productType === '2' || productType === '6') { // PANTIES related
+        additionalImages = [
+          "/lovable-uploads/photo_2025-05-05_15-45-11.jpg",
+          "/lovable-uploads/photo_2025-05-05_15-45-14.jpg",
+          "/lovable-uploads/photo_2025-05-05_15-45-16.jpg",
+          "/lovable-uploads/IMG_20250428_132532.jpg"
+        ];
+      } else if (productType === '3' || productType === '7') { // CAMISOLE related
+        additionalImages = [
+          "/lovable-uploads/Photoroom-20250427_132845.png",
+          "/lovable-uploads/new shoot pdf_page-0001.jpg",
+          "/lovable-uploads/TSPAD 3.jpg",
+          "/lovable-uploads/TSPAD4.jpg"
+        ];
+      } else if (productType === '4' || productType === '8') { // RANI or other
+        additionalImages = [
+          "/lovable-uploads/b+cover.jpg",
+          "/lovable-uploads/deepscover.jpg",
+          "/lovable-uploads/TSPAD 2.jpg",
+          "/lovable-uploads/bodicacover.jpg"
+        ];
+      } else {
+        // Default image set
+        additionalImages = [
+          "/lovable-uploads/TSPAD 0.jpg",
+          "/lovable-uploads/TSPAD1.jpg",
+          "/lovable-uploads/TSPAD 2.jpg", 
+          "/lovable-uploads/TSPAD 3.jpg",
+        ];
+      }
       
       // Add as many additional images as needed, up to photoCount - 1
       for (let i = 0; i < Math.min(photoCount - 1, additionalImages.length); i++) {
