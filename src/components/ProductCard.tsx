@@ -44,7 +44,14 @@ const ProductCard: React.FC<ProductProps> = ({
       let additionalImages;
       
       // Select different sets of images based on product ID ranges
-      if (productType === '1' || productType === '5') { // DEEP'S or FEELS
+      if (productType === '1') { // DEEP'S
+        additionalImages = [
+          "/lovable-uploads/photo_2025-03-31_17-24-35.jpg",
+          "/lovable-uploads/TSPAD 0.jpg",
+          "/lovable-uploads/TSPAD1.jpg",
+          "/lovable-uploads/TSPAD 2.jpg"
+        ]; 
+        else if (productType === '5') { // FEEL'S
         additionalImages = [
           "/lovable-uploads/photo_2025-03-31_17-24-35.jpg",
           "/lovable-uploads/TSPAD 0.jpg",
