@@ -109,6 +109,13 @@ const ProductCard: React.FC<ProductProps> = ({
           "/lovable-uploads/TSPAD1.jpg",
           "/lovable-uploads/TSPAD 2.jpg"
         ];
+          else if (productType === '11') { //mcool camisole
+        additionalImages = [
+          "/lovable-uploads/photo_2025-03-31_17-24-35.jpg",
+          "/lovable-uploads/TSPAD 0.jpg",
+          "/lovable-uploads/TSPAD1.jpg",
+          "/lovable-uploads/TSPAD 2.jpg"
+        ];
       
       } else {
         // Default image set
