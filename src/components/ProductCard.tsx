@@ -51,6 +51,29 @@ const ProductCard: React.FC<ProductProps> = ({
           "/lovable-uploads/TSPAD1.jpg",
           "/lovable-uploads/TSPAD 2.jpg"
         ]; 
+      
+      } else if (productType === '2' ) { // bplus
+        additionalImages = [
+          "/lovable-uploads/photo_2025-05-05_15-45-11.jpg",
+          "/lovable-uploads/photo_2025-05-05_15-45-14.jpg",
+          "/lovable-uploads/photo_2025-05-05_15-45-16.jpg",
+          "/lovable-uploads/IMG_20250428_132532.jpg"
+        ];
+       
+      } else if (productType === '3' ) { // bodica
+        additionalImages = [
+          "/lovable-uploads/Photoroom-20250427_132845.png",
+          "/lovable-uploads/new shoot pdf_page-0001.jpg",
+          "/lovable-uploads/TSPAD 3.jpg",
+          "/lovable-uploads/TSPAD4.jpg"
+        ];
+      } else if (productType === '4') { // RANI
+        additionalImages = [
+          "/lovable-uploads/b+cover.jpg",
+          "/lovable-uploads/deepscover.jpg",
+          "/lovable-uploads/TSPAD 2.jpg",
+          "/lovable-uploads/bodicacover.jpg"
+        ];
         else if (productType === '5') { // FEEL'S
         additionalImages = [
           "/lovable-uploads/photo_2025-03-31_17-24-35.jpg",
@@ -58,27 +81,35 @@ const ProductCard: React.FC<ProductProps> = ({
           "/lovable-uploads/TSPAD1.jpg",
           "/lovable-uploads/TSPAD 2.jpg"
         ];
-      } else if (productType === '2' || productType === '6') { // PANTIES related
+         else if (productType === '6' ) { //panty deeps
         additionalImages = [
           "/lovable-uploads/photo_2025-05-05_15-45-11.jpg",
           "/lovable-uploads/photo_2025-05-05_15-45-14.jpg",
           "/lovable-uploads/photo_2025-05-05_15-45-16.jpg",
           "/lovable-uploads/IMG_20250428_132532.jpg"
         ];
-      } else if (productType === '3' || productType === '7') { // CAMISOLE related
+          else if (productType === '7') { //b+ panty
         additionalImages = [
-          "/lovable-uploads/Photoroom-20250427_132845.png",
-          "/lovable-uploads/new shoot pdf_page-0001.jpg",
-          "/lovable-uploads/TSPAD 3.jpg",
-          "/lovable-uploads/TSPAD4.jpg"
+          "/lovable-uploads/photo_2025-03-31_17-24-35.jpg",
+          "/lovable-uploads/TSPAD 0.jpg",
+          "/lovable-uploads/TSPAD1.jpg",
+          "/lovable-uploads/TSPAD 2.jpg"
         ];
-      } else if (productType === '4' || productType === '8') { // RANI or other
+          else if (productType === '8') { //bodica panty
         additionalImages = [
-          "/lovable-uploads/b+cover.jpg",
-          "/lovable-uploads/deepscover.jpg",
-          "/lovable-uploads/TSPAD 2.jpg",
-          "/lovable-uploads/bodicacover.jpg"
+          "/lovable-uploads/photo_2025-03-31_17-24-35.jpg",
+          "/lovable-uploads/TSPAD 0.jpg",
+          "/lovable-uploads/TSPAD1.jpg",
+          "/lovable-uploads/TSPAD 2.jpg"
         ];
+          else if (productType === '9') { //rani panty
+        additionalImages = [
+          "/lovable-uploads/photo_2025-03-31_17-24-35.jpg",
+          "/lovable-uploads/TSPAD 0.jpg",
+          "/lovable-uploads/TSPAD1.jpg",
+          "/lovable-uploads/TSPAD 2.jpg"
+        ];
+      
       } else {
         // Default image set
         additionalImages = [
