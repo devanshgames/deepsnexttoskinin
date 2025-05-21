@@ -1,11 +1,11 @@
 
-import { useEffect } from "react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { CartProvider } from "@/contexts/CartContext";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { CartProvider } from "@/contexts/CartContext";
+import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import WhyUs from "./pages/WhyUs";
@@ -34,26 +34,20 @@ import CamisoleBodicaPage from "./pages/products/brands/CamisoleBodicaPage";
 import CamisoleRaniPage from "./pages/products/brands/CamisoleRaniPage";
 import CamisoleMothercoolPage from "./pages/products/Camisole/Mothercool";
 
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-  
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  
-  return null;
+// Create a separate ScrollToTop component
+const ScrollToTopComponent = () => {
+  return <ScrollToTop />;
 };
 
+// Create query client
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
-    <CartProvider>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <ScrollToTop />
+    <BrowserRouter>
+      <CartProvider>
+        <TooltipProvider>
+          <ScrollToTopComponent />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
@@ -82,9 +76,11 @@ const App = () => (
             <Route path="/products/camisole/mothercool" element={<CamisoleMothercoolPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-    </CartProvider>
+          <Toaster />
+          <Sonner />
+        </TooltipProvider>
+      </CartProvider>
+    </BrowserRouter>
   </QueryClientProvider>
 );
 

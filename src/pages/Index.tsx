@@ -7,7 +7,6 @@ import ProductsSection from '@/components/ProductsSection';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import AIChatbot from '@/components/AIChatbot';
 import Footer from '@/components/Footer';
-import { Toaster } from "@/components/ui/toaster";
 
 const Index = () => {
   return (
@@ -21,7 +20,6 @@ const Index = () => {
       <Footer />
       <WhatsAppButton />
       <AIChatbot />
-      <Toaster />
     </div>
   );
 };
