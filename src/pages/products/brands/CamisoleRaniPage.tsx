@@ -5,8 +5,61 @@ import Footer from '@/components/Footer';
 import { ArrowRight, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import RaniProductCard from '@/components/brands/RaniProductCard';
+import WhatsAppButton from '@/components/WhatsAppButton';
+import AIChatbot from '@/components/AIChatbot';
+import { Toaster } from "@/components/ui/toaster";
 
 const CamisoleRaniPage = () => {
+  // Sample product data for RANI Camisoles
+  const products = [
+    {
+      id: 901,
+      name: "RANI Cotton Camisole",
+      image: "/lovable-uploads/photo_2025-05-05_15-45-16.jpg",
+      mrp: 350,
+      discountedPrice: 300,
+      colors: ["Black", "White", "Skin"],
+      photoCount: 3
+    },
+    {
+      id: 902,
+      name: "RANI Seamless Camisole",
+      image: "/lovable-uploads/TSPAD1.jpg",
+      mrp: 380,
+      discountedPrice: 320,
+      colors: ["Skin", "Black"],
+      photoCount: 2
+    },
+    {
+      id: 903,
+      name: "RANI Everyday Camisole",
+      image: "/lovable-uploads/TSPAD 0.jpg",
+      mrp: 340,
+      discountedPrice: 290,
+      colors: ["White", "Blue"],
+      photoCount: 4
+    },
+    {
+      id: 904,
+      name: "RANI Full Coverage",
+      image: "/lovable-uploads/TSPAD 2.jpg",
+      mrp: 400,
+      discountedPrice: 350,
+      colors: ["Red", "Black", "Skin"],
+      photoCount: 3
+    },
+    {
+      id: 905,
+      name: "RANI Lightweight Camisole",
+      image: "/lovable-uploads/TSPAD 3.jpg",
+      mrp: 320,
+      discountedPrice: 270,
+      colors: ["Pink", "White"],
+      photoCount: 2
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-black">
       <NavBar />
@@ -20,10 +73,10 @@ const CamisoleRaniPage = () => {
         
         <h1 className="text-4xl font-display font-bold text-deepa-teal mb-8">RANI Camisole Collection</h1>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div className="rounded-lg overflow-hidden">
             <img 
-              src="/lovable-uploads/TSPAD 2.jpg"
+              src="/lovable-uploads/photo_2025-05-05_15-45-16.jpg"
               alt="RANI Camisole Collection"
               className="w-full h-[400px] object-cover"
             />
@@ -57,8 +110,21 @@ const CamisoleRaniPage = () => {
             </ul>
           </div>
         </div>
+
+        <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-6">Our Products</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-12">
+          {products.map(product => (
+            <RaniProductCard 
+              key={product.id} 
+              {...product}
+            />
+          ))}
+        </div>
       </main>
       <Footer />
+      <WhatsAppButton />
+      <AIChatbot />
+      <Toaster />
     </div>
   );
 };

@@ -6,6 +6,9 @@ import { ArrowRight, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import BeautyplusProductCard from '@/components/brands/BeautyplusProductCard';
+import WhatsAppButton from '@/components/WhatsAppButton';
+import AIChatbot from '@/components/AIChatbot';
+import { Toaster } from "@/components/ui/toaster";
 
 const CamisoleBeautyplusPage = () => {
   // Sample product data for BEAUTYPLUS Camisoles
@@ -119,6 +122,9 @@ const CamisoleBeautyplusPage = () => {
         </div>
       </main>
       <Footer />
+      <WhatsAppButton />
+      <AIChatbot />
+      <Toaster />
     </div>
   );
 };

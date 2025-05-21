@@ -5,8 +5,61 @@ import Footer from '@/components/Footer';
 import { ArrowRight, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import DeepsProductCard from '@/components/brands/DeepsProductCard';
+import WhatsAppButton from '@/components/WhatsAppButton';
+import AIChatbot from '@/components/AIChatbot';
+import { Toaster } from "@/components/ui/toaster";
 
 const CamisoleDeepsPage = () => {
+  // Sample product data for DEEP'S Camisoles
+  const products = [
+    {
+      id: 601,
+      name: "DEEP'S Cotton Camisole",
+      image: "/lovable-uploads/TSPAD1.jpg",
+      mrp: 320,
+      discountedPrice: 280,
+      colors: ["Black", "White", "Skin"],
+      photoCount: 3
+    },
+    {
+      id: 602,
+      name: "DEEP'S Seamless Cami",
+      image: "/lovable-uploads/TSPAD 0.jpg",
+      mrp: 350,
+      discountedPrice: 300,
+      colors: ["Skin", "Black"],
+      photoCount: 2
+    },
+    {
+      id: 603,
+      name: "DEEP'S Everyday Camisole",
+      image: "/lovable-uploads/FRONT.jpg",
+      mrp: 280,
+      discountedPrice: 240,
+      colors: ["White", "Blue"],
+      photoCount: 4
+    },
+    {
+      id: 604,
+      name: "DEEP'S Full Coverage",
+      image: "/lovable-uploads/TSPAD 2.jpg",
+      mrp: 380,
+      discountedPrice: 320,
+      colors: ["Red", "Black", "Skin"],
+      photoCount: 3
+    },
+    {
+      id: 605,
+      name: "DEEP'S Lightweight Camisole",
+      image: "/lovable-uploads/TSPAD 3.jpg",
+      mrp: 300,
+      discountedPrice: 250,
+      colors: ["Pink", "White"],
+      photoCount: 2
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-black">
       <NavBar />
@@ -20,7 +73,7 @@ const CamisoleDeepsPage = () => {
         
         <h1 className="text-4xl font-display font-bold text-deepa-teal mb-8">DEEP'S Camisole Collection</h1>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div className="rounded-lg overflow-hidden">
             <img 
               src="/lovable-uploads/TSPAD1.jpg"
@@ -57,8 +110,21 @@ const CamisoleDeepsPage = () => {
             </ul>
           </div>
         </div>
+
+        <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-6">Our Products</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-12">
+          {products.map(product => (
+            <DeepsProductCard 
+              key={product.id} 
+              {...product}
+            />
+          ))}
+        </div>
       </main>
       <Footer />
+      <WhatsAppButton />
+      <AIChatbot />
+      <Toaster />
     </div>
   );
 };

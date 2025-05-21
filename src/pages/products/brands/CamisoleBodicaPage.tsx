@@ -5,8 +5,61 @@ import Footer from '@/components/Footer';
 import { ArrowRight, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import BodicaProductCard from '@/components/brands/BodicaProductCard';
+import WhatsAppButton from '@/components/WhatsAppButton';
+import AIChatbot from '@/components/AIChatbot';
+import { Toaster } from "@/components/ui/toaster";
 
 const CamisoleBodicaPage = () => {
+  // Sample product data for BODICA Camisoles
+  const products = [
+    {
+      id: 801,
+      name: "BODICA Cotton Camisole",
+      image: "/lovable-uploads/TSPAD 3.jpg",
+      mrp: 330,
+      discountedPrice: 280,
+      colors: ["Black", "White", "Skin"],
+      photoCount: 3
+    },
+    {
+      id: 802,
+      name: "BODICA Seamless Camisole",
+      image: "/lovable-uploads/TSPAD1.jpg",
+      mrp: 350,
+      discountedPrice: 300,
+      colors: ["Skin", "Black"],
+      photoCount: 2
+    },
+    {
+      id: 803,
+      name: "BODICA Everyday Comfort",
+      image: "/lovable-uploads/TSPAD 0.jpg",
+      mrp: 310,
+      discountedPrice: 270,
+      colors: ["White", "Blue"],
+      photoCount: 4
+    },
+    {
+      id: 804,
+      name: "BODICA Full Coverage",
+      image: "/lovable-uploads/TSPAD 2.jpg",
+      mrp: 380,
+      discountedPrice: 320,
+      colors: ["Red", "Black", "Skin"],
+      photoCount: 3
+    },
+    {
+      id: 805,
+      name: "BODICA Lightweight Camisole",
+      image: "/lovable-uploads/FRONT.jpg",
+      mrp: 290,
+      discountedPrice: 250,
+      colors: ["Pink", "White"],
+      photoCount: 2
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-black">
       <NavBar />
@@ -20,7 +73,7 @@ const CamisoleBodicaPage = () => {
         
         <h1 className="text-4xl font-display font-bold text-deepa-teal mb-8">BODICA Camisole Collection</h1>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div className="rounded-lg overflow-hidden">
             <img 
               src="/lovable-uploads/TSPAD 3.jpg"
@@ -57,8 +110,21 @@ const CamisoleBodicaPage = () => {
             </ul>
           </div>
         </div>
+
+        <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-6">Our Products</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-12">
+          {products.map(product => (
+            <BodicaProductCard 
+              key={product.id} 
+              {...product}
+            />
+          ))}
+        </div>
       </main>
       <Footer />
+      <WhatsAppButton />
+      <AIChatbot />
+      <Toaster />
     </div>
   );
 };

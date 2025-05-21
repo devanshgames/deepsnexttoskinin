@@ -11,9 +11,10 @@ import AIChatbot from '@/components/AIChatbot';
 import { Toaster } from "@/components/ui/toaster";
 
 const CamisoleMothercoolPage = () => {
+  // Sample product data for Mothercool Camisoles
   const products = [
     {
-      id: 1101,
+      id: 1001,
       name: "MOTHERCOOL Cotton Camisole",
       image: "/lovable-uploads/afa52506-1b2b-4a5a-91fa-d19e3f16bf32.jpg",
       mrp: 370,
@@ -22,8 +23,8 @@ const CamisoleMothercoolPage = () => {
       photoCount: 3
     },
     {
-      id: 1102,
-      name: "MOTHERCOOL Seamless Comfort",
+      id: 1002,
+      name: "MOTHERCOOL Seamless Camisole",
       image: "/lovable-uploads/TSPAD 0.jpg",
       mrp: 390,
       discountedPrice: 340,
@@ -31,7 +32,7 @@ const CamisoleMothercoolPage = () => {
       photoCount: 2
     },
     {
-      id: 1103,
+      id: 1003,
       name: "MOTHERCOOL Everyday Camisole",
       image: "/lovable-uploads/TSPAD1.jpg",
       mrp: 350,
@@ -40,7 +41,7 @@ const CamisoleMothercoolPage = () => {
       photoCount: 4
     },
     {
-      id: 1104,
+      id: 1004,
       name: "MOTHERCOOL Full Coverage",
       image: "/lovable-uploads/TSPAD 2.jpg",
       mrp: 410,
@@ -49,7 +50,7 @@ const CamisoleMothercoolPage = () => {
       photoCount: 3
     },
     {
-      id: 1105,
+      id: 1005,
       name: "MOTHERCOOL Lightweight Camisole",
       image: "/lovable-uploads/TSPAD 3.jpg",
       mrp: 340,
@@ -59,7 +60,8 @@ const CamisoleMothercoolPage = () => {
     }
   ];
 
-  return <div className="min-h-screen bg-black">
+  return (
+    <div className="min-h-screen bg-black">
       <NavBar />
       <main className="container mx-auto px-4 py-16">
         <div className="mb-6">
@@ -71,21 +73,25 @@ const CamisoleMothercoolPage = () => {
         
         <h1 className="text-4xl font-display font-bold text-deepa-teal mb-8">MOTHERCOOL Camisole Collection</h1>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div className="rounded-lg overflow-hidden">
-            <img alt="MOTHERCOOL Camisole Collection" src="/lovable-uploads/2181061d-20ab-47fb-8c51-487beb5d3b87.jpg" className="w-full h-[400px] object-contain" />
+            <img 
+              src="/lovable-uploads/afa52506-1b2b-4a5a-91fa-d19e3f16bf32.jpg"
+              alt="MOTHERCOOL Camisole Collection"
+              className="w-full h-[400px] object-contain"
+            />
           </div>
           <div className="flex flex-col justify-center">
-            <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4"> MOTHERCOOL Camisoles</h2>
+            <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-4">Premium MOTHERCOOL Camisoles</h2>
             <p className="text-gray-300 mb-6">
               The MOTHERCOOL collection is specially designed for new mothers, providing both comfort and functionality.
             </p>
             <ul className="space-y-4 text-gray-300">
               <li className="flex items-center">
                 <Button asChild className="bg-deepa-teal hover:bg-deepa-dark-teal text-black flex items-center gap-2 w-full md:w-auto">
-                  <a href="/lovable-uploads/SLIP.pdf" download="MOTHERCOOL_Catalog.pdf">
+                  <a href="/lovable-uploads/MOTHER COOL_panties.pdf" download="MCOOL.pdf">
                     <Download size={18} />
-                    Download Product Catalog
+                    Download PDF
                   </a>
                 </Button>
               </li>
@@ -104,8 +110,8 @@ const CamisoleMothercoolPage = () => {
             </ul>
           </div>
         </div>
-        
-        <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-6 mt-12">Our Products</h2>
+
+        <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-6">Our Products</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-12">
           {products.map(product => (
             <ProductCard 
@@ -119,6 +125,8 @@ const CamisoleMothercoolPage = () => {
       <WhatsAppButton />
       <AIChatbot />
       <Toaster />
-    </div>;
+    </div>
+  );
 };
+
 export default CamisoleMothercoolPage;
