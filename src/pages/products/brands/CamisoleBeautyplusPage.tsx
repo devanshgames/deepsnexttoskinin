@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import { ArrowRight, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import ProductCard from '@/components/ProductCard';
+import BeautyplusProductCard from '@/components/brands/BeautyplusProductCard';
 
 const CamisoleBeautyplusPage = () => {
   // Sample product data for BEAUTYPLUS Camisoles
@@ -111,7 +111,7 @@ const CamisoleBeautyplusPage = () => {
         <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-6">Our Products</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-12">
           {products.map(product => (
-            <ProductCard 
+            <BeautyplusProductCard 
               key={product.id} 
               {...product}
             />

@@ -18,6 +18,7 @@ export interface ProductProps {
   colors?: string[];
   photoCount?: number;
   detailUrl?: string;
+  productImages?: string[]; // Added to allow custom images to be passed
 }
 
 const ProductCard: React.FC<ProductProps> = ({
@@ -28,114 +29,14 @@ const ProductCard: React.FC<ProductProps> = ({
   discountedPrice,
   colors,
   photoCount,
-  detailUrl
+  detailUrl,
+  productImages: customProductImages
 }) => {
   const { addToCart } = useCart();
   const [isOpen, setIsOpen] = useState(false);
   
-  // Generate unique product images based on the product ID and main image
-  const generateProductImages = () => {
-    const images = [image];
-    if (photoCount && photoCount > 1) {
-      // Create a set of unique images based on product ID
-      // Use different image patterns for different product types
-      const productType = id.toString()[0]; // First digit of ID to determine product type
-      
-      let additionalImages;
-      
-      // Select different sets of images based on product ID ranges
-      if (productType === '1') { // DEEP'S
-        additionalImages = [
-          "/lovable-uploads/photo_2025-03-31_17-24-35.jpg",
-          "/lovable-uploads/TSPAD 0.jpg",
-          "/lovable-uploads/TSPAD1.jpg",
-          "/lovable-uploads/TSPAD 2.jpg"
-        ]; 
-      
-      } else if (productType === '2' ) { // bplus
-        additionalImages = [
-          "/lovable-uploads/photo_2025-05-05_15-45-11.jpg",
-          "/lovable-uploads/photo_2025-05-05_15-45-14.jpg",
-          "/lovable-uploads/photo_2025-05-05_15-45-16.jpg",
-          "/lovable-uploads/IMG_20250428_132532.jpg"
-        ];
-       
-      } else if (productType === '3' ) { // bodica
-        additionalImages = [
-          "/lovable-uploads/Photoroom-20250427_132845.png",
-          "/lovable-uploads/new shoot pdf_page-0001.jpg",
-          "/lovable-uploads/TSPAD 3.jpg",
-          "/lovable-uploads/TSPAD4.jpg"
-        ];
-      } else if (productType === '4') { // RANI
-        additionalImages = [
-          "/lovable-uploads/b+cover.jpg",
-          "/lovable-uploads/deepscover.jpg",
-          "/lovable-uploads/TSPAD 2.jpg",
-          "/lovable-uploads/bodicacover.jpg"
-        ];
-        else if (productType === '5') { // FEEL'S
-        additionalImages = [
-          "/lovable-uploads/photo_2025-03-31_17-24-35.jpg",
-          "/lovable-uploads/TSPAD 0.jpg",
-          "/lovable-uploads/TSPAD1.jpg",
-          "/lovable-uploads/TSPAD 2.jpg"
-        ];
-         else if (productType === '6' ) { //panty deeps
-        additionalImages = [
-          "/lovable-uploads/photo_2025-05-05_15-45-11.jpg",
-          "/lovable-uploads/photo_2025-05-05_15-45-14.jpg",
-          "/lovable-uploads/photo_2025-05-05_15-45-16.jpg",
-          "/lovable-uploads/IMG_20250428_132532.jpg"
-        ];
-          else if (productType === '7') { //b+ panty
-        additionalImages = [
-          "/lovable-uploads/photo_2025-03-31_17-24-35.jpg",
-          "/lovable-uploads/TSPAD 0.jpg",
-          "/lovable-uploads/TSPAD1.jpg",
-          "/lovable-uploads/TSPAD 2.jpg"
-        ];
-          else if (productType === '8') { //bodica panty
-        additionalImages = [
-          "/lovable-uploads/photo_2025-03-31_17-24-35.jpg",
-          "/lovable-uploads/TSPAD 0.jpg",
-          "/lovable-uploads/TSPAD1.jpg",
-          "/lovable-uploads/TSPAD 2.jpg"
-        ];
-          else if (productType === '9') { //rani panty
-        additionalImages = [
-          "/lovable-uploads/photo_2025-03-31_17-24-35.jpg",
-          "/lovable-uploads/TSPAD 0.jpg",
-          "/lovable-uploads/TSPAD1.jpg",
-          "/lovable-uploads/TSPAD 2.jpg"
-        ];
-          else if (productType === '11') { //mcool camisole
-        additionalImages = [
-          "/lovable-uploads/photo_2025-03-31_17-24-35.jpg",
-          "/lovable-uploads/TSPAD 0.jpg",
-          "/lovable-uploads/TSPAD1.jpg",
-          "/lovable-uploads/TSPAD 2.jpg"
-        ];
-      
-      } else {
-        // Default image set
-        additionalImages = [
-          "/lovable-uploads/TSPAD 0.jpg",
-          "/lovable-uploads/TSPAD1.jpg",
-          "/lovable-uploads/TSPAD 2.jpg", 
-          "/lovable-uploads/TSPAD 3.jpg",
-        ];
-      }
-      
-      // Add as many additional images as needed, up to photoCount - 1
-      for (let i = 0; i < Math.min(photoCount - 1, additionalImages.length); i++) {
-        images.push(additionalImages[i]);
-      }
-    }
-    return images;
-  };
-  
-  const productImages = generateProductImages();
+  // Use custom product images if provided, otherwise use just the main image
+  const productImages = customProductImages || [image];
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -164,7 +65,7 @@ const ProductCard: React.FC<ProductProps> = ({
     <>
       <div className="relative overflow-hidden rounded-t-lg h-48">
         <img src={image} alt={name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
-        {photoCount && (
+        {photoCount && photoCount > 1 && (
           <div 
             className="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded-full flex items-center cursor-pointer"
             onClick={(e) => {

@@ -4,7 +4,7 @@ import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import ProductCard from '@/components/ProductCard';
+import RaniProductCard from '@/components/brands/RaniProductCard';
 
 const RaniPage = () => {
   // Sample product data for RANI
@@ -102,7 +102,7 @@ const RaniPage = () => {
         <h2 className="text-2xl font-display font-semibold text-deepa-teal mb-6">Our Products</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-12">
           {products.map(product => (
-            <ProductCard 
+            <RaniProductCard 
               key={product.id} 
               {...product}
             />
